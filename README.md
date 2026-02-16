@@ -1,12 +1,12 @@
-<p align="center">
-  <img src="logo.png" alt="SpoolHoarder" width="128">
+<p align="left">
+  <img src="logo.png" alt="Spool Hoarder" width="128">
 </p>
 
-# SpoolHoarder
+# Spool Hoarder
 
 **Your 3D printer filament inventory, organized.**
 
-SpoolHoarder is a cross-platform app for tracking and managing your filament spool collection. Know what you have, where it is, and what you need — at a glance.
+Spool Hoarder is a cross-platform app for tracking and managing your filament spool collection. Know what you have, where it is, and what you need — at a glance.
 
 Available on **iOS**, **macOS**, **Windows**, and **Web**.
 
@@ -60,13 +60,13 @@ Available on **iOS**, **macOS**, **Windows**, and **Web**.
 
 ## Privacy
 
-SpoolHoarder is built with privacy at its core. No accounts, no analytics, no tracking. Your data stays on your device. See our full [Privacy Policy](privacy-policy.md).
+Spool Hoarder is built with privacy at its core. No accounts, no analytics, no tracking. Your data stays on your device. See our full [Privacy Policy](privacy-policy.md).
 
 ---
 
 ## Support
 
-For bug reports, feature requests, or questions, please [open an issue](https://github.com/MiddlePathLabs/SpoolHoarder/issues).
+For bug reports, feature requests, or questions, please [open an issue](https://github.com/MiddlePathLabs/Spool Hoarder/issues).
 
 ---
 
