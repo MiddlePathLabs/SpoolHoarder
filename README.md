@@ -4,70 +4,83 @@
 
 # Spool Hoarder
 
-**Your 3D printer filament inventory, organized.**
+Spool Hoarder is a cross-platform app for tracking 3D printer filament inventory.
 
-Spool Hoarder is a cross-platform app for tracking and managing your filament spool collection. Know what you have, where it is, and what you need — at a glance.
+If you print regularly, you know the problem:
+You buy spools you already own.  
+You forget how much material is left.  
+You can’t remember what filament you used for a past project.
 
-Available on **iOS**, **macOS**, **Windows**, and **Web**.
+Spool Hoarder keeps your inventory organized so you always know what you have.
 
 ---
 
-## Features
+## What You Can Do
 
-### Inventory Management
+### Track Every Spool
+- Brand
+- Material type (PLA, PETG, ABS, TPU, etc.)
+- Color
+- Total weight and remaining grams
+- Purchase date and price
+- Storage location
 
-- Track every spool with detailed metadata: brand, material, color, diameter, weight, price, and purchase source
-- Multi-color spool support with visual hex code previews and color family grouping
-- Record technical print settings per spool — extruder/bed temperatures, flow ratios, and K-factors
-- Monitor remaining weight and mark spools as depleted
-- Organize spools by storage location
+No more guessing what’s sitting on your shelf.
 
-### AI-Powered Spool Scanning
+---
 
-- Snap a photo of a spool label and let AI extract the details automatically
-- Supports multiple AI providers (Google Gemini, Anthropic Claude, OpenAI) — bring your own API key
-- On-device OCR on supported Apple devices — no data leaves your device
-- Batch scanning workflow for adding multiple spools quickly
-- EXIF metadata is stripped from all photos before processing
+### Log Usage Per Project
+- Record how much filament a print consumed
+- Automatically update remaining weight
+- View history for each spool
 
-### Project Tracking
+You’ll know exactly where your material went.
 
-- Create projects and log filament usage per spool
-- Track total weight consumed and remaining budget per project
-- Set target material, brand, and color specifications
-- View usage history across all projects
+---
 
-### Smart Search and Organization
+### Find the Right Filament Fast
+- Filter by material, brand, or color
+- Search your inventory instantly
+- See what’s in stock before starting a new print
 
-- Sort by brand, material, color, remaining weight, price, and more
-- Filter by any attribute with quick-access facets
-- Full-text search across all spool data
-- Inventory statistics and insights
+---
 
-### Data Management
+### Smart Add (Camera Assisted)
+Capture a spool label and extract details to reduce manual entry.
 
-- **Local-first architecture** — all data stored on your device, no account required
-- CSV import and export with full RFC 4180 compliance
-- Built-in filament catalog powered by [SpoolmanDB](https://github.com/Donkie/SpoolmanDB) for quick auto-fill of brands, materials, and technical specs
+---
 
-### Cross-Platform
+## Designed for Makers
 
-- Native performance on iOS, macOS, and Windows
-- Web version available for browser-based access
-- Consistent Material 3 design across all platforms
+Spool Hoarder is built specifically for people who print regularly and want structure without complexity.
+
+No spreadsheets.  
+No clutter.  
+No unnecessary features.
+
+Just a clean way to manage filament inventory.
+
+---
+
+## Platforms
+
+- iOS  
+- macOS  
+- Windows  
+- Web  
+
+(Availability may vary by platform.)
 
 ---
 
 ## Privacy
 
-Spool Hoarder is built with privacy at its core. No accounts, no analytics, no tracking. Your data stays on your device. See our full [Privacy Policy](privacy-policy.md).
+Your inventory data stays under your control.  
+No required cloud account.
 
 ---
 
-## Support
+## About
 
-For bug reports, feature requests, or questions, please [open an issue](https://github.com/MiddlePathLabs/Spool Hoarder/issues).
-
----
-
-Built by [Middle Path Labs](https://github.com/MiddlePathLabs)
+Spool Hoarder is developed by MiddlePath Labs.
+More updates and platform details coming soon.
