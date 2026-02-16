@@ -12,7 +12,7 @@ A cross-platform 3D printer filament inventory management app.
 * Purchase tracking with source, date, and price history
 * Location tracking for inventory organization
 
-### Organization \& Search
+### Organization & Search
 
 * Sort by brand, material, color, remaining weight, and more
 * Filter by any attribute with quick-access facets
@@ -39,4 +39,3 @@ This repository is used for issue tracking and feature requests only. Source cod
 ## Support
 
 For questions, bug reports, or feature requests, please open an issue on this repository.
-
