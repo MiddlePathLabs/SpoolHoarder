@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="logo.png" alt="SpoolHoarder" width="128">
+</p>
+
 # SpoolHoarder
 
 **Your 3D printer filament inventory, organized.**
