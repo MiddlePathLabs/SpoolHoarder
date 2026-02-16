@@ -83,4 +83,5 @@ No required cloud account.
 ## About
 
 Spool Hoarder is developed by MiddlePath Labs.
+
 More updates and platform details coming soon.
