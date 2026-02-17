@@ -2,86 +2,130 @@
   <img src="logo.png" alt="Spool Hoarder" width="128">
 </p>
 
-# Spool Hoarder
+# SpoolHoarder
 
-Spool Hoarder is a cross-platform app for tracking 3D printer filament inventory.
+SpoolHoarder is a filament inventory and usage tracking app for serious 3D printing.
 
-If you print regularly, you know the problem:
-You buy spools you already own.  
-You forget how much material is left.  
-You can’t remember what filament you used for a past project.
+It gives you full visibility into what you own, how much is left, what it’s worth, and where it’s being used.
 
-Spool Hoarder keeps your inventory organized so you always know what you have.
+No spreadsheets. No guessing. No duplicate purchases.
 
 ---
 
-## What You Can Do
+## Inventory Overview
 
-### Track Every Spool
-- Brand
-- Material type (PLA, PETG, ABS, TPU, etc.)
-- Color
-- Total weight and remaining grams
-- Purchase date and price
+Track every spool in one place.
+
+<p align="center">
+  <img src="inventory.png" alt="Spool Hoarder" width="128">
+</p>
+
+- Brand, material, and color
+- Remaining weight with visual progress indicator
 - Storage location
+- Spool size (1kg, 750g, etc.)
+- Purchase price
+- Technical parameters (flow, K-factor, diameter)
 
-No more guessing what’s sitting on your shelf.
-
----
-
-### Log Usage Per Project
-- Record how much filament a print consumed
-- Automatically update remaining weight
-- View history for each spool
-
-You’ll know exactly where your material went.
+You can see at a glance which spools are full, low, or nearly depleted.
 
 ---
 
-### Find the Right Filament Fast
-- Filter by material, brand, or color
-- Search your inventory instantly
-- See what’s in stock before starting a new print
+## Precise Weight Tracking
+
+Each spool includes a live remaining-weight slider.
+
+- Adjust usage in seconds
+- Add or subtract weight quickly
+- See exact grams remaining
+- Prevent accidental overuse
+
+No mental math required.
 
 ---
 
-### Smart Add (Camera Assisted)
-Capture a spool label and extract details to reduce manual entry.
+## Project-Based Usage Logging
+
+<p align="center">
+  <img src="projects.png" alt="Spool Hoarder" width="128">
+</p>
+
+Track filament usage per project.
+
+- Assign multiple spools to a project
+- Log exact grams consumed
+- Automatic inventory deduction
+- Usage history per spool
+- Clear warnings for insufficient inventory
+
+Every print becomes documented.  
+Every gram accounted for.
 
 ---
 
-## Designed for Makers
+## Statistics & Cost Analysis
 
-Spool Hoarder is built specifically for people who print regularly and want structure without complexity.
+<p align="center">
+  <img src="stats.png" alt="Spool Hoarder" width="128">
+</p>
 
-No spreadsheets.  
-No clutter.  
-No unnecessary features.
+SpoolHoarder doesn’t just track weight. It shows the big picture.
 
-Just a clean way to manage filament inventory.
+- Total spool count
+- Active vs depleted inventory
+- Total inventory value
+- Total remaining weight (kg and lbs)
+- Average cost per kg and per gram
+- Value distribution by material
+- Breakdown by material type
+
+You know not just what you have — but what it’s worth.
+
+---
+
+## Material Breakdown
+
+See your inventory grouped by material:
+
+- Spool count per material
+- Total weight per material
+- Total value per material
+
+Quick insight into how much PLA, PETG, ABS, ASA, and more you actually stock.
+
+---
+
+## Designed for Makers with Real Inventory
+
+SpoolHoarder is built for:
+
+- Print farms
+- High-volume hobbyists
+- Workshop environments
+- Anyone managing more than a few rolls
+
+It scales from a handful of spools to hundreds without becoming cluttered.
 
 ---
 
 ## Platforms
 
-- iOS  
-- macOS  
-- Windows  
-- Web  
+- Windows
+- macOS
+- iOS
+- Web
 
-(Availability may vary by platform.)
-
----
-
-## Privacy
-
-Your inventory data stays under your control.  
-No required cloud account.
+Availability may vary by platform.
 
 ---
 
-## About
+## Why SpoolHoarder?
 
-Spool Hoarder is developed by MiddlePath Labs.
+Because filament adds up.
 
-More updates and platform details coming soon.
+Weight.  
+Cost.  
+Storage space.  
+
+SpoolHoarder gives you control over all three.
+
