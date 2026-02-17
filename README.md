@@ -2,9 +2,9 @@
   <img src="logo.png" alt="Spool Hoarder" width="128">
 </p>
 
-# SpoolHoarder
+# Spool Hoarder
 
-SpoolHoarder is a filament inventory and usage tracking app for serious 3D printing.
+Spool Hoarder is a filament inventory and usage tracking app for serious 3D printing.
 
 It gives you full visibility into what you own, how much is left, what it’s worth, and where it’s being used.
 
@@ -119,7 +119,7 @@ Availability may vary by platform.
 
 ---
 
-## Why SpoolHoarder?
+## Why Spool Hoarder?
 
 Because filament adds up.
 
