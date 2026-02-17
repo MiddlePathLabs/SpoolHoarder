@@ -16,8 +16,8 @@ No spreadsheets. No guessing. No duplicate purchases.
 
 Track every spool in one place.
 
-<p align="center">
-  <img src="inventory.png" alt="Spool Hoarder" width="128">
+<p align="left">
+  <img src="filament.png" alt="Spool Hoarder" width="512">
 </p>
 
 - Brand, material, and color
@@ -46,8 +46,8 @@ No mental math required.
 
 ## Project-Based Usage Logging
 
-<p align="center">
-  <img src="projects.png" alt="Spool Hoarder" width="128">
+<p align="left">
+  <img src="projects.png" alt="Spool Hoarder" width="512">
 </p>
 
 Track filament usage per project.
@@ -65,8 +65,8 @@ Every gram accounted for.
 
 ## Statistics & Cost Analysis
 
-<p align="center">
-  <img src="stats.png" alt="Spool Hoarder" width="128">
+<p align="left">
+  <img src="stats.png" alt="Spool Hoarder" width="512">
 </p>
 
 SpoolHoarder doesn’t just track weight. It shows the big picture.
