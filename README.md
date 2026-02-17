@@ -1,3 +1,10 @@
+![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=apple&logoColor=white)
+![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+![macOS](https://img.shields.io/badge/macOS-000000?style=for-the-badge&logo=apple&logoColor=white)
+![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)
+![Issues Welcome](https://img.shields.io/badge/Issues-Welcome-brightgreen?style=for-the-badge&logo=github)
+
 <p align="left">
   <img src="logo.png" alt="Spool Hoarder" width="128">
 </p>
