@@ -1,5 +1,4 @@
 ![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=apple&logoColor=white)
-![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
 ![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
 ![macOS](https://img.shields.io/badge/macOS-000000?style=for-the-badge&logo=apple&logoColor=white)
 ![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)
@@ -27,12 +26,14 @@ Track every spool in one place.
   <img src="filament.png" alt="Spool Hoarder" width="512">
 </p>
 
-- Brand, material, and color
+- Brand, material, and color with exact hex swatches (single-color and multi-color gradients)
 - Remaining weight with visual progress indicator
 - Storage location
 - Spool size (1kg, 750g, etc.)
 - Purchase price
 - Technical parameters (flow ratio, K-factor, diameter, extruder/bed temperatures, transmission distance)
+- Favorite any spool to pin it to the top of your inventory
+- Tag spools and filter by tag to group related filaments
 
 You can see at a glance which spools are full, low, or nearly depleted.
 
@@ -102,6 +103,9 @@ Track filament usage per project.
 - Usage history with date, spool, and grams per entry
 - Project status tracking (active, complete, paused)
 - Total weight consumed displayed per project
+- Add a thumbnail photo from your camera or gallery
+- Tag projects and filter the project list by tag
+- Track estimated vs actual filament cost per project
 
 Every print becomes documented. Every gram accounted for.
 
@@ -161,6 +165,16 @@ Your data, your way.
 - Conflict detection flags spools that would be overwritten
 - Per-row error reporting surfaces problems without failing the whole import
 - Works with files exported from other tracking tools
+
+---
+
+## Print Cost Calculator
+
+Estimate the cost of a print before you start.
+
+- Enter filament weight and select a spool to pull its price automatically
+- See cost per gram and total estimated cost instantly
+- Useful for quoting jobs or deciding which spool to use
 
 ---
 
