@@ -10,9 +10,9 @@
 
 # Spool Hoarder
 
-Spool Hoarder is a filament inventory and usage tracking app for serious 3D printing.
+Spool Hoarder tracks filament inventory and usage for serious 3D printing.
 
-It gives you full visibility into what you own, how much is left, what it's worth, and where it's being used.
+See what you own, how much remains, what it's worth, and where it's used.
 
 No spreadsheets. No guessing. No duplicate purchases.
 
@@ -35,7 +35,7 @@ Track every spool in one place.
 - Favorite any spool to pin it to the top of your inventory
 - Tag spools and filter by tag to group related filaments
 
-You can see at a glance which spools are full, low, or nearly depleted.
+See at a glance which spools are full, low, or depleted.
 
 ---
 
@@ -84,7 +84,7 @@ Spool Hoarder connects to the SpoolmanDB global filament catalog.
 - Brand and material autocomplete pulls from thousands of real products
 - Selecting a filament auto-fills hex color codes, diameter, density, and temperature ranges
 - CSV imports are automatically normalized: casing corrected, missing fields filled from catalog data
-- Catalog is cached locally and works offline; refreshed in the background when stale
+- Catalog cached locally; works offline and refreshes in the background when stale
 
 ---
 
@@ -163,7 +163,7 @@ Your data, your way.
 - Import from a CSV to restore or migrate data
 - Import preview shows exactly what will be added or updated before you commit
 - Conflict detection flags spools that would be overwritten
-- Per-row error reporting surfaces problems without failing the whole import
+- Per-row error reporting surfaces problems without failing the entire import
 - Works with files exported from other tracking tools
 
 ---
@@ -184,7 +184,7 @@ Configure Spool Hoarder to match your workflow.
 
 - Choose which fields appear on spool cards: price, temperatures, location, size, diameter, features, and more
 - Set a default spool size used when adding new spools
-- Dark mode with System / Light / Dark toggle
+- Dark mode with System/Light/Dark toggle
 
 ---
 
@@ -194,13 +194,13 @@ Configure Spool Hoarder to match your workflow.
 - macOS
 - iOS
 
-Availability may vary by platform.
+Availability varies by platform.
 
 ---
 
 ## Why Spool Hoarder?
 
-Because filament adds up.
+Filament adds up.
 
 Weight.
 Cost.
