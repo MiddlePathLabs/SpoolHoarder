@@ -106,8 +106,24 @@ Track filament usage per project.
 - Add a thumbnail photo from your camera or gallery
 - Tag projects and filter the project list by tag
 - Track estimated vs actual filament cost per project
+- View spool usage across projects from the spool detail screen ("Used in Projects" with quick navigation)
+- Automatic Personal Log project for quick standalone usage tracking
 
 Every print becomes documented. Every gram accounted for.
+
+---
+
+## Data Backup & Restore
+
+Keep your full dataset portable across devices.
+
+- Export a ZIP data bundle with spools, projects, project filaments, usage logs, and thumbnails
+- Choose whether to include soft-deleted data for complete archival backups
+- Import preview summarizes exactly what will be added or updated
+- Reference validation blocks imports with broken project/spool links before writing data
+- Optional "Apply Weight Deductions" during usage-log import to update spool/project totals
+
+Works for full backup/restore workflows and device migration.
 
 ---
 
@@ -116,9 +132,9 @@ Every print becomes documented. Every gram accounted for.
 Find any spool instantly.
 
 - Full-text search across brand, material, name, notes, and features
-- Filter by material, color family, brand, diameter, and depleted status
+- Filter by material, color family, brand, diameter, depleted status, and favorites
 - Filter counts show how many spools match each option (e.g. "PLA (15)")
-- Sort by brand, material, color family, weight, price, or date added
+- Sort by brand, material, color family, weight, price, favorites, or date added
 - Sort direction toggles with a second tap
 
 ---
@@ -159,12 +175,23 @@ You know not just what you have — but what it's worth.
 
 Your data, your way.
 
-- Export your full inventory to a standards-compliant CSV file
-- Import from a CSV to restore or migrate data
+- Export your inventory to a standards-compliant CSV file
+- Import from CSV to migrate data from other trackers or update in bulk
 - Import preview shows exactly what will be added or updated before you commit
 - Conflict detection flags spools that would be overwritten
 - Per-row error reporting surfaces problems without failing the entire import
 - Works with files exported from other tracking tools
+
+---
+
+## Color Advisor Suggestions
+
+Get compatible, in-stock color ideas from your existing inventory.
+
+- Color theory suggestions shown on spool detail
+- Suggestions limited to compatible materials
+- Scored recommendations with quick explanations
+- Optional toggle in Settings
 
 ---
 
