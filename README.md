@@ -33,7 +33,6 @@ Track every spool in one place.
 - Purchase price
 - Technical parameters (flow ratio, K-factor, diameter, extruder/bed temperatures, transmission distance)
 - Favorite any spool to pin it to the top of your inventory
-- Tag spools and filter by tag to group related filaments
 
 See at a glance which spools are full, low, or depleted.
 
@@ -220,6 +219,7 @@ Configure Spool Hoarder to match your workflow.
 - Windows
 - macOS
 - iOS
+- Web (planned)
 
 Availability varies by platform.
 
@@ -234,3 +234,4 @@ Cost.
 Storage space.
 
 Spool Hoarder gives you control over all three.
+
