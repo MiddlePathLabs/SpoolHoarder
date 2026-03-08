@@ -194,13 +194,47 @@ Get compatible, in-stock color ideas from your existing inventory.
 
 ---
 
+## QR Code & NFC Tag Reading
+
+Read filament metadata directly from spool tags — no typing required.
+
+- Scan QR codes from OpenSpool, Spoolman, and OpenTag3D standards
+- Read NFC tags using OpenSpool (NTAG), OpenPrintTag/Prusa (NFC-V), and OpenTag3D formats
+- Bambu Lab RFID tag reading on Android via MIFARE Classic with HKDF-SHA256 key derivation
+- Tag data maps directly to spool fields (brand, material, color, temperatures, weight)
+- Integrates into the batch scan pipeline alongside camera and barcode scanning
+
+---
+
+## UPC Barcode Scanning
+
+Scan a filament barcode and create a spool instantly.
+
+- Recognizes UPC-A, EAN-13, and EAN-8 barcodes via camera
+- Local catalog learns from your scans — repeat barcodes are instant
+- Cross-references SpoolmanDB for enriched data
+- Falls back to AI vision if a barcode isn't recognized
+
+---
+
 ## Print Cost Calculator
 
 Estimate the cost of a print before you start.
 
 - Enter filament weight and select a spool to pull its price automatically
-- See cost per gram and total estimated cost instantly
+- Set quantity for batch printing — see per-item and total cost
 - Useful for quoting jobs or deciding which spool to use
+
+---
+
+## Printer Profiles
+
+Track your printers alongside your filament.
+
+- Store printer details: manufacturer, model, wattage, purchase cost, and expected lifetime
+- Cost estimation per print: electricity, depreciation, failure rate, and markup
+- Maintenance scheduling with interval tracking and notes
+- Assign printers to projects and usage logs for per-print cost breakdowns
 
 ---
 
@@ -211,6 +245,7 @@ Configure Spool Hoarder to match your workflow.
 - Choose which fields appear on spool cards: price, temperatures, location, size, diameter, features, and more
 - Set a default spool size used when adding new spools
 - Dark mode with System/Light/Dark toggle
+- Multiple color palettes: Copper, Dragon Hoard (teal), Obsidian (warm gray)
 
 ---
 
