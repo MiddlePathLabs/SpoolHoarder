@@ -10,263 +10,148 @@
 
 # Spool Hoarder
 
-Spool Hoarder tracks filament inventory and usage for serious 3D printing.
-
-See what you own, how much remains, what it's worth, and where it's used.
-
-No spreadsheets. No guessing. No duplicate purchases.
+Spool Hoarder tracks filament inventory and usage for 3D printing. See what you own, how much remains, what it's worth, and where it's used.
 
 ---
 
-## Inventory Overview
-
-Track every spool in one place.
+## Inventory
 
 <p align="left">
   <img src="filament.png" alt="Spool Hoarder" width="512">
 </p>
 
-- Brand, material, and color with exact hex swatches (single-color and multi-color gradients)
-- Remaining weight with visual progress indicator
-- Storage location
-- Spool size (1kg, 750g, etc.)
-- Purchase price
-- Technical parameters (flow ratio, K-factor, diameter, extruder/bed temperatures, transmission distance)
-- Favorite any spool to pin it to the top of your inventory
+Track everything in one place. Each spool shows brand, material, color (exact hex codes, including gradients), remaining weight, storage location, spool size, purchase price, and technical print parameters. Full, partial, and empty spools look different—you can tell at a glance what's ready to print. Favorite spools pin to the top.
 
-See at a glance which spools are full, low, or depleted.
+Technical parameters include flow ratio, K-factor, diameter, extruder and bed temperatures, and transmission distance.
 
 ---
 
-## Precise Weight Tracking
+## Weight Tracking
 
-Each spool includes a live remaining-weight slider.
-
-- Adjust usage in seconds
-- Quick-adjust buttons (−50g, −10g, +10g, +50g)
-- See exact grams remaining
-- Prevent accidental overuse
-
-No mental math required.
+After a print, log what you used with a slider. Quick buttons (−50g, −10g, +10g, +50g) make it fast. Exact grams are always visible, and the slider stops you from accidentally recording more than the spool actually contains.
 
 ---
 
-## AI-Powered Spool Recognition
+## AI Spool Recognition
 
-Point your camera at a spool. Spool Hoarder does the rest.
+Point your camera at a spool label. The app extracts brand, material, name, color, hex codes, diameter, and temperatures.
 
-- Photograph a spool label to extract brand, material, name, color, hex codes, diameter, and temperatures automatically
-- Supports Google Gemini, Anthropic Claude, and OpenAI vision APIs
-- API keys stored securely in the system keychain
-- Extracted data populates the Add Spool form for your review before saving
-- Brand and material names are normalized against the global filament catalog after scanning
+You can use Google Gemini, Anthropic Claude, or OpenAI. API keys are stored in your system keychain. Extracted data goes into the Add Spool form for review before saving, and brand/material names normalize against the global filament catalog.
 
 ---
 
 ## Batch Scanning
 
-Scan an entire shelf of spools without slowing down.
+Clear a shelf in one pass. The camera preview shows real-time feedback for each spool. On iOS and macOS, OCR runs on-device—no internet needed. Review everything together, fix whatever looks wrong, then bulk-add.
 
-- Live camera preview with per-spool scan feedback
-- On-device OCR for iOS and macOS (no internet required for supported devices)
-- Review all scanned results at once with confidence indicators
-- Edit any entry before bulk-adding to inventory
-
-Scan a box of twenty spools in minutes, not hours.
+Working through a box of twenty spools takes a few minutes.
 
 ---
 
 ## SpoolmanDB Integration
 
-Spool Hoarder connects to the SpoolmanDB global filament catalog.
+Spool Hoarder connects to the SpoolmanDB global filament catalog. Autocomplete pulls from thousands of real products. Select a filament and hex codes, diameter, density, and temperature ranges fill in automatically. CSV imports also use the catalog to normalize casing and fill missing data.
 
-- Brand and material autocomplete pulls from thousands of real products
-- Selecting a filament auto-fills hex color codes, diameter, density, and temperature ranges
-- CSV imports are automatically normalized: casing corrected, missing fields filled from catalog data
-- Catalog cached locally; works offline and refreshes in the background when stale
+The catalog caches locally, so it works offline.
 
 ---
 
-## Project-Based Usage Logging
+## Projects
 
 <p align="left">
   <img src="projects.png" alt="Spool Hoarder" width="512">
 </p>
 
-Track filament usage per project.
+Track filament usage per project. Define what each project needs (brand, material, color, weight), then log grams from specific spools. Weights update automatically.
 
-- Assign multiple filament specifications to a project (brand, material, color, required weight)
-- Log exact grams consumed per spool
-- Automatic inventory deduction — spool weight updates immediately
-- Visual warnings when a selected spool doesn't match a project's target filament
-- Usage history with date, spool, and grams per entry
-- Project status tracking (active, complete, paused)
-- Total weight consumed displayed per project
-- Add a thumbnail photo from your camera or gallery
-- Tag projects and filter the project list by tag
-- Track estimated vs actual filament cost per project
-- View spool usage across projects from the spool detail screen ("Used in Projects" with quick navigation)
-- Automatic Personal Log project for quick standalone usage tracking
+You'll get a warning if you pick a spool that doesn't match what your project specified. Usage history shows date, spool, and grams per entry. Track status (active, complete, paused), total weight consumed, estimated vs actual cost. Add thumbnails, tag projects for filtering. View where each spool has been used across all projects.
 
-Every print becomes documented. Every gram accounted for.
+There's also a Personal Log project for quick standalone tracking.
 
 ---
 
-## Data Backup & Restore
+## Backup & Restore
 
-Keep your full dataset portable across devices.
-
-- Export a ZIP data bundle with spools, projects, project filaments, usage logs, and thumbnails
-- Choose whether to include soft-deleted data for complete archival backups
-- Import preview summarizes exactly what will be added or updated
-- Reference validation blocks imports with broken project/spool links before writing data
-- Optional "Apply Weight Deductions" during usage-log import to update spool/project totals
-
-Works for full backup/restore workflows and device migration.
+Export everything to a ZIP—spools, projects, usage logs, thumbnails. Optionally include deleted data for archival imports. The import preview shows what will change before you commit. Reference validation blocks imports with broken links. Works for regular backups or moving to a new device.
 
 ---
 
-## Smart Search, Filter, and Sort
+## Search, Filter, Sort
 
-Find any spool instantly.
-
-- Full-text search across brand, material, name, notes, and features
-- Filter by material, color family, brand, diameter, depleted status, and favorites
-- Filter counts show how many spools match each option (e.g. "PLA (15)")
-- Sort by brand, material, color family, weight, price, favorites, or date added
-- Sort direction toggles with a second tap
+Search across brand, material, name, notes, features. Filter by material, color family, brand, diameter, depletion, favorites (with counts). Sort by brand, material, color family, weight, price, favorites, or date added.
 
 ---
 
-## Inventory Grouping
+## Inventory Views
 
-View your inventory the way that makes sense for your setup.
+Three options:
 
-- **Flat** — every spool listed individually
-- **Product** — identical filaments grouped into expandable cards with combined weight
-- **State** — groups by spool status (full, partial, depleted)
-
-Switch modes from the inventory screen or set a default in Settings.
+- **Flat** – every spool listed
+- **Product** – identical filaments grouped with combined weight
+- **State** – grouped by full, partial, or depleted
 
 ---
 
-## Statistics & Cost Analysis
+## Statistics
 
 <p align="left">
   <img src="stats.png" alt="Spool Hoarder" width="512">
 </p>
 
-Spool Hoarder doesn't just track weight. It shows the big picture.
-
-- Total spool count
-- Active vs depleted inventory
-- Total inventory value
-- Total remaining weight in kg and lbs
-- Average cost per kg and per gram
-- Value and weight breakdown by material
-- Low-stock warnings
-
-You know not just what you have — but what it's worth.
+Total spool count, active vs depleted inventory, total value, remaining weight (kg and lbs), average cost per kg and gram, material breakdown, low-stock warnings.
 
 ---
 
 ## CSV Import & Export
 
-Your data, your way.
-
-- Export your inventory to a standards-compliant CSV file
-- Import from CSV to migrate data from other trackers or update in bulk
-- Import preview shows exactly what will be added or updated before you commit
-- Conflict detection flags spools that would be overwritten
-- Per-row error reporting surfaces problems without failing the entire import
-- Works with files exported from other tracking tools
+Export to CSV, import to migrate or bulk-update. The preview shows what changes. Conflict detection flags overwrites. Errors are reported per row. Also handles exports from other tracking tools.
 
 ---
 
-## Color Advisor Suggestions
+## Color Advisor
 
-Get compatible, in-stock color ideas from your existing inventory.
-
-- Color theory suggestions shown on spool detail
-- Suggestions limited to compatible materials
-- Scored recommendations with quick explanations
-- Optional toggle in Settings
+On the spool detail screen, get color suggestions from your own inventory based on color theory. Limited to compatible materials, scored by relevance, with explanations. Toggle in Settings.
 
 ---
 
-## QR Code & NFC Tag Reading
+## QR & NFC
 
-Read filament metadata directly from spool tags — no typing required.
+Read filament metadata from spool tags. QR codes from OpenSpool, Spoolman, OpenTag3D. NFC via OpenSpool (NTAG), OpenPrintTag/Prusa (NFC-V), OpenTag3D. Bambu Lab RFID works on Android (MIFARE Classic).
 
-- Scan QR codes from OpenSpool, Spoolman, and OpenTag3D standards
-- Read NFC tags using OpenSpool (NTAG), OpenPrintTag/Prusa (NFC-V), and OpenTag3D formats
-- Bambu Lab RFID tag reading on Android via MIFARE Classic with HKDF-SHA256 key derivation
-- Tag data maps directly to spool fields (brand, material, color, temperatures, weight)
-- Integrates into the batch scan pipeline alongside camera and barcode scanning
+Tag data maps to spool fields and integrates into batch scanning.
 
 ---
 
 ## UPC Barcode Scanning
 
-Scan a filament barcode and create a spool instantly.
-
-- Recognizes UPC-A, EAN-13, and EAN-8 barcodes via camera
-- Local catalog learns from your scans — repeat barcodes are instant
-- Cross-references SpoolmanDB for enriched data
-- Falls back to AI vision if a barcode isn't recognized
+Scan a filament barcode to create a spool. Reads UPC-A, EAN-13, EAN-8. The local catalog learns from your scans—repeat barcodes are instant. Cross-references SpoolmanDB, falls back to AI vision if unrecognized.
 
 ---
 
 ## Print Cost Calculator
 
-Estimate the cost of a print before you start.
-
-- Enter filament weight and select a spool to pull its price automatically
-- Set quantity for batch printing — see per-item and total cost
-- Useful for quoting jobs or deciding which spool to use
+Enter filament weight, pick a spool to pull its price, set quantity for batch prints, and see per-item and total cost.
 
 ---
 
 ## Printer Profiles
 
-Track your printers alongside your filament.
-
-- Store printer details: manufacturer, model, wattage, purchase cost, and expected lifetime
-- Cost estimation per print: electricity, depreciation, failure rate, and markup
-- Maintenance scheduling with interval tracking and notes
-- Assign printers to projects and usage logs for per-print cost breakdowns
+Store printer details: manufacturer, model, wattage, purchase cost, expected lifetime. Cost estimates include electricity, depreciation, failure rate, markup. Track maintenance with intervals and notes. Assign printers to projects and usage logs.
 
 ---
 
-## Customizable Display
+## Display Options
 
-Configure Spool Hoarder to match your workflow.
-
-- Choose which fields appear on spool cards: price, temperatures, location, size, diameter, features, and more
-- Set a default spool size used when adding new spools
-- Dark mode with System/Light/Dark toggle
-- Multiple color palettes: Copper, Dragon Hoard (teal), Obsidian (warm gray)
+Choose which fields appear on spool cards. Set a default spool size. Toggle dark mode (System/Light/Dark). Color palettes: Copper, Dragon Hoard (teal), Obsidian (warm gray).
 
 ---
 
 ## Platforms
 
-- Windows
-- macOS
-- iOS
-- Web (planned)
-
-Availability varies by platform.
+Windows, macOS, iOS. Web is planned.
 
 ---
 
 ## Why Spool Hoarder?
 
-Filament adds up.
-
-Weight.
-Cost.
-Storage space.
-
-Spool Hoarder gives you control over all three.
-
+Filament accumulates. It takes up space, costs money, and eventually you buy three spools of the same shade of blue.
