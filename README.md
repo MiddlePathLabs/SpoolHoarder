@@ -16,10 +16,6 @@ Spool Hoarder tracks filament inventory and usage for 3D printing. See what you 
 
 ## Inventory
 
-<p align="left">
-  <img src="filament.png" alt="Spool Hoarder" width="512">
-</p>
-
 Track everything in one place. Each spool shows brand, material, color (exact hex codes, including gradients), remaining weight, storage location, spool size, purchase price, drying history, and technical print parameters. Full, partial, and empty spools look distinct—see at a glance what's ready to print. Favorite spools pin to the top.
 
 Technical parameters include flow ratio, K-factor, diameter, extruder and bed temperatures, and transmission distance.
@@ -58,10 +54,6 @@ The catalog caches locally for offline use.
 
 ## Projects
 
-<p align="left">
-  <img src="projects.png" alt="Spool Hoarder" width="512">
-</p>
-
 Track filament usage per project. Define what each project needs (brand, material, color, weight), then log grams from specific spools. Weights update automatically.
 
 You'll get a warning if you pick a spool that doesn't match what your project specified. Usage history shows date, spool, and grams per entry. Track status (active, complete, paused), total weight consumed, estimated vs actual cost. Add thumbnails, tag projects for filtering. View where each spool has been used across all projects.
@@ -93,10 +85,6 @@ Three options:
 ---
 
 ## Statistics
-
-<p align="left">
-  <img src="stats.png" alt="Spool Hoarder" width="512">
-</p>
 
 Total spool count, active vs depleted inventory, total value, remaining weight (kg and lbs), average cost per kg and gram, material breakdown, low-stock warnings.
 
