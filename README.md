@@ -20,7 +20,7 @@ Spool Hoarder tracks filament inventory and usage for 3D printing. See what you 
   <img src="filament.png" alt="Spool Hoarder" width="512">
 </p>
 
-Track everything in one place. Each spool shows brand, material, color (exact hex codes, including gradients), remaining weight, storage location, spool size, purchase price, and technical print parameters. Full, partial, and empty spools look different—you can tell at a glance what's ready to print. Favorite spools pin to the top.
+Track everything in one place. Each spool shows brand, material, color (exact hex codes, including gradients), remaining weight, storage location, spool size, purchase price, drying history, and technical print parameters. Full, partial, and empty spools look distinct—see at a glance what's ready to print. Favorite spools pin to the top.
 
 Technical parameters include flow ratio, K-factor, diameter, extruder and bed temperatures, and transmission distance.
 
@@ -28,7 +28,7 @@ Technical parameters include flow ratio, K-factor, diameter, extruder and bed te
 
 ## Weight Tracking
 
-After a print, log what you used with a slider. Quick buttons (−50g, −10g, +10g, +50g) make it fast. Exact grams are always visible, and the slider stops you from accidentally recording more than the spool actually contains.
+After a print, log what you used with a slider. Quick buttons (−50g, −10g, +10g, +50g) make it fast. Exact grams are always visible, and the slider stops you from accidentally recording more than the spool contains.
 
 ---
 
@@ -36,13 +36,13 @@ After a print, log what you used with a slider. Quick buttons (−50g, −10g, +
 
 Point your camera at a spool label. The app extracts brand, material, name, color, hex codes, diameter, and temperatures.
 
-You can use Google Gemini, Anthropic Claude, or OpenAI. API keys are stored in your system keychain. Extracted data goes into the Add Spool form for review before saving, and brand/material names normalize against the global filament catalog.
+Choose Google Gemini, Anthropic Claude, OpenAI, or on-device Apple Intelligence (iOS/macOS). API keys stay in your system keychain. The app populates the Add Spool form for review before saving, normalizing brand and material names against the global filament catalog.
 
 ---
 
 ## Batch Scanning
 
-Clear a shelf in one pass. The camera preview shows real-time feedback for each spool. On iOS and macOS, OCR runs on-device—no internet needed. Review everything together, fix whatever looks wrong, then bulk-add.
+Clear a shelf in one pass. The camera preview shows real-time feedback for each spool. On iOS and macOS, OCR runs on-device—no internet required. Review everything together, fix errors, then bulk-add.
 
 Working through a box of twenty spools takes a few minutes.
 
@@ -50,9 +50,9 @@ Working through a box of twenty spools takes a few minutes.
 
 ## SpoolmanDB Integration
 
-Spool Hoarder connects to the SpoolmanDB global filament catalog. Autocomplete pulls from thousands of real products. Select a filament and hex codes, diameter, density, and temperature ranges fill in automatically. CSV imports also use the catalog to normalize casing and fill missing data.
+Spool Hoarder connects to the SpoolmanDB global filament catalog. Autocomplete pulls from thousands of real products. Select a filament and hex codes, diameter, density, and temperature ranges fill in automatically. CSV imports use the catalog to normalize casing and fill missing data.
 
-The catalog caches locally, so it works offline.
+The catalog caches locally for offline use.
 
 ---
 
@@ -66,13 +66,13 @@ Track filament usage per project. Define what each project needs (brand, materia
 
 You'll get a warning if you pick a spool that doesn't match what your project specified. Usage history shows date, spool, and grams per entry. Track status (active, complete, paused), total weight consumed, estimated vs actual cost. Add thumbnails, tag projects for filtering. View where each spool has been used across all projects.
 
-There's also a Personal Log project for quick standalone tracking.
+A Personal Log project provides quick standalone tracking.
 
 ---
 
 ## Backup & Restore
 
-Export everything to a ZIP—spools, projects, usage logs, thumbnails. Optionally include deleted data for archival imports. The import preview shows what will change before you commit. Reference validation blocks imports with broken links. Works for regular backups or moving to a new device.
+Export everything to a ZIP—spools, projects, usage logs, thumbnails. Optionally include deleted data for archival imports. The import preview shows what will change before you commit. Reference validation blocks imports with broken links. Rolling auto-backup keeps your data safe for regular backups or moving to a new device.
 
 ---
 
@@ -104,7 +104,13 @@ Total spool count, active vs depleted inventory, total value, remaining weight (
 
 ## CSV Import & Export
 
-Export to CSV, import to migrate or bulk-update. The preview shows what changes. Conflict detection flags overwrites. Errors are reported per row. Also handles exports from other tracking tools.
+Export to CSV, import to migrate or bulk-update. The preview shows what changes. Conflict detection flags overwrites. Errors appear per row. Handles exports from other tracking tools, including SpoolStock CSV compatibility.
+
+---
+
+## Shareable Cards
+
+Generate polished spool profile, project summary, usage breakdown, and hoard summary cards you can share or save.
 
 ---
 
@@ -142,13 +148,13 @@ Store printer details: manufacturer, model, wattage, purchase cost, expected lif
 
 ## Display Options
 
-Choose which fields appear on spool cards. Set a default spool size. Toggle dark mode (System/Light/Dark). Color palettes: Copper, Dragon Hoard (teal), Obsidian (warm gray).
+Choose which fields appear on spool cards. Set a default spool size. Toggle dark mode (System/Light/Dark). Color palettes: Copper, Dragon Hoard (teal), Twilight Mist, Obsidian (warm gray).
 
 ---
 
 ## Platforms
 
-Windows, macOS, iOS. Web is planned.
+iOS, macOS, Windows.
 
 ---
 
