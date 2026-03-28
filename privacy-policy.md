@@ -1,7 +1,7 @@
 # Privacy Policy
 
 **SpoolHoarder**
-**Last Updated:** February 16, 2026
+**Last Updated:** March 27, 2026
 
 ## Introduction
 
@@ -27,10 +27,21 @@ All data you enter into SpoolHoarder is stored **locally on your device**:
 - No personal information (name, email, phone number, address)
 - No device identifiers or advertising IDs
 - No usage analytics or telemetry
-- No crash reports
 - No location data
 - No browsing history
 - No contacts or calendar data
+
+### Crash and Error Reporting
+
+On iOS, Android, and macOS, the App uses **Firebase Crashlytics** to collect anonymized crash and error reports in release builds. This helps us identify and fix bugs. Crashlytics may collect:
+
+- Device model and OS version
+- Stack traces and error logs
+- Timestamps of errors
+
+Crashlytics does **not** collect personal information, user-entered data, inventory contents, or any of the data listed in "Information You Provide" above. Crash reporting is not present on Windows or Web builds.
+
+For more details, see [Google's Firebase Privacy Policy](https://policies.google.com/privacy).
 
 ## Optional Features With Network Access
 
@@ -67,11 +78,11 @@ The App downloads a public filament catalog from SpoolmanDB (a community-maintai
 
 ### Google Fonts
 
-The App uses the Google Fonts package, which may download font files from Google's servers on first use. No user data is transmitted during this process.
+The App uses the Google Fonts package with bundled font files. Fonts are included with the App and are **not** downloaded from Google's servers at runtime. No user data is transmitted.
 
 ## Data Storage and Security
 
-- **Local database:** Your inventory is stored in a SQLite database on your device. The database uses WAL mode for reliability and is not accessible to other apps.
+- **Local database:** Your inventory is stored in an encrypted SQLite database on your device (using SQLCipher). The database uses WAL mode for reliability and is not accessible to other apps. The encryption key is stored in platform-native secure storage.
 - **Secure storage:** AI API keys are encrypted using platform-native secure storage (iOS Keychain, Android Keystore, Windows DPAPI).
 - **Preferences:** Non-sensitive settings (theme, sort order) are stored in platform-standard preferences storage.
 - **No cloud storage:** The public version of SpoolHoarder does not include cloud sync. All data remains on your device.
@@ -99,11 +110,10 @@ SpoolHoarder does not include:
 
 - Advertising SDKs or ad networks
 - Analytics or telemetry services
-- Crash reporting services
 - Social media SDKs
 - Data brokers or data-sharing partnerships
 
-The only third-party network communication occurs through the optional features described above (AI vision APIs, SpoolmanDB catalog, Google Fonts), all of which are either user-initiated or involve no user data.
+The only third-party network communication occurs through the optional features described above (AI vision APIs, SpoolmanDB catalog, crash reporting) and bundled Google Fonts, all of which are either user-initiated or involve no user data.
 
 ## Data Retention and Deletion
 
