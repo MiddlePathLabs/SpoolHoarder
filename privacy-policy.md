@@ -1,135 +1,156 @@
 # Privacy Policy
 
-**SpoolHoarder**
-**Last Updated:** March 27, 2026
+**SpoolHoarder**  
+**Last Updated:** April 5, 2026
 
 ## Introduction
 
-SpoolHoarder ("the App") is a 3D printer filament inventory management application. This Privacy Policy explains how information is collected, used, and protected when you use the App on iOS, Android, Windows, or Web.
+SpoolHoarder ("the App") is a 3D printer filament inventory management application.
 
-SpoolHoarder is designed with a **local-first architecture**. Your inventory data is stored on your device and is not transmitted to any server unless you explicitly use optional features described below.
+The App is designed **local-first**: your spool, project, and usage data is stored on your device. Some optional features use network services and may send data off-device, as described below.
 
-## Information We Collect
+## What Data We Process
 
-### Information You Provide
+### Data you enter in the App (local by default)
 
-All data you enter into SpoolHoarder is stored **locally on your device**:
+SpoolHoarder stores your inventory and project data locally, including:
 
-- Spool inventory details (brand, material, color, weight, price, temperatures, notes)
-- Project names, weight usage, and usage logs
-- Inventory location labels
-- App preferences (theme, sort order, display settings)
+- Spool details (brand, material, colors, weights, prices, temperatures, notes)
+- Project details and usage logs
+- Preferences and app settings
 
-**We do not collect, transmit, or have access to any of this data.**
+On native platforms, the app uses SQLCipher keying with key material in secure storage for encrypted databases. Some legacy installs created before encryption support may still have plaintext local databases unless manually migrated. On web builds, storage uses browser-supported Drift/WASM storage.
 
-### Information We Do Not Collect
+### Account and cloud data (only when you use cloud features)
 
-- No personal information (name, email, phone number, address)
-- No device identifiers or advertising IDs
-- No usage analytics or telemetry
-- No location data
-- No browsing history
-- No contacts or calendar data
+If you choose to sign in and use cloud-backed features, SpoolHoarder processes account and cloud data through Supabase, such as:
 
-### Crash and Error Reporting
+- Account identifiers (for example, email and auth user ID)
+- Synced inventory/project/usage data
+- Subscription and credit status
+- Purchase validation metadata
 
-On iOS, Android, and macOS, the App uses **Firebase Crashlytics** to collect anonymized crash and error reports in release builds. This helps us identify and fix bugs. Crashlytics may collect:
+Cloud sync and cloud account features are optional and feature-flag dependent.
 
-- Device model and OS version
-- Stack traces and error logs
-- Timestamps of errors
+### Feedback data (optional)
 
-Crashlytics does **not** collect personal information, user-entered data, inventory contents, or any of the data listed in "Information You Provide" above. Crash reporting is not present on Windows or Web builds.
+If you submit feedback from the in-app Contact form, we process:
 
-For more details, see [Google's Firebase Privacy Policy](https://policies.google.com/privacy).
+- Your message
+- Optional email address (if you provide one)
+- App version and platform
+- Optional diagnostic logs (if you choose to attach them)
 
-## Optional Features With Network Access
+## Crash and Error Reporting
 
-The following features make network requests only when you explicitly use them. None are required for core App functionality.
+On iOS, Android, and macOS release builds, the App uses **Firebase Crashlytics** for crash and error reporting. Crash reporting is not enabled on Windows or Web.
 
-### AI-Powered Spool Scanning (User-Configured)
+Crash/error reports can include technical diagnostics such as:
 
-You may optionally configure AI vision to extract spool data from photos. This feature:
+- Device and OS information
+- Crash stack traces
+- Error timestamps
+- App log context associated with errors
 
-- Is **disabled by default** and requires you to provide your own API key from a supported provider (Google Gemini, Anthropic Claude, or OpenAI)
-- Sends a compressed photo to your chosen AI provider **only when you explicitly tap "Scan"**
-- **Strips all EXIF metadata** (GPS coordinates, camera model, timestamps) from photos before transmission
-- Compresses images to a maximum of 1024x1024 pixels before sending
-- Deletes temporary image files immediately after processing
-- API keys are stored in your device's secure keychain/keystore (iOS Keychain, Android Keystore, or Windows DPAPI) and are never transmitted elsewhere
+For details, see [Google's Firebase Privacy Policy](https://policies.google.com/privacy).
 
-When you use this feature, the photo is subject to the privacy policy of your chosen AI provider:
+## Optional Network Features
 
-- [Google Gemini API Privacy](https://ai.google.dev/terms)
-- [Anthropic API Privacy](https://www.anthropic.com/privacy)
-- [OpenAI API Privacy](https://openai.com/policies/privacy-policy)
+These features make network requests only when enabled/used.
 
-### On-Device OCR (iOS and macOS Only)
+### Cloud account, sync, and subscription services (Supabase)
 
-On supported Apple devices, text recognition uses Apple's on-device Vision framework. **No data leaves your device** when using on-device OCR.
+When enabled and used, the App can connect to Supabase for:
 
-### Filament Catalog (SpoolmanDB)
+- Sign-in (email/password and OAuth providers)
+- Data sync across devices
+- Subscription/credit status checks
+- Account deletion of synced cloud records
 
-The App downloads a public filament catalog from SpoolmanDB (a community-maintained open-source database hosted on GitHub Pages) to provide brand and material suggestions. This download:
+### AI-powered spool scanning
 
-- Sends no user data (read-only HTTP GET request)
-- Downloads only public catalog data (brand names, material types, color codes)
-- Caches locally and refreshes only if older than 7 days
+SpoolHoarder supports multiple AI scan paths:
 
-### Google Fonts
+- **On-Device mode (Apple platforms):** OCR/parsing runs locally on-device.
+- **Included cloud scan mode:** photo is sent through SpoolHoarder cloud function for processing.
+- **Legacy BYOK provider mode (if configured):** photo may be sent directly to configured external AI provider APIs.
 
-The App uses the Google Fonts package with bundled font files. Fonts are included with the App and are **not** downloaded from Google's servers at runtime. No user data is transmitted.
+For cloud scan paths:
 
-## Data Storage and Security
+- Images are compressed (up to 1024x1024 for scan flows)
+- EXIF metadata is stripped before transmission
+- Temporary image files are deleted after processing (best effort)
 
-- **Local database:** Your inventory is stored in an encrypted SQLite database on your device (using SQLCipher). The database uses WAL mode for reliability and is not accessible to other apps. The encryption key is stored in platform-native secure storage.
-- **Secure storage:** AI API keys are encrypted using platform-native secure storage (iOS Keychain, Android Keystore, Windows DPAPI).
-- **Preferences:** Non-sensitive settings (theme, sort order) are stored in platform-standard preferences storage.
-- **No cloud storage:** The public version of SpoolHoarder does not include cloud sync. All data remains on your device.
+### Filament catalog (SpoolmanDB)
 
-## Data Export
+The App downloads public catalog data from SpoolmanDB for suggestions and normalization. This request does not include your inventory payload and is cached locally (refresh window up to 7 days).
 
-You can export your inventory data to CSV at any time using the in-app export feature. This gives you full control over your data.
+### Optional self-hosted Spoolman server lookup
 
-## Camera and Photo Library Access
+If you enable Spoolman QR lookup and configure a server URL, the App may query your configured Spoolman server to resolve tag/QR spool references.
 
-The App requests camera and photo library permissions **only** for the optional AI spool scanning feature. These permissions are:
+### Contact/feedback submission
 
-- **Camera:** Used to photograph filament spools for data extraction
-- **Photo Library:** Used to select existing spool photos for data extraction
+If you use Contact Us, the App sends feedback payloads to a Supabase Edge Function, including optional logs when selected.
 
-If you do not use the AI scanning feature, you can deny these permissions without affecting any other App functionality.
+### In-app purchase validation and credit provisioning
 
-## Children's Privacy
+On supported platforms, purchase validation and credit/subscription provisioning calls are made to backend endpoints.
 
-SpoolHoarder does not knowingly collect any personal information from anyone, including children under the age of 13. The App does not require account creation, does not collect personal data, and contains no advertising or tracking.
+## Permissions
 
-## Third-Party Services
+### Camera and Photo Library
 
-SpoolHoarder does not include:
+When granted, camera/gallery access is used for:
 
-- Advertising SDKs or ad networks
-- Analytics or telemetry services
-- Social media SDKs
-- Data brokers or data-sharing partnerships
+- AI spool scanning
+- Project thumbnail photos
+- Spool sample print photos
 
-The only third-party network communication occurs through the optional features described above (AI vision APIs, SpoolmanDB catalog, crash reporting) and bundled Google Fonts, all of which are either user-initiated or involve no user data.
+You can deny permissions, but related photo-based features will be unavailable.
+
+### NFC (where supported)
+
+NFC permission is used for optional filament tag reading features.
+
+## Security and Storage
+
+- **Local database:** SQLCipher keying is used on native encrypted databases, with key material in secure storage (legacy plaintext databases may exist on older installs).
+- **Secure storage:** used for sensitive local secrets/tokens (for example, auth session persistence and API keys where applicable).
+- **Preferences:** non-sensitive app settings are stored in platform preferences.
+- **Log files:** diagnostic logs are stored locally and can be manually exported/shared by you; they may include technical app activity and error context.
 
 ## Data Retention and Deletion
 
-Since all data is stored locally on your device:
+### Local data
 
-- **Retention:** Data persists on your device until you delete it within the App or uninstall the App.
-- **Deletion:** Uninstalling the App removes all App data from your device. You can also delete individual spools, projects, or all data from within the App at any time.
-- **No remote data:** There is no server-side data to delete, as we do not collect or store any data remotely.
+- Data remains on your device until you delete it in-app or uninstall.
 
-## Changes to This Privacy Policy
+### Cloud data (if you used cloud features)
 
-We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last Updated" date. Continued use of the App after changes constitutes acceptance of the revised policy.
+- Synced/account-linked data may be stored remotely while your account is active.
+- You can sign out and request account deletion from within the app's sync/account controls.
+- Feedback submissions and uploaded attachments may be retained for support/debug workflows.
 
-## Your Rights
+## Third-Party Services
 
-Because SpoolHoarder does not collect personal data, there is no personal data to access, correct, or delete on our end. All your data is under your direct control on your device. You can export, modify, or delete it at any time through the App.
+SpoolHoarder may interact with:
+
+- [Supabase](https://supabase.com/privacy) (auth, sync, edge functions, storage)
+- [Firebase Crashlytics](https://policies.google.com/privacy) (crash/error reporting on supported platforms)
+- [Google Gemini API](https://ai.google.dev/terms) (cloud vision in included cloud scan path)
+- [OpenAI](https://openai.com/policies/privacy-policy) and [Anthropic](https://www.anthropic.com/privacy) (legacy BYOK AI provider paths, if configured)
+- SpoolmanDB public catalog (GitHub Pages-hosted public dataset)
+
+SpoolHoarder does **not** include advertising SDKs or ad-network tracking.
+
+## Children's Privacy
+
+SpoolHoarder is not directed to children under 13, and we do not knowingly collect personal information from children under 13.
+
+## Changes to This Policy
+
+We may update this Privacy Policy from time to time. Updates will be posted here with a revised "Last Updated" date.
 
 ## Contact
 
@@ -137,4 +158,4 @@ If you have questions about this Privacy Policy, please open an issue on our [Gi
 
 ---
 
-*This privacy policy applies to SpoolHoarder on all platforms: iOS, Android, Windows, and Web.*
+*This Privacy Policy applies to SpoolHoarder on supported platforms, including iOS, Android, macOS, Windows, and Web builds where available.*
