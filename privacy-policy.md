@@ -17,6 +17,9 @@ SpoolHoarder stores your inventory and project data locally, including:
 
 - Spool details (brand, material, colors, weights, prices, temperatures, notes)
 - Project details and usage logs
+- Printer profiles and related settings
+- Optional local photos you attach, such as project thumbnails and spool sample print photos
+- On supported desktop platforms, Print Library metadata such as library root paths, indexed model/file paths, preview or cover image paths, notes, tags, and extracted file metadata
 - Preferences and app settings
 
 On native platforms, the app uses SQLCipher keying with key material in secure storage for encrypted databases. Some legacy installs created before encryption support may still have plaintext local databases unless manually migrated. On web builds, storage uses browser-supported Drift/WASM storage.
@@ -40,6 +43,9 @@ If you submit feedback from the in-app Contact form, we process:
 - Optional email address (if you provide one)
 - App version and platform
 - Optional diagnostic logs (if you choose to attach them)
+- If you are signed in, your authenticated account ID may also be associated with the submission
+
+If backend notifications are configured, feedback details may also be forwarded to a maintainer support inbox for review.
 
 ## Crash and Error Reporting
 
@@ -62,10 +68,11 @@ These features make network requests only when enabled/used.
 
 When enabled and used, the App can connect to Supabase for:
 
-- Sign-in (email/password and OAuth providers)
+- Sign-in (email/password and supported OAuth providers such as Apple or Google)
 - Data sync across devices
 - Subscription/credit status checks
-- Account deletion of synced cloud records
+- Purchase validation, credit provisioning, and related account status updates
+- Deletion of synced cloud records through current in-app account/data deletion controls
 
 ### AI-powered spool scanning
 
@@ -111,7 +118,7 @@ You can deny permissions, but related photo-based features will be unavailable.
 
 ### NFC (where supported)
 
-NFC permission is used for optional filament tag reading features.
+NFC permission is used for optional filament tag reading and writing features.
 
 ## Security and Storage
 
@@ -129,7 +136,8 @@ NFC permission is used for optional filament tag reading features.
 ### Cloud data (if you used cloud features)
 
 - Synced/account-linked data may be stored remotely while your account is active.
-- You can sign out and request account deletion from within the app's sync/account controls.
+- Current in-app deletion controls are designed to delete synced cloud app data and sign you out. In some cases, the underlying authentication account itself may require separate backend or administrative deletion handling.
+- If an authentication account is deleted, we may retain a minimal record that the account existed and was deleted (for example, an internal identifier or its one-way hash and a deletion timestamp) for security, fraud-prevention, operational integrity, or compliance purposes.
 - Feedback submissions and uploaded attachments may be retained for support/debug workflows.
 
 ## Third-Party Services
@@ -141,6 +149,7 @@ SpoolHoarder may interact with:
 - [Google Gemini API](https://ai.google.dev/terms) (cloud vision in included cloud scan path)
 - [OpenAI](https://openai.com/policies/privacy-policy) and [Anthropic](https://www.anthropic.com/privacy) (legacy BYOK AI provider paths, if configured)
 - SpoolmanDB public catalog (GitHub Pages-hosted public dataset)
+- Email delivery infrastructure used for feedback notifications, if configured by us
 
 SpoolHoarder does **not** include advertising SDKs or ad-network tracking.
 
