@@ -17,7 +17,7 @@ These Terms provide additional app-specific information. If these Terms conflict
 
 Your use of the App is also governed by our Privacy Policy:
 
-[https://spoolhoarder.com/privacy-policy.md](https://spoolhoarder.com/privacy-policy.md)
+[https://spoolhoarder.com/privacy-policy/](https://spoolhoarder.com/privacy-policy/)
 
 ## Subscriptions
 
