@@ -1,0 +1,65 @@
+Changelog - Recent Updates (May - July 2026)
+
+[ UI & UX ]
+- Improved mobile UX for inventory assistant panel with auto-scroll.
+- Redesigned inventory assistant shell and moved button to app bar action area.
+- Show view results button on all background updates.
+- Use dynamic header text for active filters in inventory scope bar.
+- Compact and scrollable Inventory Assistant banner.
+- Improved AI inventory recommendations UI.
+- Unique color count clustering and UI tweaks for inventory snapshot share card.
+- Improved stats drill down UI with interactive filters and grouped spools.
+
+[ Features ]
+- Added barcode display and editing capabilities to inventory.
+- Added hardware barcode scanner support for Windows desktop.
+- Added AI assistant examples with clear credit usage labels.
+- Added explicit gating for inventory assistant off-topic queries.
+- Added local color-family assistant counts.
+- Expanded inventory assistant capabilities and fallback routing.
+- Improved AI inventory filter presentation and specific material filtering.
+- Improved deterministic parser with fuzzy matching and synonyms.
+- Added structured local DB audit logging.
+- Added shared autocomplete to bulk and edit spool fields.
+- Added material category inventory filters.
+- Supported multiple barcode aliases for scans.
+- Added selected spool bulk edit.
+- Allowed reordering spool colors.
+- Enabled batch selection for grouped spools.
+- Supported Pro multi-spool batch scans.
+- Added hex-aware inventory search and color match filter.
+
+[ Fixes ]
+- Fixed show barcode icon on grouped product headers.
+- Fixed re-key spoolBarcodesProvider to record type and fix technical data edit bugs.
+- Fixed backend sync pull cursors.
+- Fixed AI fallback for material advice prompts.
+- Fixed duplicate inventory assistant advice rendering.
+- Fixed AI schema parsing for inventory assistant.
+- Fixed Google Sign-In requestedScopes crash on Android.
+- Fixed synchronous Riverpod update during build.
+- Fixed analyzer issues related to uniqueColorCount and prefer_final_locals.
+- Resolved FilterSheet crash during build.
+- Fixed stats screen and inventory tab provider watch order.
+- Fixed debounced stats provider subscriptions.
+- Resolved Riverpod build crash on resume.
+- Fixed order import unknown purchase source and large order handling.
+- Fixed edit spool product name normalization and add-spool duplicate grouping.
+- Fixed spool management save conflict handling.
+- Fixed AI order import fallback and timeout handling.
+- Fixed iOS privacy string.
+- Fixed browser OAuth cleanup on launcher failure.
+- Fixed project usage total recalculation.
+
+[ Security & Infrastructure ]
+- Patched webpage-v2 vite security alerts.
+- Configured iOS Crashlytics dSYM uploads.
+- Migrated iOS build to Swift Package Manager.
+- Replaced TD-1 MIDI plugin with native bridges.
+- Scaffolded Android Play billing and validation.
+- Hardened Android monetization defaults.
+- Updated Android package name to com.spoolhoarder.app.
+- Unified inventory color family filters and swatches.
+- Sharded CI tests and bounded widget settles.
+- Upgraded Flutter dependencies.
+- Bumped app versions and build numbers.
