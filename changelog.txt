@@ -1,5 +1,29 @@
 Changelog - Recent Updates (May - July 2026)
 
+## Version 2.4.0
+[ Features ]
+- Added an on-device inventory assistant that answers queries offline without using cloud credits.
+- Surfaced on-device model availability status in the assistant.
+- Added local parsing for favorite, glow, sealed, and barcode queries.
+- Added local matching for locations, vendors, and printers.
+- Added aggregate queries: total, average, min/max, distinct count, and share.
+- Added within-last and older-than date filters with missing-data caveats.
+- Added support for grouped and negated filters in assistant queries.
+- Refreshed assistant help text and examples with new capabilities.
+
+[ UI & UX ]
+- Showed detected barcodes on batch scan review cards, including screen-reader announcements.
+- Improved batch scan editing to use the full scanned spool data with brand suggestions drawn from your inventory.
+
+[ Fixes ]
+- Fixed assistant partial brand follow-ups.
+- Fixed batch scan spool size defaults and review detail rendering.
+- Kept inventory snapshot color pills on one line.
+
+[ Security & Infrastructure ]
+- Enabled the on-device assistant on Android devices.
+
+
 ## Version 2.3.0
 [ UI & UX ]
 - Improved mobile UX for inventory assistant panel with auto-scroll.
@@ -13,12 +37,12 @@ Changelog - Recent Updates (May - July 2026)
 - Added hardware barcode scanner support for Windows desktop.
 
 [ Fixes ]
-- Fixed backend sync pull cursors.
+- Fixed cloud sync reliability.
 - Fixed duplicate inventory assistant advice rendering.
-- Fixed show barcode icon on grouped product headers.
-- Fixed re-key spoolBarcodesProvider to record type and fix technical data edit bugs.
-- Fixed Google Sign-In requestedScopes crash on Android.
-- Fixed synchronous Riverpod update during build.
+- Fixed barcode icon display on grouped product headers.
+- Fixed barcode association and technical data edit bugs in inventory.
+- Fixed a Google Sign-In crash on Android.
+- Fixed an occasional inventory screen rendering error.
 
 [ Security & Infrastructure ]
 - Updated Android package name to com.spoolhoarder.app.
@@ -39,9 +63,8 @@ Changelog - Recent Updates (May - July 2026)
 
 [ Fixes ]
 - Fixed AI fallback for material advice prompts.
-- Fixed AI schema parsing for inventory assistant.
-- Fixed analyzer issues related to uniqueColorCount and prefer_final_locals.
-- Resolved FilterSheet crash during build.
+- Fixed AI response parsing for the inventory assistant.
+- Resolved a filter panel crash.
 
 
 ## Version 2.2.0
@@ -49,20 +72,19 @@ Changelog - Recent Updates (May - July 2026)
 - Improved stats drill down UI with interactive filters and grouped spools.
 
 [ Features ]
-- Added structured local DB audit logging.
+- Added local change history tracking.
 - Added shared autocomplete to bulk and edit spool fields.
 - Added material category inventory filters.
 - Supported multiple barcode aliases for scans.
 
 [ Fixes ]
-- Fixed stats screen and inventory tab provider watch order.
-- Fixed debounced stats provider subscriptions.
-- Resolved Riverpod build crash on resume.
+- Fixed stats and inventory tab loading order.
+- Improved stats refresh responsiveness.
+- Resolved a crash when resuming the app.
 - Fixed edit spool product name normalization and add-spool duplicate grouping.
 
 [ Security & Infrastructure ]
-- Configured iOS Crashlytics dSYM uploads.
-- Migrated iOS build to Swift Package Manager.
+- Improved iOS crash reporting and build tooling.
 
 
 ## Version 2.1.1
@@ -79,22 +101,18 @@ Changelog - Recent Updates (May - July 2026)
 - Fixed iOS privacy string.
 
 [ Security & Infrastructure ]
-- Patched webpage-v2 vite security alerts.
-- Replaced TD-1 MIDI plugin with native bridges.
-- Upgraded Flutter dependencies.
-- Bumped app versions and build numbers.
+- Applied routine security and dependency updates.
+- Improved plugin stability with native integrations.
 
 
 ## Version 2.1.0
+[ UI & UX ]
+- Unified inventory color family filters and swatches.
+
 [ Features ]
 - Added hex-aware inventory search and color match filter.
+- Added Android Play billing support.
 
 [ Fixes ]
 - Fixed browser OAuth cleanup on launcher failure.
 - Fixed project usage total recalculation.
-
-[ Security & Infrastructure ]
-- Scaffolded Android Play billing and validation.
-- Hardened Android monetization defaults.
-- Unified inventory color family filters and swatches.
-- Sharded CI tests and bounded widget settles.
