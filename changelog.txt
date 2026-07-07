@@ -1,12 +1,31 @@
 Changelog - Recent Updates (May - July 2026)
 
-## Version 2.2.1
+## Version 2.3.0
 [ UI & UX ]
 - Improved mobile UX for inventory assistant panel with auto-scroll.
 - Redesigned inventory assistant shell and moved button to app bar action area.
 - Show view results button on all background updates.
 - Use dynamic header text for active filters in inventory scope bar.
 - Compact and scrollable Inventory Assistant banner.
+
+[ Features ]
+- Added barcode display and editing capabilities to inventory.
+- Added hardware barcode scanner support for Windows desktop.
+
+[ Fixes ]
+- Fixed backend sync pull cursors.
+- Fixed duplicate inventory assistant advice rendering.
+- Fixed show barcode icon on grouped product headers.
+- Fixed re-key spoolBarcodesProvider to record type and fix technical data edit bugs.
+- Fixed Google Sign-In requestedScopes crash on Android.
+- Fixed synchronous Riverpod update during build.
+
+[ Security & Infrastructure ]
+- Updated Android package name to com.spoolhoarder.app.
+
+
+## Version 2.2.1
+[ UI & UX ]
 - Improved AI inventory recommendations UI.
 - Unique color count clustering and UI tweaks for inventory snapshot share card.
 
@@ -20,7 +39,6 @@ Changelog - Recent Updates (May - July 2026)
 
 [ Fixes ]
 - Fixed AI fallback for material advice prompts.
-- Fixed duplicate inventory assistant advice rendering.
 - Fixed AI schema parsing for inventory assistant.
 - Fixed analyzer issues related to uniqueColorCount and prefer_final_locals.
 - Resolved FilterSheet crash during build.
@@ -49,8 +67,6 @@ Changelog - Recent Updates (May - July 2026)
 
 ## Version 2.1.1
 [ Features ]
-- Added barcode display and editing capabilities to inventory.
-- Added hardware barcode scanner support for Windows desktop.
 - Added selected spool bulk edit.
 - Allowed reordering spool colors.
 - Enabled batch selection for grouped spools.
@@ -74,17 +90,11 @@ Changelog - Recent Updates (May - July 2026)
 - Added hex-aware inventory search and color match filter.
 
 [ Fixes ]
-- Fixed show barcode icon on grouped product headers.
-- Fixed re-key spoolBarcodesProvider to record type and fix technical data edit bugs.
-- Fixed backend sync pull cursors.
-- Fixed Google Sign-In requestedScopes crash on Android.
-- Fixed synchronous Riverpod update during build.
 - Fixed browser OAuth cleanup on launcher failure.
 - Fixed project usage total recalculation.
 
 [ Security & Infrastructure ]
 - Scaffolded Android Play billing and validation.
 - Hardened Android monetization defaults.
-- Updated Android package name to com.spoolhoarder.app.
 - Unified inventory color family filters and swatches.
 - Sharded CI tests and bounded widget settles.
