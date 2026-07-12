@@ -1,5 +1,56 @@
 Changelog - Recent Updates (May - July 2026)
 
+## Version 2.4.2
+[ Features ]
+- Expanded cloud sync (Pro accounts) to cover printers, printer-specific spool settings, project filament assignments, and project pricing.
+- Added desktop keyboard shortcuts for inventory: Ctrl/Cmd+F to search, Ctrl/Cmd+N to add a spool, and Esc to close panels.
+- Added one-tap removal of onboarding sample data.
+- Added support for using your own AI API key for scanning.
+- Made stats "Needs Attention" tiles (low stock, missing printer, missing location, missing technical profile, missing dry history) tappable to jump straight to filtered inventory.
+- Added a validation summary that lists missing required fields when saving a spool fails, and moves focus to the first missing field.
+- Showed spool card display-field summary pills on desktop compact rows and group cards.
+
+[ UI & UX ]
+- Redesigned the compact inventory toolbar with filter/sort as icon buttons showing an active-filter badge, and moved batch Select into the view-options menu.
+- Refreshed the first-run empty state with the app's signature liquid-fill tank graphic and a bolder headline.
+- Streamlined the upgrade dialog, renamed the inventory batch "Empty" action to "Mark Empty", and fixed a Calculator/Stats tab icon clash.
+- Refreshed upgrade/subscription prompts throughout the app with clearer, benefit-focused messaging.
+- Replaced the generic sparkle icon with context-specific icons throughout the app (assistant, AI scan, order import, and more).
+- Improved assistant results to show rich, familiar spool-card previews inline, with clearer action buttons.
+- Reworded onboarding copy to focus on outcomes rather than setup steps.
+- Made Retry the primary action on load-error screens, with destructive actions shown as outlined instead of filled.
+- Made in-app confirmation and error messages consistent across the app, with reliable screen-reader announcements.
+- Clarified spool card badges: temperature chips now read "240°C nozzle"/"90°C bed", and low-stock badges read "Low stock" instead of "Low".
+- Showed active filter status on phones while browsing inventory (previously desktop-only), and added a Select None action to batch mode.
+- Added color swatches to the palette picker in appearance settings.
+- Added a leading back button to the Print Library screen on narrow widths.
+- Added accessible labels and larger tap targets to interactive elements throughout the app.
+- Made the barcode field editable in the batch scan review sheet.
+
+[ Fixes ]
+- Fixed the assistant dropping brand filters on grouped-count questions (e.g. "show me all Numakers with more than 2 spools").
+- Fixed several double-tap and concurrent-edit bugs (onboarding sample data import, spool details, printer settings, inventory undo) that could create duplicates or let simultaneous edits silently overwrite each other.
+- Improved reliability of cloud sync across multiple devices, fixing several cases where edits could conflict, go unacknowledged, or be lost during sync.
+- Fixed desktop inventory keyboard shortcuts not working until the window was clicked first.
+- Fixed bulk library trash/delete operations potentially leaving files in an inconsistent state if interrupted midway.
+- Fixed batch UPC imports overwriting rather than updating existing barcode data.
+- Improved performance when importing items by UPC.
+- Fixed a crash that could occur when taking a photo in the scanner.
+- Fixed an error when canceling the share sheet during CSV export on iOS.
+- Fixed project print counts not updating correctly after deleting print logs.
+- Fixed a possible crash when the Spoolman database cache failed to save on web.
+- Fixed an issue with restoring purchases.
+- Fixed a crash loading settings when a saved value had an unexpected type.
+- Fixed temporary log files not being cleaned up if a log export failed.
+- Fixed a crash when reordering favorites by dragging.
+- Fixed scanning accepting invalid negative spool weights.
+- Fixed very dark spool colors appearing pure black in light mode; true blacks are unaffected.
+- Fixed barcode handling bugs in the batch scan review flow.
+
+[ Security & Infrastructure ]
+- Improved reliability of the web app's local database engine.
+
+
 ## Version 2.4.0
 [ Features ]
 - Added an on-device inventory assistant that answers queries offline without using cloud credits.
