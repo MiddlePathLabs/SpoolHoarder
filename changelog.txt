@@ -1,5 +1,34 @@
 Changelog - Recent Updates (May - July 2026)
 
+## Version 2.5.0
+[ Features ]
+- Added a dense table view for inventory on desktop — resizable panes, click-to-sort columns, and a docked details inspector — built for managing large collections at a glance.
+- Redesigned the Stats overview into an operational report that surfaces readiness and "needs attention" signals more clearly.
+- Widened the desktop workspace with a denser layout across inventory, projects, and spool details.
+- Added a skeleton loading state so inventory shows its structure while your data loads.
+
+[ UI & UX ]
+- Rebuilt the add-spool intake with a live inspector preview that mirrors the inventory card, including low-stock indication.
+- Compacted the spool detail primary controls and aligned the weight and actions panels for a cleaner layout.
+- Widened the projects workspace on desktop with a tighter, more informative project record layout.
+- Polished spool cards with a dedicated favorite-star color, cleaner selection highlighting, and a simplified weight badge.
+- Gave the Calculator tab a distinct selected icon so it no longer clashes with Stats.
+- Sharpened inventory interactions with clearer focus feedback, persistent pane widths, and extended desktop keyboard controls.
+- Improved dark themes: restored contrast in the Onyx and Copper palettes and normalized status colors.
+- Adapted the filament catalog search picker for desktop layouts.
+- Surfaced explanations for inventory color advice so you can see why a color is suggested.
+- Let the inventory empty-state message wrap naturally on narrow screens.
+- Added screen-reader progress announcements across spool save, order and library imports, barcode capture, and code redemption.
+- Honored the system reduced-motion preference throughout the app, and preserved touch-target sizes and text scaling on more controls.
+
+[ Fixes ]
+- Fixed automatic cloud sync to retry after transient failures, and repaired account ownership for anonymous accounts.
+- Made Pro/subscription status appear instantly from a cached state while it revalidates in the background.
+- Made sorted spool order deterministic so lists stay stable between refreshes.
+- Honored your configured low-stock threshold in stats.
+- Scaled the monthly stats chart correctly at large text sizes.
+- Resolved rendering, hierarchy, and copy issues found in a full UI review.
+
 ## Version 2.4.2
 [ Features ]
 - Expanded cloud sync (Pro accounts) to cover printers, printer-specific spool settings, project filament assignments, and project pricing.
@@ -9,6 +38,7 @@ Changelog - Recent Updates (May - July 2026)
 - Made stats "Needs Attention" tiles (low stock, missing printer, missing location, missing technical profile, missing dry history) tappable to jump straight to filtered inventory.
 - Added a validation summary that lists missing required fields when saving a spool fails, and moves focus to the first missing field.
 - Showed spool card display-field summary pills on desktop compact rows and group cards.
+- Added automatic filament identification when adding or batch-scanning spools: barcode and photo scans can now match against a filament catalog to suggest brand, material, and color, with a manual search fallback when there's no confident match.
 
 [ UI & UX ]
 - Redesigned the compact inventory toolbar with filter/sort as icon buttons showing an active-filter badge, and moved batch Select into the view-options menu.
