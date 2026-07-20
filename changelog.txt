@@ -1,11 +1,33 @@
 Changelog - Recent Updates (May - July 2026)
 
+## Version 2.5.2
+[ Features ]
+- Linked NFC tags to individual spools and added an inventory action that scans a linked tag and jumps straight to its spool, without changing the tag's existing data.
+- Added an optional mobile setting to write a companion link on NFC tags that opens the spool directly when the system reads the tag; off by default because some OpenSpool readers may not support tags with extra records.
+- Expanded cloud sync (Pro accounts) to include NFC tag bindings, so tags set up on one device work on the rest.
+
+
+## Version 2.5.1
+[ Features ]
+- Restored on-device barcode scanning on Android, bringing it back to parity with other platforms for fast local scans without needing the cloud.
+- Added missing default images for several Bambu Lab filaments, including PLA Pure, PLA Tough, and a few multi-color and TPU colors that previously showed a generic placeholder.
+
+[ Fixes ]
+- Resolved subscription redemption and entitlement issues that affected some Android purchases through Google Play.
+- Improved camera stability when leaving the scanner screen.
+- Improved how filament product images are matched so the correct image appears more reliably.
+
+[ Security & Infrastructure ]
+- Reduced the app's download and installed size by trimming oversized bundled images.
+
+
 ## Version 2.5.0
 [ Features ]
 - Added a dense table view for inventory on desktop — resizable panes, click-to-sort columns, and a docked details inspector — built for managing large collections at a glance.
 - Redesigned the Stats overview into an operational report that surfaces readiness and "needs attention" signals more clearly.
 - Widened the desktop workspace with a denser layout across inventory, projects, and spool details.
 - Added a skeleton loading state so inventory shows its structure while your data loads.
+- Added an option when importing usage history from a backup: apply it to reduce your current spool weights, or import history-only and leave weights unchanged.
 
 [ UI & UX ]
 - Rebuilt the add-spool intake with a live inspector preview that mirrors the inventory card, including low-stock indication.
@@ -28,6 +50,20 @@ Changelog - Recent Updates (May - July 2026)
 - Honored your configured low-stock threshold in stats.
 - Scaled the monthly stats chart correctly at large text sizes.
 - Resolved rendering, hierarchy, and copy issues found in a full UI review.
+- Fixed a bug where the on-device assistant could occasionally return an answer that didn't match the question you asked.
+- Fixed misaligned action buttons in the spool detail header, and a clipped weight label on some spool cards.
+- Fixed multi-color suggestions in the color advisor not showing their color swatches.
+- Fixed a crash that could occur when returning to a spool or project detail screen after the record had changed elsewhere.
+- Fixed the filament catalog auto-match: barcode scans no longer match non-product barcodes, and a match in progress is no longer lost if you save the spool before it finishes loading.
+- Fixed AI scan credits occasionally being charged twice when retrying a failed or timed-out scan; canceling a scan now properly stops it instead of leaving it running, and error messages are clearer when a scan fails due to a network or access issue.
+- Fixed AI order import leaving a stale credit count after running out of credits mid-import.
+- Fixed the trial period status sometimes carrying over between different accounts on the same device.
+- Fixed community filament measurement contributions not being sent for guest/anonymous accounts, and deleted projects occasionally reappearing after a cloud sync or restore.
+- Fixed an interrupted usage-history import potentially leaving spool weights partially updated.
+
+[ Security & Infrastructure ]
+- Improved app startup time and reduced unnecessary re-rendering across inventory, spool details, and stats for smoother scrolling.
+- Made cloud sync more resilient to network stalls by adding timeouts and automatic retries, so a stuck connection can no longer block subsequent syncs.
 
 ## Version 2.4.2
 [ Features ]

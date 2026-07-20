@@ -61,7 +61,7 @@
     <main>
       <article>
         <h1>Privacy Policy</h1>
-        <p><strong>SpoolHoarder</strong> <strong>Last Updated:</strong> May 6, 2026</p>
+        <p><strong>SpoolHoarder</strong> <strong>Last Updated:</strong> July 16, 2026</p>
         <h2>Introduction</h2>
         <p>SpoolHoarder (&quot;the App&quot;) is a 3D printer filament inventory management application.</p>
         <p>The App is designed <strong>local-first</strong>: your spool, project, and usage data is stored on your device. Some optional features use network services and may send data off-device, as described below.</p>
@@ -178,6 +178,20 @@
         <li><strong>Log files:</strong> diagnostic logs are stored locally and can be manually exported/shared by you; they may include technical app activity and error context.</li>
         <li><strong>AI usage records:</strong> for included cloud AI features, account-linked usage records may be stored remotely for credit accounting, operations, and abuse prevention.</li>
         </ul>
+        <h2 id="account-data-deletion">Account and Data Deletion</h2>
+        <h3>Delete your SpoolHoarder account and associated cloud data</h3>
+        <p>You can permanently delete your SpoolHoarder cloud account in the App:</p>
+        <ol>
+        <li>Open <strong>Settings</strong>.</li>
+        <li>Open <strong>Account &amp; Cloud Sync</strong>.</li>
+        <li>Select <strong>Delete Account</strong>.</li>
+        <li>Type <strong>DELETE</strong> and confirm.</li>
+        </ol>
+        <p>This deletes your SpoolHoarder cloud account and the cloud records associated with it, including synced inventory, projects, usage logs, printer data, subscription and credit records, purchase-validation records, AI usage records, and account-linked feedback and uploaded support attachments. Your local data remains on your device.</p>
+        <p>Deleting your SpoolHoarder account does not cancel a subscription managed by the Apple App Store, Google Play, or Microsoft Store. Cancel an active store subscription through the store where you purchased it to avoid future charges.</p>
+        <p>If you cannot access the App, you can <a href="mailto:support@middlepathlabs.com?subject=SpoolHoarder%20Account%20Deletion%20Request">request account deletion by email</a>. Send the request from the email address associated with your account, or include that address in your message. We may request additional information to verify that you own the account before processing the request.</p>
+        <h3>Data-only deletion</h3>
+        <p>SpoolHoarder does not currently provide a separate cloud-data deletion option that keeps your cloud account active. You can remove local data by deleting it in the App or uninstalling the App.</p>
         <h2>Data Retention and Deletion</h2>
         <h3>Local data</h3>
         <ul>
@@ -187,9 +201,9 @@
         <ul>
         <li>Synced/account-linked data may be stored remotely while your account is active.</li>
         <li>Account-linked subscription, credit, receipt-validation, AI usage, and optional measurement-contribution records may be stored remotely while needed for account operations, fraud prevention, support, or compliance.</li>
-        <li>Current in-app deletion controls are designed to delete synced cloud app data and sign you out. In some cases, the underlying authentication account itself may require separate backend or administrative deletion handling.</li>
-        <li>If an authentication account is deleted, we may retain a minimal record that the account existed and was deleted (for example, an internal identifier or its one-way hash and a deletion timestamp) for security, fraud-prevention, operational integrity, or compliance purposes.</li>
-        <li>Feedback submissions and uploaded attachments may be retained for support/debug workflows.</li>
+        <li>When an account-deletion request is completed, we delete the cloud records described in the account-deletion section above and sign the account out of the App.</li>
+        <li>We retain indefinitely a minimal deletion record: a one-way hash of the former account ID, the deletion timestamp, and deletion-request metadata. We use this record for security, fraud prevention, operational integrity, and compliance; it does not retain the former account ID or email address.</li>
+        <li>Optional shared filament or UPC contributions may remain after account deletion, but their account association is removed. Anonymous feedback that was not linked to an account is not part of an account-deletion request.</li>
         </ul>
         <h2>Third-Party Services</h2>
         <p>SpoolHoarder may interact with:</p>

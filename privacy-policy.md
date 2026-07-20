@@ -1,7 +1,7 @@
 # Privacy Policy
 
 **SpoolHoarder**  
-**Last Updated:** May 6, 2026
+**Last Updated:** July 16, 2026
 
 ## Introduction
 
@@ -159,6 +159,27 @@ Bluetooth, USB, or serial device access may be used to discover and connect to c
 - **Log files:** diagnostic logs are stored locally and can be manually exported/shared by you; they may include technical app activity and error context.
 - **AI usage records:** for included cloud AI features, account-linked usage records may be stored remotely for credit accounting, operations, and abuse prevention.
 
+## Account and Data Deletion
+
+### Delete your SpoolHoarder account and associated cloud data
+
+You can permanently delete your SpoolHoarder cloud account in the App:
+
+1. Open **Settings**.
+2. Open **Account & Cloud Sync**.
+3. Select **Delete Account**.
+4. Type **DELETE** and confirm.
+
+This deletes your SpoolHoarder cloud account and the cloud records associated with it, including synced inventory, projects, usage logs, printer data, subscription and credit records, purchase-validation records, AI usage records, and account-linked feedback and uploaded support attachments. Your local data remains on your device.
+
+Deleting your SpoolHoarder account does not cancel a subscription managed by the Apple App Store, Google Play, or Microsoft Store. Cancel an active store subscription through the store where you purchased it to avoid future charges.
+
+If you cannot access the App, you can [request account deletion by email](mailto:support@middlepathlabs.com?subject=SpoolHoarder%20Account%20Deletion%20Request). Send the request from the email address associated with your account, or include that address in your message. We may request additional information to verify that you own the account before processing the request.
+
+### Data-only deletion
+
+SpoolHoarder does not currently provide a separate cloud-data deletion option that keeps your cloud account active. You can remove local data by deleting it in the App or uninstalling the App.
+
 ## Data Retention and Deletion
 
 ### Local data
@@ -169,9 +190,9 @@ Bluetooth, USB, or serial device access may be used to discover and connect to c
 
 - Synced/account-linked data may be stored remotely while your account is active.
 - Account-linked subscription, credit, receipt-validation, AI usage, and optional measurement-contribution records may be stored remotely while needed for account operations, fraud prevention, support, or compliance.
-- Current in-app deletion controls are designed to delete synced cloud app data and sign you out. In some cases, the underlying authentication account itself may require separate backend or administrative deletion handling.
-- If an authentication account is deleted, we may retain a minimal record that the account existed and was deleted (for example, an internal identifier or its one-way hash and a deletion timestamp) for security, fraud-prevention, operational integrity, or compliance purposes.
-- Feedback submissions and uploaded attachments may be retained for support/debug workflows.
+- When an account-deletion request is completed, we delete the cloud records described in the account-deletion section above and sign the account out of the App.
+- We retain indefinitely a minimal deletion record: a one-way hash of the former account ID, the deletion timestamp, and deletion-request metadata. We use this record for security, fraud prevention, operational integrity, and compliance; it does not retain the former account ID or email address.
+- Optional shared filament or UPC contributions may remain after account deletion, but their account association is removed. Anonymous feedback that was not linked to an account is not part of an account-deletion request.
 
 ## Third-Party Services
 
