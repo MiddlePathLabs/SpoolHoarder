@@ -10,7 +10,7 @@
 
 # Spool Hoarder
 
-Spool Hoarder tracks filament inventory and usage for 3D printing. See what you own, how much remains, what it's worth, and where it's used.
+Spool Hoarder tracks filament inventory and usage for 3D printing. See what you own, how much remains, what it's worth, and where it's used. It's offline-first, stores everything locally in SQLite, and collects no analytics or telemetry.
 
 ---
 
@@ -19,6 +19,8 @@ Spool Hoarder tracks filament inventory and usage for 3D printing. See what you 
 Track everything in one place. Each spool shows brand, material, color (exact hex codes, including gradients), remaining weight, storage location, spool size, purchase price, drying history, and technical print parameters. Full, partial, and empty spools look distinct—see at a glance what's ready to print. Favorite spools pin to the top.
 
 Technical parameters include flow ratio, K-factor, diameter, extruder and bed temperatures, and transmission distance.
+
+Multi-select spools to mark them depleted, delete, add to a project, or export in bulk—no one-by-one cleanup.
 
 ---
 
@@ -32,7 +34,7 @@ After a print, log what you used with a slider. Quick buttons (−50g, −10g, +
 
 Point your camera at a spool label. The app extracts brand, material, name, color, hex codes, diameter, and temperatures.
 
-Choose Google Gemini, Anthropic Claude, OpenAI, or on-device Apple Intelligence (iOS/macOS). API keys stay in your system keychain. The app populates the Add Spool form for review before saving, normalizing brand and material names against the global filament catalog.
+Choose Google Gemini, Anthropic Claude, OpenAI, or on-device Apple Intelligence (iOS/macOS). Bring your own API key for free, or use included scan credits on a Pro subscription. Photos are compressed and EXIF-stripped before processing, and API keys stay in your system keychain. The app populates the Add Spool form for review before saving, normalizing brand and material names against the global filament catalog.
 
 ---
 
@@ -41,6 +43,12 @@ Choose Google Gemini, Anthropic Claude, OpenAI, or on-device Apple Intelligence 
 Clear a shelf in one pass. The camera preview shows real-time feedback for each spool. On iOS and macOS, OCR runs on-device—no internet required. Review everything together, fix errors, then bulk-add.
 
 Working through a box of twenty spools takes a few minutes.
+
+---
+
+## AJAX-3D TD1 Scanner
+
+Connect a TD1 scanner over USB to capture Transmission Distance (TD) and hex color codes directly into a spool—no manual typing required.
 
 ---
 
@@ -64,7 +72,7 @@ A Personal Log project provides quick standalone tracking.
 
 ## Backup & Restore
 
-Export everything to a ZIP—spools, projects, usage logs, thumbnails. Optionally include deleted data for archival imports. The import preview shows what will change before you commit. Reference validation blocks imports with broken links. Rolling auto-backup keeps your data safe for regular backups or moving to a new device.
+Export everything to a ZIP (with SHA-256 checksums)—spools, projects, usage logs, thumbnails. Optionally include deleted data for archival imports. The import preview shows what will change before you commit. Reference validation blocks imports with broken links. Rolling auto-backup keeps your data safe for regular backups or moving to a new device.
 
 ---
 
@@ -90,6 +98,12 @@ Total spool count, active vs depleted inventory, total value, remaining weight (
 
 ---
 
+## AI Assistant
+
+Ask your inventory questions in plain English—"How much PLA do I have left?", "Sealed spools I haven't touched in 90 days," "Total value of my Bambu filament." The assistant runs entirely on-device: it works offline and never spends a scan credit. It handles aggregates and math (totals, averages, min/max, distinct counts), smart filters (favorite, glow, sealed, barcode, color family), location/vendor/printer context, and date-aware queries, and it tells you when on-device model availability isn't ready yet.
+
+---
+
 ## CSV Import & Export
 
 Export to CSV, import to migrate or bulk-update. The preview shows what changes. Conflict detection flags overwrites. Errors appear per row. Handles exports from other tracking tools, including SpoolStock CSV compatibility.
@@ -110,7 +124,7 @@ On the spool detail screen, get color suggestions from your own inventory based 
 
 ## QR & NFC
 
-Read filament metadata from spool tags. QR codes from OpenSpool, Spoolman, OpenTag3D. NFC via OpenSpool (NTAG), OpenPrintTag/Prusa (NFC-V), OpenTag3D. Bambu Lab RFID works on Android (MIFARE Classic).
+Read filament metadata from spool tags. QR codes from OpenSpool, Spoolman, OpenTag3D. NFC via OpenSpool (NTAG), OpenPrintTag/Prusa (NFC-V), OpenTag3D. Bambu Lab RFID works on Android (MIFARE Classic). Write standard OpenSpool NFC tags directly from spool detail.
 
 Tag data maps to spool fields and integrates into batch scanning.
 
@@ -118,7 +132,7 @@ Tag data maps to spool fields and integrates into batch scanning.
 
 ## UPC Barcode Scanning
 
-Scan a filament barcode to create a spool. Reads UPC-A, EAN-13, EAN-8. The local catalog learns from your scans—repeat barcodes are instant. Cross-references SpoolmanDB, falls back to AI vision if unrecognized.
+Scan a filament barcode to create a spool. Reads UPC-A, EAN-13, EAN-8. On Windows, plug in a USB barcode scanner for rapid hands-on-keyboard entry. The local catalog learns from your scans—repeat barcodes are instant. Cross-references SpoolmanDB, falls back to AI vision if unrecognized. View and edit barcodes right on spool detail and grouped product headers.
 
 ---
 
@@ -130,7 +144,7 @@ Enter filament weight, pick a spool to pull its price, set quantity for batch pr
 
 ## Printer Profiles
 
-Store printer details: manufacturer, model, wattage, purchase cost, expected lifetime. Cost estimates include electricity, depreciation, failure rate, markup. Track maintenance with intervals and notes. Assign printers to projects and usage logs.
+Store printer details: manufacturer, model, wattage, purchase cost, expected lifetime. Cost estimates include electricity, depreciation, failure rate, markup. Override extruder temp, bed temp, flow ratio, and K-factor per spool per printer. Track maintenance with intervals and notes. Assign printers to projects and usage logs.
 
 ---
 
@@ -140,9 +154,19 @@ Choose which fields appear on spool cards. Set a default spool size. Toggle dark
 
 ---
 
+## Pricing
+
+Free forever: up to 50 spools, 5 projects, 1 printer profile, bring-your-own-key AI scanning, full search/filter/sort, barcode and NFC/QR scanning, CSV import/export, and data backup.
+
+Pro is $19.99/year (30-day free trial): unlimited spools and projects, 20 AI scan credits per month, cloud sync across devices, and 12+ extended statistics charts.
+
+Need more scans? Buy a 25-credit pack for $0.99 any time—no expiration.
+
+---
+
 ## Platforms
 
-iOS, macOS, Windows.
+iOS, macOS, Windows. Android is coming soon.
 
 ---
 
