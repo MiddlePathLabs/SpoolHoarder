@@ -1,5 +1,50 @@
 Changelog - Recent Updates (May - July 2026)
 
+## Version 2.7.1
+[ Features ]
+- Brought multi-currency to the whole app: spool prices, print costs, and reports each carry their own currency, your existing money is migrated automatically, and currencies survive import, export, scanning, and cloud sync. Mixed-currency reports stay correct, with cached exchange rates shown for reference.
+- Added language selection: pick the app language in Settings or follow the system, with dates, numbers, and units formatted to your locale.
+
+[ UI & UX ]
+- Redesigned the selected-spool hero with a calmer wound-filament texture that reads as real filament and renders multicolor correctly, and tightened the details, quick-notes, and color-suggestion sections.
+- Promoted edit, adjust-weight, and set-location to hero actions on the spool detail screen.
+- Decluttered the desktop inventory row: the remaining-weight ring aligns to a fixed trailing column, group headers mirror the rows beneath them, the detail line no longer cuts off mid-token, and summary pills match the row text.
+- Lifted navigation contrast so unselected labels and icons read clearly across every palette, fixed the iOS tab bar that bypassed the theme, and restored copy buttons on detail rows.
+
+[ Fixes ]
+- Inline spool edits now merge onto the latest stored row instead of overwriting it, so a cloud pull or background update from another device is no longer silently clobbered.
+- Library organization moves that fail midway now roll back instead of leaving items half-moved, and organization previews refresh after library changes.
+- Made settings restore recoverable when it fails.
+- Protected spool-to-location and other relationships during the database rebuild that accompanies the location upgrade.
+- Localization fixes across batch-scan currency fields, ISO currency-code spacing, the offscreen share card, and usage-entry parsing.
+
+
+## Version 2.6.1
+[ Fixes ]
+- Made storage location renames update consistently across inventory, details, statistics, search, exports, and synced devices.
+- Reworked spool location assignments to use one reliable structured link instead of duplicate stored names.
+- Improved location sync ordering so a spool is not uploaded before its new location.
+
+[ Beta Notes ]
+- A spool with an ambiguous or invalid location from an older beta build may become unassigned and can be assigned again normally.
+
+
+## Version 2.6.0
+[ Features ]
+- Introduced structured storage Locations: a dedicated Locations manager in Settings to create, rename, and code locations, manually reorder them, merge duplicates, and delete with automatic reassignment so no spool is ever orphaned.
+- Added a structured location picker to the add/edit spool screen with autocomplete suggestions, plus a first-run backfill that lifts your existing free-text locations into the new system.
+- Linked locations to NFC: scan a tagged location to set a spool's spot, and check a spool in with one tap.
+- Expanded cloud sync (Pro accounts) to include your locations.
+
+[ Fixes ]
+- Made library and project bulk operations atomic so an interruption can't leave them half-finished.
+- Preserved portable feature metadata through backups.
+- Kept spool statistics and technical-data state current.
+- Hardened preferences and share cards, and protected the order-review step with larger controls.
+- Refreshed 3MF metadata handling and safer handoff to the calculator.
+- Addressed accessibility findings across the app.
+
+
 ## Version 2.5.2
 [ Features ]
 - Linked NFC tags to individual spools and added an inventory action that scans a linked tag and jumps straight to its spool, without changing the tag's existing data.
