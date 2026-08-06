@@ -85,5 +85,6 @@ confirmed.
 
 ## Related pages
 
+- [Organize filament storage](/docs/organizing/organize-filament-storage/)
 - [Tagging locations with NFC](/docs/organizing/tagging-locations-with-nfc/)
 `;export{o as default};

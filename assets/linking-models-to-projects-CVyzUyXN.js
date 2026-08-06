@@ -1,7 +1,7 @@
 const e=`---
 title: Linking models to projects
 description: Connect a model in your library to the project you printed it for.
-order: 5
+order: 6
 status: published
 updated: 2026-08-04
 keywords:

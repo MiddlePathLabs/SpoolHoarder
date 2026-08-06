@@ -1,7 +1,7 @@
 const e=`---
 title: Print library
 description: Point the app at your model files so prints and projects stay connected.
-order: 3
+order: 4
 status: published
 updated: 2026-08-04
 keywords:

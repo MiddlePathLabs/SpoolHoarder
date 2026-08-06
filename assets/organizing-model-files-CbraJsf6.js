@@ -1,7 +1,7 @@
 const e=`---
 title: Organizing model files
 description: Preview and apply a tidier folder structure for your library.
-order: 4
+order: 5
 status: published
 updated: 2026-08-04
 keywords:

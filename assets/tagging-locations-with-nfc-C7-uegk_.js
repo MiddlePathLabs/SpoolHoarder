@@ -77,5 +77,8 @@ shows a message explaining what went wrong rather than moving anything.
 
 ## Related pages
 
+- [Organize filament storage](/docs/organizing/organize-filament-storage/)
 - [Storage locations](/docs/organizing/storage-locations/)
+- [Reading NFC tags](/docs/scanning/nfc-tags/)
+- [An NFC tag will not read](/docs/troubleshooting/nfc-tag-wont-read/)
 `;export{n as default};
