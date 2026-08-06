@@ -14,7 +14,7 @@ Changelog - Recent Updates (May - July 2026)
 - Lifted navigation contrast so unselected labels and icons read clearly across every palette, fixed the iOS tab bar that bypassed the theme, and restored copy buttons on detail rows.
 - Reworked the spool detail screen: wide desktop panes now lead with the color-suggestion strip, the overflow menu moved into a labelled More button, and the details card is a reflowing grid that matches Print Settings.
 - Tightened the mobile spool detail layout with a more compact hero and stock ring, a full-width Log Usage action, scroll-aware print profile chips, and quieter "Not set" empty states.
-- Added a "TD1 verified" badge next to Material when TD and color values are confirmed by scan.
+- Added a "TD1 verified" badge to Properties & Features on the spool detail screen when both the transmission distance and color values still hold what a TD1 scan measured.
 - Fixed picker sheets, including the barcode scanner, sliding up as full-width phone sheets on desktop windows instead of showing as constrained dialogs.
 
 [ Fixes ]

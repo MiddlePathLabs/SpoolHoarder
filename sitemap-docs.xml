@@ -121,6 +121,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://spoolhoarder.com/docs/scanning/td1-scanner/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://spoolhoarder.com/docs/scanning/ai-providers-and-api-keys/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
