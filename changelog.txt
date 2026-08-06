@@ -4,12 +4,18 @@ Changelog - Recent Updates (May - July 2026)
 [ Features ]
 - Brought multi-currency to the whole app: spool prices, print costs, and reports each carry their own currency, your existing money is migrated automatically, and currencies survive import, export, scanning, and cloud sync. Mixed-currency reports stay correct, with cached exchange rates shown for reference.
 - Added language selection: pick the app language in Settings or follow the system, with dates, numbers, and units formatted to your locale.
+- Added a complete set of Bambu Lab printer presets.
+- Added in-app links to the documentation site from Settings, Contact Us, the inventory error screen, Data & Backup, and Getting Started.
 
 [ UI & UX ]
 - Redesigned the selected-spool hero with a calmer wound-filament texture that reads as real filament and renders multicolor correctly, and tightened the details, quick-notes, and color-suggestion sections.
 - Promoted edit, adjust-weight, and set-location to hero actions on the spool detail screen.
 - Decluttered the desktop inventory row: the remaining-weight ring aligns to a fixed trailing column, group headers mirror the rows beneath them, the detail line no longer cuts off mid-token, and summary pills match the row text.
 - Lifted navigation contrast so unselected labels and icons read clearly across every palette, fixed the iOS tab bar that bypassed the theme, and restored copy buttons on detail rows.
+- Reworked the spool detail screen: wide desktop panes now lead with the color-suggestion strip, the overflow menu moved into a labelled More button, and the details card is a reflowing grid that matches Print Settings.
+- Tightened the mobile spool detail layout with a more compact hero and stock ring, a full-width Log Usage action, scroll-aware print profile chips, and quieter "Not set" empty states.
+- Added a "TD1 verified" badge next to Material when TD and color values are confirmed by scan.
+- Fixed picker sheets, including the barcode scanner, sliding up as full-width phone sheets on desktop windows instead of showing as constrained dialogs.
 
 [ Fixes ]
 - Inline spool edits now merge onto the latest stored row instead of overwriting it, so a cloud pull or background update from another device is no longer silently clobbered.
@@ -17,6 +23,18 @@ Changelog - Recent Updates (May - July 2026)
 - Made settings restore recoverable when it fails.
 - Protected spool-to-location and other relationships during the database rebuild that accompanies the location upgrade.
 - Localization fixes across batch-scan currency fields, ISO currency-code spacing, the offscreen share card, and usage-entry parsing.
+- Fixed local edits and deletions taking hours to reach other devices instead of syncing right away.
+- Fixed duplicate storage locations created on different devices from staying separate forever; merges now converge automatically and keep NFC tag bindings and spool assignments intact.
+- Fixed currency exchange rates failing to load for some users; rates now load through a more reliable path with automatic fallback.
+- Fixed duplicating a priced spool losing its currency, which could block saving the copy.
+- Fixed TD1 verified badges appearing on fields with no actual scanned value.
+- Fixed long spool names stretching the More menu off the edge of the screen.
+- Fixed the camera scan option being offered on macOS, where camera scanning isn't available.
+- Fixed the on-device inventory assistant failing on libraries with a lot of materials, brands, or locations.
+- Fixed the mobile spool hero not letting you add a reference photo when none was set.
+
+[ Security & Infrastructure ]
+- Applied routine security and dependency updates.
 
 
 ## Version 2.6.1
