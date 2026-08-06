@@ -20,13 +20,12 @@ platforms:
   - android
 ---
 
-Some spools carry an NFC tag with their identity written to it. Hold your phone
+Some spools carry an NFC tag with their identity written to it. Hold your device
 to the tag and Spool Hoarder reads the brand, material, color, and temperatures
 straight off it — no photo, no network, no credits. It is the fastest scan when
 the tag exists.
 
-NFC reading needs NFC hardware, so it is available on iPhone, iPad, and Android.
-Mac and Windows do not have the hardware.
+NFC reading requires a supported iPhone, iPad, or Android device with NFC available. Spool Hoarder NFC features are not available on Mac, Windows, or the web.
 
 ## Tag formats supported
 
@@ -39,16 +38,16 @@ Mac and Windows do not have the hardware.
 | **Generic NDEF** | Spoolman and others | A text or URL record, including Spoolman \`SM:SPOOL=\` codes |
 
 Bambu Lab tags are encrypted (MIFARE Classic) and can only be read on Android,
-which supports that tag type. Other formats work on both iPhone and Android.
+which supports that tag type. Other formats work on supported iPhone, iPad, and Android devices.
 
 ## What you need
 
-- An iPhone or Android phone with NFC turned on.
-- The spool's tag placed against the phone's NFC antenna (usually the upper back
-  on phones, the top edge on iPhone).
+- A supported iPhone, iPad, or Android device with NFC available.
+- The spool's tag placed against the device's NFC antenna. Antenna position
+  varies by device — on iPhone, near the top back.
 
-On iPhone the system NFC sheet appears when you start a read. On Android you
-hold the phone to the tag directly.
+On iPhone and iPad the system NFC sheet appears when you start a read. On Android you
+hold the device to the tag directly.
 
 ## Reading a tag
 
@@ -60,7 +59,7 @@ You can read an NFC tag from several places:
 - From a **storage location**, to confirm which spools are sitting on a rack
   that has its own linked location tag.
 
-Hold the phone to the tag until the read completes. The tag's data fills the
+Hold the device to the tag until the read completes. The tag's data fills the
 add form the same way an AI photo scan does, and nothing is saved until you
 review and tap **Save**.
 
@@ -75,7 +74,7 @@ you rewrite them.
 
 ## When a read fails
 
-If the phone cannot read the tag you will see a message such as **NFC is
+If the device cannot read the tag you will see a message such as **NFC is
 unavailable or disabled on this device** or **An NFC scan is already in
 progress**. Cancelling the system sheet simply ends the read with nothing saved.
 

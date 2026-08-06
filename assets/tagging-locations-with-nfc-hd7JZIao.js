@@ -1,7 +1,7 @@
 const n=`---
 title: Tagging locations with NFC
 description: Stick an NFC tag on a bin so you can scan spools into it.
-order: 2
+order: 3
 status: published
 updated: 2026-08-04
 keywords:
@@ -15,6 +15,7 @@ keywords:
   - nfc sticker
 platforms:
   - ios
+  - ipados
   - android
 ---
 
@@ -22,8 +23,7 @@ Stick an NFC tag on a shelf, bin, or dry box and link it to a storage location.
 Then, when you put a spool away, scan the spool's tag to confirm it has moved
 there — no menus, no typing.
 
-This feature needs NFC hardware, so it runs on iPhone and Android only. On
-Android, Spool Hoarder can also read Bambu Lab's encrypted MIFARE Classic tags.
+This feature requires a supported iPhone, iPad, or Android device with NFC available. Bambu Lab MIFARE Classic tags can be read on Android only.
 
 You need at least one [storage location](/docs/organizing/storage-locations/)
 before you can link a tag.
@@ -32,7 +32,7 @@ before you can link a tag.
 
 1. Open **Settings → Storage Locations**.
 1. Open the location's menu and choose **Link NFC tag**.
-1. Hold an NFC tag against your phone when prompted.
+1. Hold an NFC tag against your device when prompted.
 
 The tag now opens that location's contents whenever it is scanned. The **Link NFC
 tag** option only appears when your device has NFC available and switched on.
@@ -48,7 +48,7 @@ To detach a tag later, open the location's menu and choose **Unlink NFC tag**.
 
 ## Scan a location tag
 
-Tap a linked tag against your phone from the inventory. Spool Hoarder opens that
+Tap a linked tag against your device from the inventory. Spool Hoarder opens that
 location's contents view, listing every spool last recorded there.
 
 If the location is empty, you see a note that no spools are recorded there yet.
@@ -61,7 +61,7 @@ Once a location tag has opened the contents view, scan a spool's NFC tag to file
 it there:
 
 1. Tap **Scan a spool tag to move it here** (the NFC icon in the app bar).
-1. Hold the spool's NFC tag against your phone.
+1. Hold the spool's NFC tag against your device.
 1. Confirm **Move here**.
 
 Spool Hoarder updates the spool's last known location and the contents list
@@ -70,7 +70,7 @@ shows a message explaining what went wrong rather than moving anything.
 
 ## What you need
 
-- An iPhone or Android phone with NFC hardware, switched on.
+- A supported iPhone, iPad, or Android device with NFC available.
 - One NFC tag per location. Cheap NTAG stickers work well for bins and shelves.
 - For Bambu Lab spool tags, an Android device — their MIFARE Classic encryption
   cannot be read on iOS.

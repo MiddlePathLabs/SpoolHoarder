@@ -1,4 +1,4 @@
-const n=`---
+const e=`---
 title: An NFC tag will not read
 description: Why a tag scan fails, and how to get a reliable read.
 order: 2
@@ -20,15 +20,15 @@ platforms:
   - android
 ---
 
-NFC scanning works on iPhone, iPad, and Android. There is no NFC button on Windows or macOS — the hardware is not there.
+NFC scanning requires a supported iPhone, iPad, or Android device with NFC available. Spool Hoarder NFC features are not available on Windows, macOS, Linux, or the web.
 
 You start an NFC scan from the inventory screen, the batch scanner, a spool's detail page, or **Settings → Storage Locations**. It is not a button on the Add Spool screen itself. When you tap an unlinked tag from the inventory screen, Spool Hoarder opens Add Spool and links that tag to the new spool when you save.
 
-## First, confirm your phone can scan
+## First, confirm your device can scan
 
 On Android, open the system **Settings → Connected devices → Connection preferences → NFC** (the path varies by manufacturer) and make sure NFC is switched on. A dead battery-saver or a thick metal case can block reads.
 
-On iPhone, NFC is always on. Hold the top back of the phone to the tag.
+On iPhone, NFC is always on. Hold the top back of the phone to the tag. On iPad, NFC is available on supported models; hold the device against the tag until the system sheet appears.
 
 If the hardware check fails, you see **NFC is unavailable or disabled on this device.** Turn NFC back on in system settings and try again.
 
@@ -56,7 +56,7 @@ A tag carrying a Spoolman **SM:SPOOL=** ID only fetches data when you have a Spo
 
 | Message | Cause | Fix |
 |---|---|---|
-| **NFC scan canceled** | You pulled the phone away or the system session timed out. | Hold the phone steady on the tag for the whole read. |
+| **NFC scan canceled** | You pulled the device away or the system session timed out. | Hold the device steady on the tag for the whole read. |
 | **An NFC scan is already in progress** | A previous scan has not finished. | Wait for it to end, then scan again. |
 | **This NFC tag does not expose a readable UID.** | The tag blocks UID reads. | Link it by writing to the tag instead, or add the spool manually. |
 | **Unrecognized NFC tag format** | The tag is blank or an unsupported type. | Use a supported format, or write an OpenSpool payload to it. |
@@ -67,10 +67,10 @@ A tag carrying a Spoolman **SM:SPOOL=** ID only fetches data when you have a Spo
 
 NFC antennas live near the top back of most phones, not in the center. Hold that spot flat against the tag.
 
-- Remove metal or magnetic phone cases, or cards stuck to the back of the phone. Metal blocks the NFC field.
-- Hold still. Moving the phone mid-read cancels the session.
-- On spools with recessed tags, press the phone firmly against the flat of the tag.
-- If a read fails twice, lift the phone away and set it down again. The reader needs a fresh tap to start over.
+- Remove metal or magnetic device cases, or cards stuck to the back of the device. Metal blocks the NFC field.
+- Hold still. Moving the device mid-read cancels the session.
+- On spools with recessed tags, press the device firmly against the flat of the tag.
+- If a read fails twice, lift the device away and set it down again. The reader needs a fresh tap to start over.
 
 ## Write a tag that scans reliably
 
@@ -82,4 +82,4 @@ If a tag is already linked elsewhere, Spool Hoarder asks whether to **Move** or 
 
 - [Scan results are wrong or empty](/docs/troubleshooting/scan-results-are-wrong/)
 - [Contacting support](/docs/troubleshooting/contacting-support/)
-`;export{n as default};
+`;export{e as default};
