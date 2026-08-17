@@ -3,7 +3,7 @@ title: Grouping and tags
 description: Group the inventory list by product or exact match, and use the Features field to label spools.
 order: 5
 status: published
-updated: 2026-08-04
+updated: 2026-08-17
 keywords:
   - group
   - grouping
@@ -31,6 +31,8 @@ There are three modes:
 Switch modes from the **Group** control on the inventory toolbar (desktop) or the **View Options** menu (compact screens). You can also set the default in Settings → Appearance → **Default View** → **Inventory Grouping**, choosing **Flat**, **Product**, or **State**.
 
 Your grouping choice is remembered between sessions. A grouped card shows the total count and a representative weight; tap it to expand and see the individual spools.
+
+A grouped card's menu also has its own **Add another spool** action, which creates new spools from the fields shared across the group rather than a full copy of any one member — see [Add another spool](/docs/inventory/spool-details/#add-another-spool).
 
 ## Labeling spools with features
 

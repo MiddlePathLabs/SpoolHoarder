@@ -1,9 +1,9 @@
-const r=`---\r
+const e=`---\r
 title: Appearance and themes\r
 description: Light, dim, and dark modes, the color palettes, and the display options that change how the inventory looks.\r
 order: 2\r
 status: published\r
-updated: 2026-08-04\r
+updated: 2026-08-17\r
 keywords:\r
   - theme\r
   - dark mode\r
@@ -21,6 +21,9 @@ keywords:\r
   - spool card\r
   - inventory layout\r
   - grouping\r
+  - weight display\r
+  - filament only\r
+  - total scale weight\r
 platforms:\r
   - all\r
 ---\r
@@ -51,6 +54,15 @@ Each palette is tuned for light, dim, and dark, so you can combine any palette w
 \r
 - **Reduce Motion** minimizes animations throughout the app.\r
 - **Show Barcode Icon** displays a small barcode glyph on spool cards that have a saved barcode.\r
+\r
+## Weight display\r
+\r
+**Weight Display** chooses whether weights include the empty spool:\r
+\r
+- **Total scale weight** (the default) — filament plus the empty spool, the number you'd read straight off a kitchen scale.\r
+- **Filament only** — net filament weight, with the empty spool's weight subtracted.\r
+\r
+This applies everywhere weight is shown or entered, not just on cards. Switching to **Filament only** for the first time may prompt a short setup step for any existing spools that need their filament capacity confirmed. See [Tracking remaining weight](/docs/inventory/tracking-remaining-weight/) for how the conversion works.\r
 \r
 ## Default inventory grouping\r
 \r
@@ -94,4 +106,4 @@ The **Preview** at the bottom of the screen shows a sample spool card with your 
 - [Grouping and tags](/docs/inventory/grouping-and-tags/)\r
 - [Preferences](/docs/settings/preferences/)\r
 - [What's in Settings](/docs/settings/whats-in-settings/)\r
-`;export{r as default};
+`;export{e as default};

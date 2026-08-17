@@ -3,7 +3,7 @@ title: The spool detail screen\r
 description: What you see when you open a spool, and everything you can do from there.\r
 order: 2\r
 status: published\r
-updated: 2026-08-06\r
+updated: 2026-08-17\r
 keywords:\r
   - spool detail\r
   - spool details\r
@@ -18,6 +18,9 @@ keywords:\r
   - dry record\r
   - transmission distance\r
   - td1 verified\r
+  - add another spool\r
+  - duplicate spool\r
+  - scan barcode\r
 platforms:\r
   - all\r
 ---\r
@@ -47,12 +50,24 @@ The full action set — **Edit spool**, **Share**, **NFC Tag**, **Add another sp
 - **Edit spool** — opens the same form used to add a spool.\r
 - **Share** — creates a shareable image card for the spool. On iPhone, iPad, Mac, and Android it opens the system share sheet; on Windows it saves a PNG file.\r
 - **NFC Tag** — write, link, or unlink a physical NFC tag, when your device supports NFC.\r
-- **Add another spool** — start a new spool prefilled with this one's details.\r
+- **Add another spool** — create one or more duplicates of this spool. See [Add another spool](#add-another-spool) below.\r
 - **Buy again** — open the purchase link, if you saved one.\r
 - **Mark depleted** — zero out the weight and flag the spool as empty. You can undo this.\r
 - **Delete spool** — remove the spool. See [Editing and deleting spools](/docs/inventory/editing-and-deleting-spools/).\r
 \r
 The heart icon adds the spool to your favorites — see [Favorites and low stock](/docs/inventory/favorites-and-low-stock/).\r
+\r
+## Add another spool\r
+\r
+**Add another spool** opens a dialog for creating duplicates of the current spool, rather than taking you straight to the add form:\r
+\r
+- **Quantity** — create up to ten identical duplicates in one go.\r
+- **Price per new spool** — optional. Leave it blank to copy the source spool's price, or enter a different price to use for all the duplicates created this time.\r
+- **Create as variant** — instead of duplicating immediately, this opens the add-spool form prefilled with the source spool's brand, material, spool size, and quantity, so you can review and change details before saving. Checking this hides the price field, since the form itself covers price.\r
+\r
+With **Create as variant** unchecked, tapping **Add** creates the duplicate(s) immediately with a full copy of the source spool's details — no review step. This is the fast path for restocking an identical spool; use **Create as variant** when the new spool differs in some way, such as a different color or purchase source.\r
+\r
+A grouped card's menu also has an **Add another spool** action. It works the same way, but leaves out **Purchase Source**, **Inventory Location**, **Notes**, and price — the fields most likely to differ between individual spools in the group — while still copying everything else, including diameter, spool size, and technical settings.\r
 \r
 ## How usage and remaining weight relate\r
 \r

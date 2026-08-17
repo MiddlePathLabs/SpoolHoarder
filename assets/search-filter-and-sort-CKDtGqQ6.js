@@ -3,7 +3,7 @@ title: Search, filter, and sort
 description: Find the spool you need in a large inventory using search, filters, and sort orders.
 order: 4
 status: published
-updated: 2026-08-04
+updated: 2026-08-17
 keywords:
   - search
   - find spool
@@ -32,7 +32,7 @@ There is one special case: type a hex color code like \`#59E9FF\` and Spool Hoar
 
 Tap the **Filter** button to open the **Filter Inventory** sheet. Filters are grouped into sections:
 
-- **Status** — **Active Only** (hide empties), **Empty Only**, **Favorites**, and **In Active Projects**.
+- **Status** — **All Spools**, **Active Only** (hide empties), **Empty Only**, **Favorites**, and **In Active Projects**.
 - **Needs Attention** — **Low Stock**, **Missing Printer Assignment**, **Missing Location**, **Missing Technical Settings**, **Missing Dry History**, and **Missing Price**. Pick one at a time to find spools that need a look.
 - **Material Category** — PLA, PETG, Engineering, Flexible, Support, Specialty, and Other, each with a count.
 - **Material**, **Brand**, **Product Family**, and **Color Family** — pick any number of values within each. Each chip shows how many spools match.
@@ -41,7 +41,7 @@ Tap the **Filter** button to open the **Filter Inventory** sheet. Filters are gr
 
 Filters combine with AND across sections, and within a section you can select several values (any of which matches). The filter button shows a count of how many filters are active.
 
-Use **Reset all filters** inside the sheet, or the **Clear Filters** pill above the list, to start fresh.
+Two controls clear filters, and they don't do quite the same thing: **Reset to defaults** inside the sheet returns every filter to your saved default view (for example, **Active Only**), while the **Show all spools** pill above the list clears every filter for the current session — including revealing depleted spools — without changing your defaults.
 
 ## Sort
 

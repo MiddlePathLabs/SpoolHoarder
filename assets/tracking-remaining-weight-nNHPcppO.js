@@ -3,7 +3,7 @@ title: Tracking remaining weight
 description: The ways spool weight goes down, how to correct it against a real scale, and why it never goes negative.
 order: 8
 status: published
-updated: 2026-08-04
+updated: 2026-08-17
 keywords:
   - remaining weight
   - weight
@@ -14,6 +14,10 @@ keywords:
   - accuracy
   - refill
   - negative weight
+  - filament only
+  - total scale weight
+  - tare
+  - empty spool weight
 platforms:
   - all
 ---
@@ -35,6 +39,21 @@ Adding a usage log also works in reverse: if you delete a log by mistake, its gr
 Filament can drift from what the app thinks — moisture loss, a messy first layer, or a spool that arrived part-used. To correct it, open the spool and tap the **Remaining** card (or the pencil icon beside it). The **Adjust remaining weight** dialog has a single field, **Remaining weight (g)**, where you type the number your scale shows. Tap **Save** and the spool updates.
 
 The value you enter is capped between zero and the spool's full size, so you cannot accidentally set it higher than the spool could ever hold. When a spool is empty, the same dialog is how you record a refill — type the new weight to bring it back into use.
+
+## Filament only vs. total scale weight
+
+Settings → Appearance → **Weight Display** controls whether the weights Spool Hoarder shows and tracks include the empty spool itself:
+
+- **Total scale weight** (the default) — the number you'd read straight off a kitchen scale with the spool on it: filament plus the empty spool.
+- **Filament only** — just the net filament, with the empty spool's weight (its tare) subtracted out.
+
+This setting is global — it changes how weight is displayed and entered everywhere: spool cards, the **Remaining** card, low-stock thresholds, and usage logging all switch to the same basis at once.
+
+### Switching to Filament only
+
+The first time you switch to **Filament only**, Spool Hoarder needs to know how much of each existing spool's recorded weight is filament versus empty spool. If any of your spools don't already have that worked out, a **Set up filament weights** dialog walks you through it: pick a filament capacity for each one (a few common sizes are suggested, or enter your own), and Spool Hoarder works out the empty spool weight and converts the stored remaining weight to net filament. Nothing is changed until you confirm, and a spool with a scale reading that doesn't add up shows an error instead of saving a bad conversion.
+
+New spools you add after switching don't need this — their spool size is already recorded on the basis you've selected.
 
 ## Why weight never goes negative
 
