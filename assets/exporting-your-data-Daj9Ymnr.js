@@ -3,7 +3,7 @@ title: Exporting your data
 description: Get a CSV or a full bundle out of the app, whenever you want.
 order: 4
 status: published
-updated: 2026-08-04
+updated: 2026-08-26
 keywords:
   - export
   - csv
@@ -36,7 +36,7 @@ Open **Settings → Data & Backup → Export Data** and choose what to include. 
 export is always a single \`.zip\` file.
 
 - **Export All** — toggles every category below at once.
-- **Spools** — your filament inventory.
+- **Spools** — your filament inventory, including spools that have left it. Each row carries the spool's status, the date it changed, the weight it had when it left, any status note, and — for a sold spool — the amount received.
 - **Projects** — includes each project's filaments, usage logs, and thumbnails.
 - **UPC Catalog** — your barcode scan history and learned product mappings.
 - **Include Deleted Data** — also bundles soft-deleted rows, for a complete

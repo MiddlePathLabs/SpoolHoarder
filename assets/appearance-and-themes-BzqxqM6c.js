@@ -59,7 +59,7 @@ Each palette is tuned for light, dim, and dark, so you can combine any palette w
 \r
 **Weight Display** chooses whether weights include the empty spool:\r
 \r
-- **Total scale weight** (the default) — filament plus the empty spool, the number you'd read straight off a kitchen scale.\r
+- **Scale weight** (the default) — filament plus the empty spool, the number you'd read straight off a kitchen scale.\r
 - **Filament only** — net filament weight, with the empty spool's weight subtracted.\r
 \r
 This applies everywhere weight is shown or entered, not just on cards. Switching to **Filament only** for the first time may prompt a short setup step for any existing spools that need their filament capacity confirmed. See [Tracking remaining weight](/docs/inventory/tracking-remaining-weight/) for how the conversion works.\r

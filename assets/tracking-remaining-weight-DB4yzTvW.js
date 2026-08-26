@@ -3,7 +3,7 @@ title: Tracking remaining weight
 description: The ways spool weight goes down, how to correct it against a real scale, and why it never goes negative.
 order: 8
 status: published
-updated: 2026-08-17
+updated: 2026-08-26
 keywords:
   - remaining weight
   - weight
@@ -30,9 +30,9 @@ Three things reduce remaining weight:
 
 1. **Logging usage.** Whenever you record grams used against a project, that amount is subtracted from the spool. If a log would use more than the spool has left, Spool Hoarder stops it with a message such as "Only 120g remaining".
 2. **Correcting it by hand.** Tap the **Remaining** card on the spool detail screen to type the real weight from a scale.
-3. **Marking a spool depleted.** This zeroes the weight and flags the spool as empty in one step.
+3. **Marking a spool used up.** **More** (⋯) → **Mark Used Up** zeroes the weight and sets the spool's status to used up in one step. Whatever was left is recorded on the spool first, and if any filament is still on it you are asked to confirm, with **Mark Discarded** offered as the alternative. See [Editing and deleting spools](/docs/inventory/editing-and-deleting-spools/).
 
-Adding a usage log also works in reverse: if you delete a log by mistake, its grams are added back onto the spool automatically.
+Adding a usage log also works in reverse: if you delete a log by mistake, its grams are added back onto the spool automatically. And when a usage log takes a spool to exactly zero, Spool Hoarder offers to mark it used up for you.
 
 ## Reconciling against a real scale
 
@@ -44,7 +44,7 @@ The value you enter is capped between zero and the spool's full size, so you can
 
 Settings → Appearance → **Weight Display** controls whether the weights Spool Hoarder shows and tracks include the empty spool itself:
 
-- **Total scale weight** (the default) — the number you'd read straight off a kitchen scale with the spool on it: filament plus the empty spool.
+- **Scale weight** (the default) — the number you'd read straight off a kitchen scale with the spool on it: filament plus the empty spool.
 - **Filament only** — just the net filament, with the empty spool's weight (its tare) subtracted out.
 
 This setting is global — it changes how weight is displayed and entered everywhere: spool cards, the **Remaining** card, low-stock thresholds, and usage logging all switch to the same basis at once.

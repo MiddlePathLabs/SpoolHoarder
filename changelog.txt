@@ -1,11 +1,30 @@
-Changelog - Recent Updates (May - July 2026)
+Changelog - Recent Updates (May - August 2026)
 
-## Version 2.7.1
+## Version 26.8.2
+[ Features ]
+- Every spool now has a status - active, used up, sold, gifted, or discarded - so a spool that leaves your collection stays a full record instead of being deleted. Mark a spool sold (optionally recording what you received for it and, if it never had one, what you originally paid), gifted, or discarded from its detail screen or the multi-select bar, and bring it back any time with Restore to Inventory.
+- Marking a spool used up now prompts you when there is still filament on it, with a one-tap path to mark it discarded instead, and when a usage log takes a spool to exactly zero the app offers to mark it used up for you.
+- The inventory filter grew a Status section: a visible "Current inventory" chip is the default view, and clearing it (or picking sold, gifted, discarded, or used up) shows those records. Grouping, cards, rows, and the detail screen all show a spool's status in words, and sold spools without a recorded amount carry a small "No amount" marker so you can fill them in later.
+- The free plan's 50-spool limit now counts your current inventory only: sold, gifted, discarded, and used-up records do not take up slots, and restoring a spool back into a full inventory tells you exactly what to do about it.
+- Exports now carry each spool's status, exit details, and sale amount through CSV, backups, and cloud sync, and include spools that are no longer in inventory.
+- The statistics dashboard gained an exit ledger: totals for spools you have sold, gifted, or discarded, with what your sold spools brought in alongside what they originally cost.
+
+[ Fixes ]
+- Undoing a used-up or sold spool restores everything about it - including its remaining weight and printer assignment - instead of leaving some fields behind.
+- Statistics no longer flicker or disappear while you are editing a spool; the numbers settle a moment after you stop typing.
+
+
+## Version 26.8.1
 [ Features ]
 - Brought multi-currency to the whole app: spool prices, print costs, and reports each carry their own currency, your existing money is migrated automatically, and currencies survive import, export, scanning, and cloud sync. Mixed-currency reports stay correct, with cached exchange rates shown for reference.
 - Added language selection: pick the app language in Settings or follow the system, with dates, numbers, and units formatted to your locale.
 - Added a complete set of Bambu Lab printer presets.
 - Added in-app links to the documentation site from Settings, Contact Us, the inventory error screen, Data & Backup, and Getting Started.
+- Added a Weight display setting to track spool weight as filament only or as a total scale reading, with an optional empty-spool weight so the app can convert between the two; existing spools are resolved automatically wherever possible, and you're only asked about the ones it can't determine on its own.
+- Added a duplicate action to spool group cards, matching the one already on the spool detail screen.
+- Added a Scan button to attach a barcode to a spool from its details card, even if it doesn't have one yet.
+- Data exports now include each spool's bound NFC tag UID, so the exported file shows which physical tag opens each spool.
+- Added the option to send a one-time support tip to Spool Hoarder from Settings on Android, matching iOS, macOS, and Windows.
 
 [ UI & UX ]
 - Redesigned the selected-spool hero with a calmer wound-filament texture that reads as real filament and renders multicolor correctly, and tightened the details, quick-notes, and color-suggestion sections.
@@ -16,6 +35,9 @@ Changelog - Recent Updates (May - July 2026)
 - Tightened the mobile spool detail layout with a more compact hero and stock ring, a full-width Log Usage action, scroll-aware print profile chips, and quieter "Not set" empty states.
 - Added a "TD1 verified" badge to Properties & Features on the spool detail screen when both the transmission distance and color values still hold what a TD1 scan measured.
 - Fixed picker sheets, including the barcode scanner, sliding up as full-width phone sheets on desktop windows instead of showing as constrained dialogs.
+- Picking a color swatch by family now fills in a name from that family; a custom shade you didn't pick a family for is left unnamed instead of getting an invented name.
+- "Find similar" now applies the color filter immediately with an undo option, instead of opening a settings panel over the results, and is now available from group headers as well as individual spools.
+- Clarified the two ways to edit a spool: "Quick edit" on the details card edits just those fields, while the full editor is now one tap away on phones via a pencil icon, not just through the overflow menu. Leaving Quick edit with unsaved changes now asks before discarding them.
 
 [ Fixes ]
 - Inline spool edits now merge onto the latest stored row instead of overwriting it, so a cloud pull or background update from another device is no longer silently clobbered.
@@ -32,6 +54,27 @@ Changelog - Recent Updates (May - July 2026)
 - Fixed the camera scan option being offered on macOS, where camera scanning isn't available.
 - Fixed the on-device inventory assistant failing on libraries with a lot of materials, brands, or locations.
 - Fixed the mobile spool hero not letting you add a reference photo when none was set.
+- Fixed the remaining-weight percentage in the compact inventory row wrapping onto its own line on narrower phones, and made sure it's announced to screen readers in every list style.
+- Fixed autocomplete suggestions on the Add Spool form (Brand, Material, Product Family, Purchase Source, Color Description) closing and dismissing the keyboard when you tried to scroll them.
+- Fixed inventory grouping merging differently colored spools together when the color came from a swatch, scan, or catalog match rather than typed text.
+- Fixed "Show all" not including depleted spools when explicitly requested, and clarified the filter reset button labels.
+- Fixed storage locations recreated after being deleted on another device sometimes failing to sync back correctly.
+- Fixed the inventory assistant getting stuck instead of showing an error when it couldn't answer a question, and made Clear Filters and back navigation also clear an active search term or assistant-driven view.
+- Fixed the on-device inventory assistant not recognizing some materials, brands, or locations that were only recognized when asked online.
+- Fixed clearing a field like Brand or Material while reviewing an order import not actually clearing it.
+- Fixed a discarded batch scan occasionally having its result reappear afterward.
+- Made "Clear All Data" in Settings clearly report whether data was fully or only partially cleared, instead of showing a raw error.
+- Fixed location changes from other devices sometimes not appearing promptly on screens already open.
+- Fixed an interrupted transmission-distance or color edit sometimes leaving the field marked as NFC-scan-confirmed when the edit hadn't actually been saved.
+- Fixed saving a print-cost estimate to a since-deleted project showing an error instead of a clear message.
+- Fixed the project cost card showing a saved estimate instead of the actual logged print cost when both were available.
+- Fixed inventory value totals skipping currency conversion in some views, which could show incorrect totals for multi-currency libraries.
+- Fixed a failed vendor tag lookup being treated as a barcode match, which could point to the wrong product; it's now flagged for manual review instead.
+- Fixed hardware barcode scans queued while the app was busy sometimes stalling instead of processing once free.
+- Fixed AI order-import credit charges occasionally being double-charged on a network retry.
+- Android: purchases that are refunded, cancelled, or revoked on Google Play now lose Pro access right away instead of keeping it until the original period would have ended.
+- Fixed the "Add purchase source" prompt jumping the screen around instead of opening cleanly.
+- Fixed some Print Settings temperatures showing doubled units, like "215°C°C".
 
 [ Security & Infrastructure ]
 - Applied routine security and dependency updates.
