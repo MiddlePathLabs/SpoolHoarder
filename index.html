@@ -168,11 +168,29 @@
       gtag('js', new Date());
       gtag('config', 'G-G89GWQ4895');
     </script>
-    <script type="module" crossorigin src="./assets/main-C-rW9MkT.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/index-BXYWvGI3.js">
-    <link rel="modulepreload" crossorigin href="./assets/badge-BM74E1EG.js">
-    <link rel="modulepreload" crossorigin href="./assets/mail-0SBGAJcx.js">
-    <link rel="stylesheet" crossorigin href="./assets/index-BSYFAR_7.css">
+      <script>
+      // Applies the saved theme before first paint. Without this the app always
+      // renders `light` first and then swaps in `useEffect`, which flashes and
+      // makes a dark-theme visitor download the light hero screenshot and then
+      // the dark one. Kept inline and tiny so it cannot delay the paint itself.
+      (function () {
+        try {
+          var t = localStorage.getItem('theme');
+          if (t === 'light' || t === 'dim' || t === 'dark') {
+            document.documentElement.classList.add(t);
+          } else {
+            document.documentElement.classList.add('light');
+          }
+        } catch (e) {
+          document.documentElement.classList.add('light');
+        }
+      })();
+    </script>
+    <script type="module" crossorigin src="./assets/main-Dz0Ltz8Y.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/index-D1ZCiD46.js">
+    <link rel="modulepreload" crossorigin href="./assets/badge-C540BpWL.js">
+    <link rel="modulepreload" crossorigin href="./assets/mail-BP-ClH6X.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-9whjkT7l.css">
   </head>
   <body>
     <div id="root"></div>
