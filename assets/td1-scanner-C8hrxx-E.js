@@ -72,7 +72,7 @@ with TD1**.\r
 \r
 If more than one candidate device is attached, a **Scanner** dropdown appears so\r
 you can pick the right one. Spool Hoarder chooses for you when it is confident,\r
-and the helper text says as much: *Choose a scanner only if SpoolHoarder picked\r
+and the helper text says as much: *Choose a scanner only if Spool Hoarder picked\r
 the wrong one.*\r
 \r
 ## Where to start a scan\r

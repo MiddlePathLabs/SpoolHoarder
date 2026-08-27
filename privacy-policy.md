@@ -1,11 +1,11 @@
 # Privacy Policy
 
-**SpoolHoarder**  
+**Spool Hoarder**  
 **Last Updated:** July 16, 2026
 
 ## Introduction
 
-SpoolHoarder ("the App") is a 3D printer filament inventory management application.
+Spool Hoarder ("the App") is a 3D printer filament inventory management application.
 
 The App is designed **local-first**: your spool, project, and usage data is stored on your device. Some optional features use network services and may send data off-device, as described below.
 
@@ -13,7 +13,7 @@ The App is designed **local-first**: your spool, project, and usage data is stor
 
 ### Data you enter in the App (local by default)
 
-SpoolHoarder stores your inventory and project data locally, including:
+Spool Hoarder stores your inventory and project data locally, including:
 
 - Spool details (brand, material, colors, weights, prices, temperatures, notes)
 - Project details and usage logs
@@ -27,7 +27,7 @@ On native platforms, the app uses SQLCipher keying with key material in secure s
 
 ### Account and cloud data (only when you use cloud features)
 
-If you choose to sign in and use cloud-backed features, SpoolHoarder processes account and cloud data through Supabase, such as:
+If you choose to sign in and use cloud-backed features, Spool Hoarder processes account and cloud data through Supabase, such as:
 
 - Account identifiers (for example, email and auth user ID)
 - Synced inventory/project/usage data
@@ -40,7 +40,7 @@ Cloud sync and cloud account features are optional and feature-flag dependent.
 
 ### Shared filament measurement contributions (optional)
 
-If you enable "Share Confirmed TD/Hex Measurements," SpoolHoarder may submit TD1-confirmed filament measurement data to help improve filament data quality. Contributions may include:
+If you enable "Share Confirmed TD/Hex Measurements," Spool Hoarder may submit TD1-confirmed filament measurement data to help improve filament data quality. Contributions may include:
 
 - Brand, material, name, colors, product family, and diameter
 - Transmission distance and/or color hex codes
@@ -63,7 +63,7 @@ If backend notifications are configured, feedback details may also be forwarded 
 
 ### Website usage
 
-If you visit the SpoolHoarder website, standard website hosting logs may be processed by our hosting providers. The public website may also use privacy-respecting configuration of Google Analytics to understand aggregate page usage. The website support form sends the information you enter to the same feedback backend described above.
+If you visit the Spool Hoarder website, standard website hosting logs may be processed by our hosting providers. The public website may also use privacy-respecting configuration of Google Analytics to understand aggregate page usage. The website support form sends the information you enter to the same feedback backend described above.
 
 ## Crash and Error Reporting
 
@@ -96,12 +96,12 @@ Some purchase flows may create or use an anonymous Supabase session when you are
 
 ### AI-powered spool scanning
 
-SpoolHoarder supports multiple AI scan and import paths:
+Spool Hoarder supports multiple AI scan and import paths:
 
 - **On-Device mode (Apple platforms):** OCR/parsing runs locally on-device.
-- **Included cloud scan mode:** photo is sent through SpoolHoarder cloud function for processing.
+- **Included cloud scan mode:** photo is sent through Spool Hoarder cloud function for processing.
 - **Legacy BYOK provider mode (if configured):** photo may be sent directly to configured external AI provider APIs.
-- **Order text import:** pasted order confirmation text is sent through a SpoolHoarder cloud function for AI parsing when you choose to use that feature.
+- **Order text import:** pasted order confirmation text is sent through a Spool Hoarder cloud function for AI parsing when you choose to use that feature.
 
 For cloud scan paths:
 
@@ -109,7 +109,7 @@ For cloud scan paths:
 - EXIF metadata is stripped before transmission
 - Temporary image files are deleted after processing (best effort)
 
-For included cloud AI features, SpoolHoarder may store account-linked operational usage metadata for credit accounting, abuse prevention, cost monitoring, and debugging. This can include token counts, model/provider names, credit changes, request source, timestamps, parse status, and estimated processing cost. It does not intentionally store the original image or pasted order text in the usage log, though AI responses returned for the active app workflow may contain extracted fields from the submitted content.
+For included cloud AI features, Spool Hoarder may store account-linked operational usage metadata for credit accounting, abuse prevention, cost monitoring, and debugging. This can include token counts, model/provider names, credit changes, request source, timestamps, parse status, and estimated processing cost. It does not intentionally store the original image or pasted order text in the usage log, though AI responses returned for the active app workflow may contain extracted fields from the submitted content.
 
 ### Filament catalog (SpoolmanDB)
 
@@ -161,24 +161,24 @@ Bluetooth, USB, or serial device access may be used to discover and connect to c
 
 ## Account and Data Deletion
 
-### Delete your SpoolHoarder account and associated cloud data
+### Delete your Spool Hoarder account and associated cloud data
 
-You can permanently delete your SpoolHoarder cloud account in the App:
+You can permanently delete your Spool Hoarder cloud account in the App:
 
 1. Open **Settings**.
 2. Open **Account & Cloud Sync**.
 3. Select **Delete Account**.
 4. Type **DELETE** and confirm.
 
-This deletes your SpoolHoarder cloud account and the cloud records associated with it, including synced inventory, projects, usage logs, printer data, subscription and credit records, purchase-validation records, AI usage records, and account-linked feedback and uploaded support attachments. Your local data remains on your device.
+This deletes your Spool Hoarder cloud account and the cloud records associated with it, including synced inventory, projects, usage logs, printer data, subscription and credit records, purchase-validation records, AI usage records, and account-linked feedback and uploaded support attachments. Your local data remains on your device.
 
-Deleting your SpoolHoarder account does not cancel a subscription managed by the Apple App Store, Google Play, or Microsoft Store. Cancel an active store subscription through the store where you purchased it to avoid future charges.
+Deleting your Spool Hoarder account does not cancel a subscription managed by the Apple App Store, Google Play, or Microsoft Store. Cancel an active store subscription through the store where you purchased it to avoid future charges.
 
-If you cannot access the App, you can [request account deletion by email](mailto:support@middlepathlabs.com?subject=SpoolHoarder%20Account%20Deletion%20Request). Send the request from the email address associated with your account, or include that address in your message. We may request additional information to verify that you own the account before processing the request.
+If you cannot access the App, you can [request account deletion by email](mailto:support@middlepathlabs.com?subject=Spool%20Hoarder%20Account%20Deletion%20Request). Send the request from the email address associated with your account, or include that address in your message. We may request additional information to verify that you own the account before processing the request.
 
 ### Data-only deletion
 
-SpoolHoarder does not currently provide a separate cloud-data deletion option that keeps your cloud account active. You can remove local data by deleting it in the App or uninstalling the App.
+Spool Hoarder does not currently provide a separate cloud-data deletion option that keeps your cloud account active. You can remove local data by deleting it in the App or uninstalling the App.
 
 ## Data Retention and Deletion
 
@@ -196,7 +196,7 @@ SpoolHoarder does not currently provide a separate cloud-data deletion option th
 
 ## Third-Party Services
 
-SpoolHoarder may interact with:
+Spool Hoarder may interact with:
 
 - [Supabase](https://supabase.com/privacy) (auth, sync, edge functions, storage)
 - [Firebase Crashlytics](https://policies.google.com/privacy) (crash/error reporting on supported platforms)
@@ -206,11 +206,11 @@ SpoolHoarder may interact with:
 - SpoolmanDB public catalog (GitHub Pages-hosted public dataset)
 - Email delivery infrastructure used for feedback notifications, if configured by us
 
-SpoolHoarder does **not** include advertising SDKs or ad-network tracking.
+Spool Hoarder does **not** include advertising SDKs or ad-network tracking.
 
 ## Children's Privacy
 
-SpoolHoarder is not directed to children under 13, and we do not knowingly collect personal information from children under 13.
+Spool Hoarder is not directed to children under 13, and we do not knowingly collect personal information from children under 13.
 
 ## Changes to This Policy
 
@@ -222,4 +222,4 @@ If you have questions about this Privacy Policy, please open an issue on our [Gi
 
 ---
 
-*This Privacy Policy applies to SpoolHoarder on supported platforms, including iOS, Android, macOS, Windows, and Web builds where available.*
+*This Privacy Policy applies to Spool Hoarder on supported platforms, including iOS, Android, macOS, Windows, and Web builds where available.*

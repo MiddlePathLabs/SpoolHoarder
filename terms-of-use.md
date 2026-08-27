@@ -1,11 +1,11 @@
 # Terms of Use
 
-**SpoolHoarder**  
+**Spool Hoarder**  
 **Last Updated:** May 6, 2026
 
 ## Agreement
 
-These Terms of Use apply to your use of SpoolHoarder ("the App"), a 3D printer filament inventory management application.
+These Terms of Use apply to your use of Spool Hoarder ("the App"), a 3D printer filament inventory management application.
 
 For App Store downloads, your use of the App is governed by Apple's Standard End User License Agreement (EULA), available at:
 
@@ -21,9 +21,9 @@ Your use of the App is also governed by our Privacy Policy:
 
 ## Subscriptions
 
-SpoolHoarder may offer an auto-renewable Pro subscription.
+Spool Hoarder may offer an auto-renewable Pro subscription.
 
-- Subscription title: SpoolHoarder Pro Annual
+- Subscription title: Spool Hoarder Pro Annual
 - Subscription length: 1 year
 - Subscription price: shown in the App before purchase and confirmed by Apple at checkout
 - Benefits may include Pro features, cloud sync access, and included AI scan credits, as described in the App
@@ -38,7 +38,7 @@ If a free trial or promotional offer is available, unused trial time may be forf
 
 ## AI Scan Credits and Consumable Purchases
 
-SpoolHoarder may offer consumable AI scan credits. Credits are used for eligible cloud AI features, such as included cloud spool scanning or order import, when those features are available. Consumable purchases are processed by Apple or the applicable platform store.
+Spool Hoarder may offer consumable AI scan credits. Credits are used for eligible cloud AI features, such as included cloud spool scanning or order import, when those features are available. Consumable purchases are processed by Apple or the applicable platform store.
 
 Credits do not represent cash value, cannot be transferred, and may be subject to technical or account restrictions described in the App.
 
@@ -54,7 +54,7 @@ Some features depend on platform support, device permissions, network access, th
 
 ## No Warranty
 
-The App is provided as described in Apple's Standard EULA and applicable law. SpoolHoarder is intended as a helpful inventory tool, but we do not guarantee that inventory data, AI extraction, cost estimates, sync results, or third-party catalog data will always be complete, accurate, or available.
+The App is provided as described in Apple's Standard EULA and applicable law. Spool Hoarder is intended as a helpful inventory tool, but we do not guarantee that inventory data, AI extraction, cost estimates, sync results, or third-party catalog data will always be complete, accurate, or available.
 
 ## Contact
 
