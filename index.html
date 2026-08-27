@@ -55,7 +55,7 @@
           "@type": "Offer",
           "price": "0",
           "priceCurrency": "USD",
-          "description": "Free tier with up to 50 spools, 5 projects, and core features"
+          "description": "Free tier with 50 spools in current inventory, 5 projects, and core features"
         },
         {
           "@type": "Offer",
@@ -71,95 +71,10 @@
     }
     </script>
 
-    <!-- Structured Data: FAQPage -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Does it work without a cloud account?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. The core app is local-first with a SQLite database on your device. You can track inventory, manage projects, and back up your data without creating an account. Cloud sync is an optional Pro feature."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I scan spools with my phone by the printer?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. On iPhone and iPad, Spool Hoarder supports camera-based AI scanning, Apple Vision OCR, NFC tag reading, UPC barcodes, and batch scanning for multiple spools at once."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How does AI scanning work? Is it private?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "You can bring your own API key (Gemini, Claude, or OpenAI) or use the included credits with a Pro subscription. Photos are compressed to 1024px and EXIF metadata is stripped before processing. API keys are stored in your platform's secure keychain."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does scan-assisted entry save automatically?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "No. Scanning fills in what it can detect — brand, material, color, temperatures — but nothing is added to your inventory until you review the details and confirm. You stay in control of every spool that gets saved."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What happens when I hit the free limit?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Nothing happens to the data you already have — it stays on your device and remains fully yours. Free covers up to 50 spools, 5 projects, and 1 printer profile. Pro removes those limits, and if you ever stop subscribing your existing inventory stays put."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "I track spools in a spreadsheet. Can I import them?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Import your existing CSV and start without re-entering your inventory. Spool Hoarder also auto-detects SpoolStock exports and normalizes data against the SpoolmanDB catalog during import."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I move my data to another computer?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Yes. Export a full data bundle (ZIP with SHA-256 checksums) or a CSV at any time. The app also runs rolling auto-backups. No vendor lock-in."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Does it integrate with Spoolman or other tools?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Spool Hoarder uses SpoolmanDB for catalog autocomplete and supports SpoolmanDB-compatible fields. It also reads OpenSpool, Spoolman, and OpenTag3D QR codes and NFC tags."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What's free vs paid?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Free includes up to 50 spools, 5 projects, the print cost calculator, printer profiles, barcode and tag scanning, bring-your-own-key AI scanning, basic stats, and full data backup. Pro ($19.99/year) removes all limits, adds 20 monthly AI scan credits, extended statistics, cloud sync, and shareable project cards."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What platforms are supported?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Spool Hoarder is available now on Windows through the Microsoft Store and on iPhone, iPad, and Mac through the App Store. Apple devices also support platform-specific features like Apple Vision OCR and NFC."
-          }
-        }
-      ]
-    }
-    </script>
+    <!-- Structured Data: FAQPage.
+         Generated from src/content/faq.json by plugins/faq-plugin.ts, which is
+         the same file FaqSection.tsx renders. Kept out of this file on purpose:
+         the two copies drifted on three answers while both were hand-edited. -->
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G89GWQ4895"></script>
     <script>
@@ -186,13 +101,123 @@
         }
       })();
     </script>
-    <script type="module" crossorigin src="./assets/main-Dz0Ltz8Y.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/index-D1ZCiD46.js">
-    <link rel="modulepreload" crossorigin href="./assets/badge-C540BpWL.js">
-    <link rel="modulepreload" crossorigin href="./assets/mail-BP-ClH6X.js">
-    <link rel="stylesheet" crossorigin href="./assets/index-9whjkT7l.css">
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does it work without a cloud account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The core app is local-first with a SQLite database on your device. You can track inventory, manage projects, and back up your data without creating an account. Cloud sync is an optional Pro feature."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I scan spools with my phone by the printer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. On iPhone and iPad, Spool Hoarder supports camera-based AI scanning, Apple Vision OCR, NFC tag reading, UPC barcodes, and batch scanning for multiple spools at once. You can scan right where you print."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does AI scanning work? Is it private?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can bring your own API key (Gemini, Claude, or OpenAI) or use the included credits with a Pro subscription. Photos are compressed to 1024px and EXIF metadata is stripped before processing. API keys are stored in your platform's secure keychain."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does scan-assisted entry save automatically?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Scanning fills in what it can detect — brand, material, color, temperatures — but nothing is added to your inventory until you review the details and confirm. You stay in control of every spool that gets saved."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens when I hit the free limit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nothing happens to the data you already have — it stays on your device and remains fully yours. Free covers 50 spools in your current inventory, 5 projects, and 1 printer profile. Spools you have marked used up, sold, gifted, or discarded keep their full records but stop counting against the 50, so your history costs you nothing. Pro removes those limits, and if you ever stop subscribing your existing inventory stays put."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens to a spool when I use it up or sell it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It stays. Every spool has a status — active, used up, sold, gifted, or discarded — so a spool that leaves your collection keeps its full record: price, notes, usage history, and the weight it had when it left. Sold spools can record what you got for them, so the stats can show what your sales brought in against what those spools cost. Nothing is lost, and you can restore any of it to inventory later."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can it keep track of my STL and 3MF files?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, on Mac and Windows. Point the Print Library at a folder of models and it indexes them in place — nothing is copied or moved. You get previews, search, duplicate detection, smart collections, and links from a model to the project you printed it for. The library is local to each device and does not sync."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I don't buy filament in dollars. Does it handle my currency?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Each price is stored in the currency you entered it in — spools, usage logs, and printer costs all carry their own. Pick a reporting currency and mixed-currency totals convert through cached European Central Bank rates. Dates, numbers, and units follow your locale. The interface itself is currently English only."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I track spools in a spreadsheet. Can I import them?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Import your existing CSV and start without re-entering your inventory. Spool Hoarder also auto-detects SpoolStock exports and normalizes data against the SpoolmanDB catalog during import."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I move my data to another computer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Export a full data bundle (ZIP with SHA-256 checksums) or a CSV at any time. The app also runs rolling auto-backups. No vendor lock-in."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it integrate with Spoolman or other tools?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Spool Hoarder uses SpoolmanDB for catalog autocomplete and supports SpoolmanDB-compatible fields. It also reads OpenSpool, Spoolman, and OpenTag3D QR codes and NFC tags, and can write standard OpenSpool NFC tags from spool detail."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's free vs paid?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Free includes 50 spools in your current inventory, 5 projects, the print cost calculator, printer profiles, TD1 USB scanner support for TD and hex color capture, barcode and tag scanning, bulk actions, bring-your-own-key AI scanning, basic stats, shareable cards, the print library on Mac and Windows, and full data backup. Pro ($19.99/year) removes all limits, adds 20 monthly AI scan credits, extended statistics including the exit ledger, and cloud sync. You can also buy a 25-credit pack for $0.99 any time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What platforms are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Spool Hoarder is available now on Windows through the Microsoft Store and on iPhone, iPad, and Mac through the App Store. Apple devices also support platform-specific features like Apple Vision OCR and NFC."
+      }
+    }
+  ]
+}</script>
+    <script type="module" crossorigin src="./assets/main-C9LF0rUT.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/index-jxCut6sG.js">
+    <link rel="modulepreload" crossorigin href="./assets/badge-ENO1Y7o-.js">
+    <link rel="modulepreload" crossorigin href="./assets/mail-uAsM26Ph.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-BYr9zn9c.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
   </body>
 </html>

@@ -1,5 +1,22 @@
 Changelog - Recent Updates (May - August 2026)
 
+## Unreleased
+[ Fixes ]
+- Fixed the app's typeface falling back to the system font on Windows, macOS, and Android: four of the five bundled Outfit weights were not valid font files, so almost all text rendered in the platform default instead.
+- Deleting a spool no longer erases its usage history on your other devices. A usage log records that filament was consumed on a date, which stays true after the spool is gone.
+- Fixed two cloud sync problems that could lose data: an edit saved moments before a sync could be overwritten by an older copy from the server and then look already-synced, and a project deletion that was correctly rejected could still wipe that project's usage logs and filaments on the device receiving it.
+- Fixed reordering favorites moving the wrong spool when a search or a status filter was hiding part of the list.
+- Logging usage twice in quick succession - a double tap, or Enter pressed twice - no longer records the usage twice and deducts double.
+- Log Usage and Start Project are no longer offered for sold, gifted, or discarded spools in the wide desktop layout, matching the phone layout.
+- The Statistics screen no longer drops you back on the Overview tab while its numbers reload.
+- Project cost now updates immediately after a reprint, a "Log This Print" from the calculator, or a quick deduction, instead of waiting for something else to refresh it.
+- Undoing a sold, gifted, discarded, or used-up spool now checks the free plan's spool limit even after you have navigated away from the screen you started on.
+- The reserved Personal Log project can no longer be renamed or turned into an ordinary project by re-importing an exported CSV.
+- Account deletion no longer becomes permanently stuck after one failed or timed-out attempt.
+- The on-device inventory assistant now asks its own follow-up question when a prompt is ambiguous, instead of pushing you toward the cloud assistant.
+- Fixed a signed-in device occasionally reverting the decision about what to do with local data after signing in.
+
+
 ## Version 26.8.2
 [ Features ]
 - Every spool now has a status - active, used up, sold, gifted, or discarded - so a spool that leaves your collection stays a full record instead of being deleted. Mark a spool sold (optionally recording what you received for it and, if it never had one, what you originally paid), gifted, or discarded from its detail screen or the multi-select bar, and bring it back any time with Restore to Inventory.
