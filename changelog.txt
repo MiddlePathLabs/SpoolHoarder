@@ -1,10 +1,14 @@
 Changelog - Recent Updates (May - August 2026)
 
-## Unreleased
+## Version 26.8.3
+[ Features ]
+- The inventory assistant now understands the product lines you stock: a typed prompt like "show my Polyterra spools" matches the product families in your inventory instead of falling back to a plain name search.
+
 [ Fixes ]
 - Fixed the app's typeface falling back to the system font on Windows, macOS, and Android: four of the five bundled Outfit weights were not valid font files, so almost all text rendered in the platform default instead.
 - Deleting a spool no longer erases its usage history on your other devices. A usage log records that filament was consumed on a date, which stays true after the spool is gone.
 - Fixed two cloud sync problems that could lose data: an edit saved moments before a sync could be overwritten by an older copy from the server and then look already-synced, and a project deletion that was correctly rejected could still wipe that project's usage logs and filaments on the device receiving it.
+- Importing an exported backup no longer skips usage logs that have no unit price recorded on them; those rows used to fail with an error and be silently dropped, so their filament deductions went missing after a restore.
 - Fixed reordering favorites moving the wrong spool when a search or a status filter was hiding part of the list.
 - Logging usage twice in quick succession - a double tap, or Enter pressed twice - no longer records the usage twice and deducts double.
 - Log Usage and Start Project are no longer offered for sold, gifted, or discarded spools in the wide desktop layout, matching the phone layout.
@@ -15,6 +19,10 @@ Changelog - Recent Updates (May - August 2026)
 - Account deletion no longer becomes permanently stuck after one failed or timed-out attempt.
 - The on-device inventory assistant now asks its own follow-up question when a prompt is ambiguous, instead of pushing you toward the cloud assistant.
 - Fixed a signed-in device occasionally reverting the decision about what to do with local data after signing in.
+- Using a cloud AI feature - spool scan, inventory assistant, or order import - now asks for your explicit consent first, with a clear description of what is sent and to which provider, and you can revoke that consent in Settings at any time. Photos you pick for a scan no longer carry their hidden EXIF metadata, such as the GPS location, out of the app.
+- Exports on macOS now open a Save dialog like on Windows instead of the phone-style share sheet, and files shared from the app keep their intended filename instead of a random code.
+- Your spool database is encrypted on disk again: a dependency update in March had silently switched the app to an unencrypted database with no error shown. Existing databases are converted to encrypted copies automatically the next time the app starts, and the original unencrypted file is only removed after the conversion has been verified.
+- A temporarily unavailable secure-storage key - for example right after an app update - no longer makes the app report a corrupt database, which previously invited a reset that would erase your data; the app now reports the failed launch instead.
 
 
 ## Version 26.8.2
