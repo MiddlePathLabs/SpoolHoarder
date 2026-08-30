@@ -1,175 +1,58 @@
-![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=apple&logoColor=white)
-![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
-![macOS](https://img.shields.io/badge/macOS-000000?style=for-the-badge&logo=apple&logoColor=white)
-![License](https://img.shields.io/badge/License-Proprietary-red?style=for-the-badge)
-![Issues Welcome](https://img.shields.io/badge/Issues-Welcome-brightgreen?style=for-the-badge&logo=github)
-
-<p align="left">
-  <img src="logo.png" alt="Spool Hoarder" width="128">
-</p>
-
 # Spool Hoarder
 
-Spool Hoarder tracks filament inventory and usage for 3D printing. See what you own, how much remains, what it's worth, and where it's used. It's offline-first, stores everything locally in SQLite, and collects no analytics or telemetry.
-
----
-
-## Inventory
-
-Track everything in one place. Each spool shows brand, material, color (exact hex codes, including gradients), remaining weight, storage location, spool size, purchase price, drying history, and technical print parameters. Full, partial, and empty spools look distinct—see at a glance what's ready to print. Favorite spools pin to the top.
-
-Technical parameters include flow ratio, K-factor, diameter, extruder and bed temperatures, and transmission distance.
-
-Multi-select spools to mark them depleted, delete, add to a project, or export in bulk—no one-by-one cleanup.
-
----
-
-## Weight Tracking
-
-After a print, log what you used with a slider. Quick buttons (−50g, −10g, +10g, +50g) make it fast. Exact grams are always visible, and the slider stops you from accidentally recording more than the spool contains.
-
----
-
-## AI Spool Recognition
-
-Point your camera at a spool label. The app extracts brand, material, name, color, hex codes, diameter, and temperatures.
-
-Choose Google Gemini, Anthropic Claude, OpenAI, or on-device Apple Intelligence (iOS/macOS). Bring your own API key for free, or use included scan credits on a Pro subscription. Photos are compressed and EXIF-stripped before processing, and API keys stay in your system keychain. The app populates the Add Spool form for review before saving, normalizing brand and material names against the global filament catalog.
-
----
-
-## Batch Scanning
-
-Clear a shelf in one pass. The camera preview shows real-time feedback for each spool. On iOS and macOS, OCR runs on-device—no internet required. Review everything together, fix errors, then bulk-add.
-
-Working through a box of twenty spools takes a few minutes.
-
----
-
-## AJAX-3D TD1 Scanner
-
-Connect a TD1 scanner over USB to capture Transmission Distance (TD) and hex color codes directly into a spool—no manual typing required.
-
----
-
-## SpoolmanDB Integration
-
-Spool Hoarder connects to the SpoolmanDB global filament catalog. Autocomplete pulls from thousands of real products. Select a filament and hex codes, diameter, density, and temperature ranges fill in automatically. CSV imports use the catalog to normalize casing and fill missing data.
-
-The catalog caches locally for offline use.
-
----
-
-## Projects
-
-Track filament usage per project. Define what each project needs (brand, material, color, weight), then log grams from specific spools. Weights update automatically.
-
-You'll get a warning if you pick a spool that doesn't match what your project specified. Usage history shows date, spool, and grams per entry. Track status (active, complete, paused), total weight consumed, estimated vs actual cost. Add thumbnails, tag projects for filtering. View where each spool has been used across all projects.
-
-A Personal Log project provides quick standalone tracking.
-
----
-
-## Backup & Restore
-
-Export everything to a ZIP (with SHA-256 checksums)—spools, projects, usage logs, thumbnails. Optionally include deleted data for archival imports. The import preview shows what will change before you commit. Reference validation blocks imports with broken links. Rolling auto-backup keeps your data safe for regular backups or moving to a new device.
-
----
-
-## Search, Filter, Sort
-
-Search across brand, material, name, notes, features. Filter by material, color family, brand, diameter, depletion, favorites (with counts). Sort by brand, material, color family, weight, price, favorites, or date added.
-
----
-
-## Inventory Views
-
-Three options:
-
-- **Flat** – every spool listed
-- **Product** – identical filaments grouped with combined weight
-- **State** – grouped by full, partial, or depleted
-
----
-
-## Statistics
-
-Total spool count, active vs depleted inventory, total value, remaining weight (kg and lbs), average cost per kg and gram, material breakdown, low-stock warnings.
-
----
-
-## AI Assistant
-
-Ask your inventory questions in plain English—"How much PLA do I have left?", "Sealed spools I haven't touched in 90 days," "Total value of my Bambu filament." The assistant runs entirely on-device: it works offline and never spends a scan credit. It handles aggregates and math (totals, averages, min/max, distinct counts), smart filters (favorite, glow, sealed, barcode, color family), location/vendor/printer context, and date-aware queries, and it tells you when on-device model availability isn't ready yet.
-
----
-
-## CSV Import & Export
-
-Export to CSV, import to migrate or bulk-update. The preview shows what changes. Conflict detection flags overwrites. Errors appear per row. Handles exports from other tracking tools, including SpoolStock CSV compatibility.
-
----
-
-## Shareable Cards
-
-Generate polished spool profile, project summary, usage breakdown, and hoard summary cards you can share or save.
-
----
-
-## Color Advisor
-
-On the spool detail screen, get color suggestions from your own inventory based on color theory. Limited to compatible materials, scored by relevance, with explanations. Toggle in Settings.
-
----
-
-## QR & NFC
-
-Read filament metadata from spool tags. QR codes from OpenSpool, Spoolman, OpenTag3D. NFC via OpenSpool (NTAG), OpenPrintTag/Prusa (NFC-V), OpenTag3D. Bambu Lab RFID works on Android (MIFARE Classic). Write standard OpenSpool NFC tags directly from spool detail.
-
-Tag data maps to spool fields and integrates into batch scanning.
-
----
-
-## UPC Barcode Scanning
-
-Scan a filament barcode to create a spool. Reads UPC-A, EAN-13, EAN-8. On Windows, plug in a USB barcode scanner for rapid hands-on-keyboard entry. The local catalog learns from your scans—repeat barcodes are instant. Cross-references SpoolmanDB, falls back to AI vision if unrecognized. View and edit barcodes right on spool detail and grouped product headers.
-
----
-
-## Print Cost Calculator
-
-Enter filament weight, pick a spool to pull its price, set quantity for batch prints, and see per-item and total cost.
-
----
-
-## Printer Profiles
-
-Store printer details: manufacturer, model, wattage, purchase cost, expected lifetime. Cost estimates include electricity, depreciation, failure rate, markup. Override extruder temp, bed temp, flow ratio, and K-factor per spool per printer. Track maintenance with intervals and notes. Assign printers to projects and usage logs.
-
----
-
-## Display Options
-
-Choose which fields appear on spool cards. Set a default spool size. Toggle dark mode (System/Light/Dark). Color palettes: Copper, Dragon Hoard (teal), Twilight Mist, Obsidian (warm gray).
-
----
-
-## Pricing
-
-Free forever: up to 50 spools, 5 projects, 1 printer profile, bring-your-own-key AI scanning, full search/filter/sort, barcode and NFC/QR scanning, CSV import/export, and data backup.
-
-Pro is $19.99/year (30-day free trial): unlimited spools and projects, 20 AI scan credits per month, cloud sync across devices, and 12+ extended statistics charts.
-
-Need more scans? Buy a 25-credit pack for $0.99 any time—no expiration.
-
----
-
-## Platforms
-
-iOS, macOS, Windows. Android is coming soon.
-
----
-
-## Why Spool Hoarder?
-
-Filament accumulates. It takes up space, costs money, and eventually you buy three spools of the same shade of blue.
+[Spool Hoarder](https://spoolhoarder.com) is a local-first inventory app for
+3D-printing filament. Track what you own, how much remains, where it is stored,
+what it cost, and how it was used in each project.
+
+> This repository contains the static site deployed at
+> [spoolhoarder.com](https://spoolhoarder.com). The Flutter application source
+> is maintained in a private repository.
+
+## What it does
+
+- **Manage inventory:** add, edit, search, filter, sort, group, and batch-manage
+  spools. Track color, material, technical settings, storage location, weight,
+  price, and lifecycle status.
+- **Track real usage and costs:** log filament against projects, plan required
+  materials, estimate print costs, and review inventory and material statistics.
+- **Scan and tag spools:** scan labels, barcodes, QR codes, and NFC tags; use
+  compatible printer RFID and TD1 transmission-distance hardware where
+  available.
+- **Recognize filament:** use a supported AI provider, on-device Apple
+  Foundation Models, or included Pro scan credits to extract spool details from
+  a photo before you save it.
+- **Keep data portable:** import and export CSV files, create checksummed backup
+  bundles, and restore data with a preview and validation step.
+- **Sync when you choose:** the app works offline with its local SQLite database
+  as the source of truth. Signed-in Pro users can synchronize supported data
+  across devices.
+- **Organize a print library:** on Windows and macOS, index STL and 3MF files,
+  find duplicates, manage collections, and link models to projects.
+
+## Privacy and data ownership
+
+Your inventory stays on your device by default. Optional AI features send only
+the information needed for the requested scan or query to the provider you
+choose; the inventory assistant executes its resulting query locally. API keys
+are stored in secure platform storage.
+
+## Platform support
+
+| Platform | Availability | Highlights |
+| --- | --- | --- |
+| iOS | Supported | Camera scanning, NFC read/write, Apple Vision, Foundation Models, and TD1 MIDI support |
+| macOS | Supported | Print Library, Apple Vision, Foundation Models, and TD1 MIDI support |
+| Windows | Supported | Print Library, native file dialogs, cloud AI scanning, TD1 USB serial, and Microsoft Store licensing |
+| Android | Supported | Camera scanning, ML Kit, NFC read/write, Bambu Lab RFID, TD1 USB serial, and Google Play Billing |
+
+Linux is not a build target.
+
+## Learn more
+
+- [Visit Spool Hoarder](https://spoolhoarder.com)
+- [Read the product documentation](https://spoolhoarder.com/docs)
+
+## About this repository
+
+This is the public deployment repository for Spool Hoarder. It contains
+generated static assets and is not the application source repository.
