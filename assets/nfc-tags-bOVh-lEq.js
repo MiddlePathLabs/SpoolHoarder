@@ -11,7 +11,6 @@ keywords:
   - openprinttag
   - prusa nfc
   - opentag3d
-  - bambu nfc
   - rfid
   - tap tag
 platforms:
@@ -34,11 +33,7 @@ NFC reading requires a supported iPhone, iPad, or Android device with NFC availa
 | **OpenSpool** | Generic open standard | Brand, material, color, extruder temperature range |
 | **OpenPrintTag** | Prusa | Filament identity |
 | **OpenTag3D** | Open standard | Filament identity |
-| **Bambu Lab** | Bambu Lab spools | Filament identity (encrypted) |
 | **Generic NDEF** | Spoolman and others | A text or URL record, including Spoolman \`SM:SPOOL=\` codes |
-
-Bambu Lab tags are encrypted (MIFARE Classic) and can only be read on Android,
-which supports that tag type. Other formats work on supported iPhone, iPad, and Android devices.
 
 ## What you need
 

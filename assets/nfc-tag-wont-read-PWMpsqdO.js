@@ -9,7 +9,6 @@ keywords:
   - nfc tag failed
   - nfc unsupported
   - tag wont scan
-  - bambu tag
   - openspool
   - prusa tag
   - spoolman qr
@@ -39,14 +38,9 @@ Spool Hoarder reads these tag formats:
 - **OpenSpool** — JSON on NTAG215 and NTAG216 tags.
 - **OpenPrintTag (Prusa)** — CBOR on NFC-V tags such as ICODE SLIX and SLIX2.
 - **OpenTag3D** — fixed binary data on NTAG213, NTAG215, and NTAG216.
-- **Bambu Lab** — encrypted MIFARE Classic. Android only. The app reads these automatically when your phone supports MIFARE Classic; there is no toggle to turn on.
 - **Generic NDEF** — text or URL records. This includes the Spoolman **SM:SPOOL=** format.
 
 A plain blank tag, a hotel key, a payment card, or any tag in an unknown format produces **Unrecognized NFC tag format.** A tag Spool Hoarder recognizes but cannot read cleanly produces **Could not parse tag data.**
-
-### Bambu tags on iPhone
-
-Bambu Lab tags use MIFARE Classic, which CoreNFC cannot read. They work on Android only. There is no setting to change this on iPhone.
 
 ## The Spoolman tag did nothing
 

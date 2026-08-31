@@ -73,7 +73,7 @@ Batch scan turns the camera into a conveyor belt — capture one photo after ano
 \r
 ## NFC tags\r
 \r
-Some spools carry an NFC tag with their identity written to it — OpenSpool, Prusa's OpenPrintTag, OpenTag3D, Bambu Lab, or a generic Spoolman tag. Hold the device to the tag and the details appear, ready to save. Requires a supported iPhone, iPad, or Android device with NFC available. Bambu Lab MIFARE Classic tags can be read on Android only. See [Reading NFC tags](/docs/scanning/nfc-tags/) for the details.\r
+Some spools carry an NFC tag with their identity written to it — OpenSpool, Prusa's OpenPrintTag, OpenTag3D, or a generic Spoolman tag. Hold the device to the tag and the details appear, ready to save. Requires a supported iPhone, iPad, or Android device with NFC available. See [Reading NFC tags](/docs/scanning/nfc-tags/) for the details.
 \r
 ## TD1 scanning\r
 \r

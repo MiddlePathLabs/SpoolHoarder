@@ -48,7 +48,7 @@ For one spool, open it and set the **Inventory Location** field. For a batch on 
 
 ### 4. Optionally link NFC tags to locations
 
-> **Platform note —** NFC steps require a supported iPhone, iPad, or Android device with NFC available. Bambu Lab MIFARE Classic tags can be read on Android only.
+> **Platform note —** NFC steps require a supported iPhone, iPad, or Android device with NFC available.
 
 For each location you want to file spools into by tap, stick an NFC tag on the shelf or bin and link it. Open **Settings → Storage Locations**, open the location's menu, and choose **Link NFC tag**. See [Tagging locations with NFC](/docs/organizing/tagging-locations-with-nfc/) for the link, scan, and reassign flow.
 

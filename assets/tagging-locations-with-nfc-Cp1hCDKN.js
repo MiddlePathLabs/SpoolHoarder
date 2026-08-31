@@ -23,7 +23,7 @@ Stick an NFC tag on a shelf, bin, or dry box and link it to a storage location.
 Then, when you put a spool away, scan the spool's tag to confirm it has moved
 there — no menus, no typing.
 
-This feature requires a supported iPhone, iPad, or Android device with NFC available. Bambu Lab MIFARE Classic tags can be read on Android only.
+This feature requires a supported iPhone, iPad, or Android device with NFC available.
 
 You need at least one [storage location](/docs/organizing/storage-locations/)
 before you can link a tag.
@@ -72,8 +72,6 @@ shows a message explaining what went wrong rather than moving anything.
 
 - A supported iPhone, iPad, or Android device with NFC available.
 - One NFC tag per location. Cheap NTAG stickers work well for bins and shelves.
-- For Bambu Lab spool tags, an Android device — their MIFARE Classic encryption
-  cannot be read on iOS.
 
 ## Related pages
 

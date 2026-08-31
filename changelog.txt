@@ -19,7 +19,12 @@ Changelog - Recent Updates (May - August 2026)
 - Account deletion no longer becomes permanently stuck after one failed or timed-out attempt.
 - The on-device inventory assistant now asks its own follow-up question when a prompt is ambiguous, instead of pushing you toward the cloud assistant.
 - Fixed a signed-in device occasionally reverting the decision about what to do with local data after signing in.
+- Fixed Pro access sometimes not loading when opening the app while signed in: an entitlement check racing the sign-in token refresh could leave Statistics and trial messaging on the free plan even with an active Pro subscription or redeemed code, until you restarted the app or restored purchases.
+- Fixed Google Play subscription purchases failing to validate, which could keep Pro from activating on Android after a purchase.
 - Using a cloud AI feature - spool scan, inventory assistant, or order import - now asks for your explicit consent first, with a clear description of what is sent and to which provider, and you can revoke that consent in Settings at any time. Photos you pick for a scan no longer carry their hidden EXIF metadata, such as the GPS location, out of the app.
+- Batch scanning reads unmatched spool labels with AI again instead of coming back unrecognized: local barcode and catalog matches still return instantly, and if the AI scan means sending a photo to the cloud, the app asks for your consent first, once per scan session.
+- Typing a hardware barcode on the Add Spool form now prefills empty fields like brand and material when the code is already known from an earlier scan, instead of only saving it for later.
+- Moved the NFC scan action on the batch scan screen into the app bar as a labelled button.
 - Exports on macOS now open a Save dialog like on Windows instead of the phone-style share sheet, and files shared from the app keep their intended filename instead of a random code.
 - Your spool database is encrypted on disk again: a dependency update in March had silently switched the app to an unencrypted database with no error shown. Existing databases are converted to encrypted copies automatically the next time the app starts, and the original unencrypted file is only removed after the conversion has been verified.
 - A temporarily unavailable secure-storage key - for example right after an app update - no longer makes the app report a corrupt database, which previously invited a reset that would erase your data; the app now reports the failed launch instead.
