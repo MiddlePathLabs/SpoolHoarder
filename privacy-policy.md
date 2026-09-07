@@ -1,225 +1,186 @@
 # Privacy Policy
 
 **Spool Hoarder**  
-**Last Updated:** July 16, 2026
+**Last Updated:** September 7, 2026
 
-## Introduction
+## Operator and Scope
 
-Spool Hoarder ("the App") is a 3D printer filament inventory management application.
+Middlepath Labs, LLC ("Middlepath Labs," "we," "us," or "our") operates Spool Hoarder and is the controller responsible for the personal information described in this policy.
 
-The App is designed **local-first**: your spool, project, and usage data is stored on your device. Some optional features use network services and may send data off-device, as described below.
+This policy covers the Spool Hoarder application (the "App"), the public Spool Hoarder website, account and cloud features, and support requests.
 
-## What Data We Process
+Spool Hoarder is designed **local-first**. You can use its core inventory features without creating an account. Inventory, project, usage, and preference data is stored on your device unless you choose a feature that sends data off-device as described below.
 
-### Data you enter in the App (local by default)
+## Information We Process
 
-Spool Hoarder stores your inventory and project data locally, including:
+### Local App data
 
-- Spool details (brand, material, colors, weights, prices, temperatures, notes)
-- Project details and usage logs
-- Printer profiles and related settings
-- Optional local photos you attach, such as project thumbnails and spool sample print photos
-- On supported desktop platforms, Print Library metadata such as library root paths, indexed model/file paths, preview or cover image paths, notes, tags, and extracted file metadata
-- Order import drafts and parsed order details when you choose to use order import features
-- Preferences and app settings
+The App can store the following information locally:
 
-On native platforms, the app uses SQLCipher keying with key material in secure storage for encrypted databases. Some legacy installs created before encryption support may still have plaintext local databases unless manually migrated. On web builds, storage uses browser-supported Drift/WASM storage.
+- Spool details, including brand, material, colors, weights, prices, temperatures, locations, and notes
+- Project details, filament requirements, and usage logs
+- Printer profiles, cost settings, and related preferences
+- Photos you attach, such as project thumbnails and spool sample photos
+- On supported desktop platforms, Print Library paths, indexed model and file paths, preview paths, notes, tags, and extracted file metadata
+- Order-import drafts and parsed order details
+- App preferences and settings
 
-### Account and cloud data (only when you use cloud features)
+On native platforms, current encrypted databases use SQLCipher keying with key material held in platform secure storage. Some older installations created before encryption support may still have a plaintext local database unless it has been migrated. Web builds use browser-supported Drift/WASM storage.
 
-If you choose to sign in and use cloud-backed features, Spool Hoarder processes account and cloud data through Supabase, such as:
+### Accounts and authentication
 
-- Account identifiers (for example, email and auth user ID)
-- Synced inventory/project/usage data
-- Subscription and credit status
-- Purchase validation metadata
-- AI credit usage and operational metadata, such as feature name, provider/model, token counts, credit changes, timestamps, request source, parse status, and estimated processing cost
-- Confirmed filament metadata synced across your devices, such as TD/hex measurements and related spool metadata
+If you create an account or use cloud-backed functionality, Supabase processes identifiers such as your email address, authentication provider, authentication user ID, and session information. Supported sign-in methods can include email/password and Apple or Google sign-in.
 
-Cloud sync and cloud account features are optional and feature-flag dependent.
+Some purchase flows can create an anonymous Supabase account when you have not signed in. This allows a purchase, subscription, or AI-credit balance to be associated with an account without requiring an email address first.
 
-### Shared filament measurement contributions (optional)
+### Cloud synchronization
 
-If you enable "Share Confirmed TD/Hex Measurements," Spool Hoarder may submit TD1-confirmed filament measurement data to help improve filament data quality. Contributions may include:
+If you enable cloud sync, Supabase processes the App records selected for synchronization, including inventory, projects, usage logs, printer information, settings, and supported photo or metadata records. Cloud sync is optional and depends on the App's build and runtime configuration.
 
-- Brand, material, name, colors, product family, and diameter
-- Transmission distance and/or color hex codes
-- Confirmation method, source, measurement time, app version, and platform
-- If you are signed in, your authenticated account ID may be associated with the contribution. If you are not signed in, contributions may be submitted without an account identifier.
+### Subscriptions, purchase validation, and AI credits
 
-Notes, prices, inventory locations, and general project data are not included in these measurement contributions.
+When you buy, restore, or validate a subscription or credit pack, we can process:
 
-### Feedback data (optional)
+- Storefront and platform
+- Product and transaction identifiers
+- Receipt or purchase-validation data
+- Subscription status and entitlement dates
+- AI-credit balance and credit changes
+- Account identifiers needed to associate the purchase with you
 
-If you submit feedback from the in-app Contact form or website support form, we process:
+Apple, Google, or Microsoft also processes purchases made through its storefront under its own terms and privacy policy.
 
-- Your message
-- Optional email address (if you provide one)
-- App version and platform
-- Optional diagnostic logs (if you choose to attach them)
-- If you are signed in, your authenticated account ID may also be associated with the submission
+For included cloud AI features, we can retain operational usage records needed for credit accounting, abuse prevention, cost monitoring, and troubleshooting. These records can include the feature, provider and model, token counts, credit changes, timestamps, request source, parse status, and estimated processing cost. They do not intentionally include the original image or pasted order text.
 
-If backend notifications are configured, feedback details may also be forwarded to a maintainer support inbox for review.
+### Optional AI features
 
-### Website usage
+Network requests occur only when you choose a feature that requires them.
 
-If you visit the Spool Hoarder website, standard website hosting logs may be processed by our hosting providers. The public website may also use privacy-respecting configuration of Google Analytics to understand aggregate page usage. The website support form sends the information you enter to the same feedback backend described above.
+- **On-device processing:** Supported Apple and Android features can process information locally without sending it to an external AI provider.
+- **Included cloud AI:** A selected image or pasted order text is sent through a Spool Hoarder Supabase Edge Function and then to the configured cloud AI provider, currently Google Gemini for included scan and order-import paths.
+- **Bring-your-own-key providers:** If you configure a provider key, selected content can be sent directly to Google Gemini, OpenAI, or Anthropic, depending on your selection.
 
-## Crash and Error Reporting
+For cloud image scans, the App compresses images to the size used by the scan flow, removes EXIF metadata before transmission, and deletes temporary image files after processing on a best-effort basis. AI output can contain fields extracted from the content you submitted and is returned to the active App workflow for your review.
 
-On iOS, Android, and macOS release builds, the App uses **Firebase Crashlytics** for crash and error reporting. Crash reporting is not enabled on Windows or Web.
+### Crash diagnostics
 
-Crash/error reports can include technical diagnostics such as:
+Release builds on iOS, Android, and macOS use Firebase Crashlytics. Crash reporting is not enabled on Windows or Web. Reports can include device and operating-system information, stack traces, timestamps, and technical App log context associated with an error.
 
-- Device and OS information
-- Crash stack traces
-- Error timestamps
-- App log context associated with errors
+### Support requests
 
-For details, see [Google's Firebase Privacy Policy](https://policies.google.com/privacy).
+If you contact us through the App or website, we process the request category, message, optional contact email, platform, App version, and submission time. Signed-in App submissions can also be associated with an account ID. App users can choose to attach diagnostic logs; the website form does not accept attachments.
 
-## Optional Network Features
+Support requests are stored through Supabase. If notification email is configured, the request and contact information are forwarded to a Middlepath Labs support inbox through Amazon Simple Email Service (Amazon SES).
 
-These features make network requests only when enabled/used.
+### Website analytics and hosting
 
-### Cloud account, sync, and subscription services (Supabase)
+The website uses Cloudflare Web Analytics for aggregate page and performance measurements. Cloudflare states that this service does not use cookies or local storage, does not fingerprint visitors, and does not collect or use visitors' personal data. We do not send email addresses, account identifiers, purchase identifiers, inventory information, uploaded-image metadata, or support-message contents as analytics properties.
 
-When enabled and used, the App can connect to Supabase for:
+The website is hosted through GitHub Pages. GitHub and network providers can process ordinary request and security logs, such as IP address, browser or device information, requested URL, referring page, and request time, as part of delivering and protecting the website.
 
-- Sign-in (email/password and supported OAuth providers such as Apple or Google)
-- Data sync across devices
-- Subscription/credit status checks
-- Purchase validation, credit provisioning, and related account status updates
-- Deletion of synced cloud records through current in-app account/data deletion controls
+Spool Hoarder does not use advertising SDKs, ad-network tracking, or cross-app behavioral tracking.
 
-Some purchase flows may create or use an anonymous Supabase session when you are not otherwise signed in. This is used to validate receipts, attach subscription or credit records, and account for consumable AI credits.
+### Optional shared and community data
 
-### AI-powered spool scanning
+If you enable sharing of confirmed filament measurements, Spool Hoarder can submit information such as brand, material, product name, colors, diameter, transmission distance, color values, confirmation method, source, measurement time, App version, and platform. Notes, prices, inventory locations, and general project information are not included.
 
-Spool Hoarder supports multiple AI scan and import paths:
+Signed-in contributions can initially be associated with your account. Signed-out contributions can be submitted without an account identifier. Shared UPC or filament contributions can remain after account deletion, but the account association is removed.
 
-- **On-Device mode (Apple platforms):** OCR/parsing runs locally on-device.
-- **Included cloud scan mode:** photo is sent through Spool Hoarder cloud function for processing.
-- **Legacy BYOK provider mode (if configured):** photo may be sent directly to configured external AI provider APIs.
-- **Order text import:** pasted order confirmation text is sent through a Spool Hoarder cloud function for AI parsing when you choose to use that feature.
+The App also downloads public catalog information from SpoolmanDB. Catalog-download requests do not include your inventory payload. If you configure your own Spoolman server, requests are sent to the server address you provide.
 
-For cloud scan paths:
+## Why We Process Information
 
-- Images are compressed (up to 1024x1024 for scan flows)
-- EXIF metadata is stripped before transmission
-- Temporary image files are deleted after processing (best effort)
+Depending on the feature and applicable law, we rely on the following legal bases:
 
-For included cloud AI features, Spool Hoarder may store account-linked operational usage metadata for credit accounting, abuse prevention, cost monitoring, and debugging. This can include token counts, model/provider names, credit changes, request source, timestamps, parse status, and estimated processing cost. It does not intentionally store the original image or pasted order text in the usage log, though AI responses returned for the active app workflow may contain extracted fields from the submitted content.
+- **Contract:** Providing an account, synchronization, subscription, purchase restoration, AI credits, and other cloud functionality you request.
+- **Legitimate interests:** Operating and securing the service, preventing fraud and abuse, responding to support requests, diagnosing crashes, maintaining service reliability, and understanding aggregate website performance. We use this basis only where those interests are not overridden by your rights.
+- **Consent:** Submitting optional shared/community contributions and using optional cloud AI features where the App asks for consent. You can withdraw consent for future processing.
+- **Legal obligation:** Keeping or disclosing information when applicable law requires it, including records needed for tax, accounting, consumer-protection, or lawful-request obligations.
 
-### Filament catalog (SpoolmanDB)
+The exact legal basis can depend on your location and how you use a feature.
 
-The App downloads public catalog data from SpoolmanDB for suggestions and normalization. This request does not include your inventory payload and is cached locally (refresh window up to 7 days).
+## Retention
 
-### Optional self-hosted Spoolman server lookup
+We use the following retention criteria rather than fixed periods where the repository does not establish a duration:
 
-If you enable Spoolman QR lookup and configure a server URL, the App may query your configured Spoolman server to resolve tag/QR spool references.
-
-### Contact/feedback submission
-
-If you use Contact Us, the App sends feedback payloads to a Supabase Edge Function, including optional logs when selected.
-
-### Order text import
-
-If you use order import, the pasted order confirmation text is sent to a Supabase Edge Function and then to Google Gemini for parsing. Order text may include retailer names, product lines, quantities, prices, dates, discounts, shipping/tax lines, and any other text you paste. You should avoid pasting unrelated personal information that is not needed for filament import.
-
-### In-app purchase validation and credit provisioning
-
-On supported platforms, purchase validation and credit/subscription provisioning calls are made to backend endpoints.
-
-## Permissions
-
-### Camera and Photo Library
-
-When granted, camera/gallery access is used for:
-
-- AI spool scanning
-- Project thumbnail photos
-- Spool sample print photos
-
-You can deny permissions, but related photo-based features will be unavailable.
-
-### NFC (where supported)
-
-NFC permission is used for optional filament tag reading and writing features.
-
-### Bluetooth, USB, and serial device access (where supported)
-
-Bluetooth, USB, or serial device access may be used to discover and connect to compatible TD-1 filament devices for scanning and data transfer. Device names and connection events may appear in local diagnostic logs.
-
-## Security and Storage
-
-- **Local database:** SQLCipher keying is used on native encrypted databases, with key material in secure storage (legacy plaintext databases may exist on older installs).
-- **Secure storage:** used for sensitive local secrets/tokens (for example, auth session persistence and API keys where applicable).
-- **Preferences:** non-sensitive app settings are stored in platform preferences.
-- **Log files:** diagnostic logs are stored locally and can be manually exported/shared by you; they may include technical app activity and error context.
-- **AI usage records:** for included cloud AI features, account-linked usage records may be stored remotely for credit accounting, operations, and abuse prevention.
+- **Local data:** Remains on your device until you delete it in the App, remove the relevant files, clear browser data, or uninstall the App.
+- **Account and synchronized data:** Generally remains while your account is active and is removed through the account-deletion process described below.
+- **Purchase, subscription, credit, and operational AI records:** Retained while needed to provide entitlements and credits, resolve disputes, prevent fraud or abuse, maintain accounting integrity, and meet legal obligations.
+- **Support requests and attachments:** Retained while needed to respond, investigate the reported issue, protect the service, and meet legal obligations.
+- **Crash reports and website/hosting logs:** Retention is controlled by the applicable provider settings and operational needs.
+- **Shared contributions:** Can remain as de-identified community catalog data after any account association is removed.
+- **Deletion record:** We retain a minimal deletion record indefinitely: a one-way hash of the former account ID, deletion time, and deletion-request metadata. It supports security, fraud prevention, operational integrity, and compliance and does not retain the former account ID or email address.
 
 ## Account and Data Deletion
 
-### Delete your Spool Hoarder account and associated cloud data
-
-You can permanently delete your Spool Hoarder cloud account in the App:
+You can delete your Spool Hoarder cloud account in the App:
 
 1. Open **Settings**.
 2. Open **Account & Cloud Sync**.
 3. Select **Delete Account**.
 4. Type **DELETE** and confirm.
 
-This deletes your Spool Hoarder cloud account and the cloud records associated with it, including synced inventory, projects, usage logs, printer data, subscription and credit records, purchase-validation records, AI usage records, and account-linked feedback and uploaded support attachments. Your local data remains on your device.
+This removes the cloud account and associated synchronized records, subscription and credit records, purchase-validation records, AI-usage records, and account-linked feedback and support attachments. Local data remains on your device.
 
-Deleting your Spool Hoarder account does not cancel a subscription managed by the Apple App Store, Google Play, or Microsoft Store. Cancel an active store subscription through the store where you purchased it to avoid future charges.
+Deleting a Spool Hoarder account does not cancel a subscription managed by Apple, Google, or Microsoft. Cancel the subscription through the storefront where you purchased it.
 
-If you cannot access the App, you can [request account deletion by email](mailto:support@middlepathlabs.com?subject=Spool%20Hoarder%20Account%20Deletion%20Request). Send the request from the email address associated with your account, or include that address in your message. We may request additional information to verify that you own the account before processing the request.
+If you cannot use the App, see the [account-deletion page](https://spoolhoarder.com/delete-account/) or email [support@middlepathlabs.com](mailto:support@middlepathlabs.com?subject=Spool%20Hoarder%20Account%20Deletion%20Request).
 
-### Data-only deletion
+Spool Hoarder does not currently offer a separate process that deletes all synchronized data while keeping the same cloud account active.
 
-Spool Hoarder does not currently provide a separate cloud-data deletion option that keeps your cloud account active. You can remove local data by deleting it in the App or uninstalling the App.
+## Service Providers and Disclosures
 
-## Data Retention and Deletion
+We disclose information to service providers only as needed for the relevant feature:
 
-### Local data
+- **Supabase:** Authentication, database, synchronization, storage, and Edge Functions
+- **Firebase Crashlytics:** Crash and error reporting on supported platforms
+- **Google Gemini:** Included cloud AI scanning and order-text import, plus optional bring-your-own-key use
+- **OpenAI and Anthropic:** Optional bring-your-own-key AI processing
+- **Cloudflare:** Aggregate website analytics and network delivery where configured
+- **GitHub Pages:** Website hosting
+- **Amazon SES:** Support-request notification email where configured
+- **Apple, Google, and Microsoft:** Store purchases, subscriptions, and purchase validation
+- **SpoolmanDB:** Public catalog downloads
 
-- Data remains on your device until you delete it in-app or uninstall.
+We can also disclose information when required by law, to protect rights or service security, or as part of a business transaction subject to appropriate safeguards. We do not sell personal information or share it for cross-context behavioral advertising.
 
-### Cloud data (if you used cloud features)
+## International Transfers
 
-- Synced/account-linked data may be stored remotely while your account is active.
-- Account-linked subscription, credit, receipt-validation, AI usage, and optional measurement-contribution records may be stored remotely while needed for account operations, fraud prevention, support, or compliance.
-- When an account-deletion request is completed, we delete the cloud records described in the account-deletion section above and sign the account out of the App.
-- We retain indefinitely a minimal deletion record: a one-way hash of the former account ID, the deletion timestamp, and deletion-request metadata. We use this record for security, fraud prevention, operational integrity, and compliance; it does not retain the former account ID or email address.
-- Optional shared filament or UPC contributions may remain after account deletion, but their account association is removed. Anonymous feedback that was not linked to an account is not part of an account-deletion request.
+Some service providers can process information outside the European Economic Area, including in the United States. The applicable processing location depends on the provider, account configuration, and feature used.
 
-## Third-Party Services
+Specific transfer mechanisms and configured processing regions have not yet been verified for every provider. Contact us for current information before relying on a particular regional-hosting or transfer-safeguard claim.
 
-Spool Hoarder may interact with:
+## Security
 
-- [Supabase](https://supabase.com/privacy) (auth, sync, edge functions, storage)
-- [Firebase Crashlytics](https://policies.google.com/privacy) (crash/error reporting on supported platforms)
-- [Google Gemini API](https://ai.google.dev/terms) (included cloud AI scan and order import paths)
-- [OpenAI](https://openai.com/policies/privacy-policy) and [Anthropic](https://www.anthropic.com/privacy) (legacy BYOK AI provider paths, if configured)
-- [Google Analytics](https://policies.google.com/privacy) (aggregate website analytics, if enabled on the public website)
-- SpoolmanDB public catalog (GitHub Pages-hosted public dataset)
-- Email delivery infrastructure used for feedback notifications, if configured by us
+We use technical and organizational measures intended to protect information, including encrypted local databases on current native installations, platform secure storage for sensitive local keys and tokens, access controls on cloud data, and restricted backend functions. No method of storage or transmission is completely secure.
 
-Spool Hoarder does **not** include advertising SDKs or ad-network tracking.
+## Your Privacy Rights
+
+Depending on your location, you may have the right to:
+
+- Request access to personal information we hold about you
+- Correct inaccurate information
+- Request deletion
+- Restrict certain processing
+- Receive portable data in an applicable format
+- Object to processing based on legitimate interests
+- Withdraw consent for future processing
+- Complain to your local data-protection supervisory authority
+
+These rights can be limited where an exception applies. We may need to verify your identity before acting on a request. Withdrawing consent does not affect processing that was lawful before withdrawal.
 
 ## Children's Privacy
 
-Spool Hoarder is not directed to children under 13, and we do not knowingly collect personal information from children under 13.
+Spool Hoarder is not directed to children under 13, and we do not knowingly collect personal information from children under 13. Additional age protections may apply in some locations.
 
 ## Changes to This Policy
 
-We may update this Privacy Policy from time to time. Updates will be posted here with a revised "Last Updated" date.
+We may update this policy as the product, providers, or legal requirements change. We will post the revised policy here and update the date above.
 
-## Contact
+## Privacy Contact
 
-If you have questions about this Privacy Policy, please open an issue on our [GitHub repository](https://github.com/MiddlePathLabs/SpoolHoarder/issues).
+For support and privacy requests, contact [support@middlepathlabs.com](mailto:support@middlepathlabs.com) or open an issue in the [Spool Hoarder GitHub repository](https://github.com/MiddlePathLabs/SpoolHoarder/issues).
 
 ---
 
-*This Privacy Policy applies to Spool Hoarder on supported platforms, including iOS, Android, macOS, Windows, and Web builds where available.*
+*This policy applies to Spool Hoarder on supported platforms, including iOS, iPadOS, Android, macOS, Windows, and Web builds where available.*
