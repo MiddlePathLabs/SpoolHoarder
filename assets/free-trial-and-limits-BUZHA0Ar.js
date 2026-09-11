@@ -3,7 +3,7 @@ title: Free tier, trial, and limits\r
 description: Exactly what the free tier includes, what the trial unlocks, and what happens at a limit.\r
 order: 1\r
 status: published\r
-updated: 2026-08-26\r
+updated: 2026-09-11\r
 keywords:\r
   - free\r
   - trial\r
@@ -69,7 +69,9 @@ A trial is available once per platform account. If you have already used a trial
 \r
 The cap counts your **current inventory** only. A spool you have marked used up, sold, gifted, or discarded keeps its full record but no longer occupies a slot, so a long history costs you nothing. See [Editing and deleting spools](/docs/inventory/editing-and-deleting-spools/).\r
 \r
-The one place this shows up is **Restore to Inventory**: putting a spool back into an inventory that is already at 50 is blocked, and the message tells you what to do about it.\r
+The place this shows up most is **Restore to Inventory**: putting a spool back into an inventory that is already at 50 is blocked, and the message tells you what to do about it.\r
+\r
+Restoring a backup is counted the same way. Only the spools that would be in your current inventory afterwards count toward the 50, so a backup carrying a long history of sold, gifted, or used-up spools is not refused for its size. A restore the app performs while [recovering data it cannot open](/docs/troubleshooting/app-wont-open/) is never refused by the limit at all — your data comes back in full, and the cap goes back to blocking the next addition.\r
 \r
 ## What happens when you reach a limit\r
 \r

@@ -1,9 +1,9 @@
-const a=`---\r
+const e=`---\r
 title: Backup and restore\r
 description: The automatic backups you already have, and how to roll back to one.\r
 order: 6\r
 status: published\r
-updated: 2026-08-27\r
+updated: 2026-09-11\r
 keywords:\r
   - backup\r
   - restore\r
@@ -13,6 +13,8 @@ keywords:\r
   - safety\r
   - undo\r
   - automatic backup\r
+  - recovery\r
+  - spool limit on restore\r
 platforms:\r
   - ios\r
   - ipados\r
@@ -72,6 +74,23 @@ Restoring is destructive, so it is gated twice:\r
 Only the restore itself replaces data. The safety backup gives you a way back\r
 even after a restore you change your mind about.\r
 \r
+### The free-plan limit and restores\r
+\r
+Where the free-tier spool cap applies — see\r
+[Free tier, trial, and limits](/docs/account/free-trial-and-limits/) — a restore\r
+is refused if it would leave you over it. That count is **your current inventory\r
+after the restore** — spools you\r
+have marked used up, sold, gifted, or discarded come back with the rest of the\r
+backup and do not count toward it. A long history costs you nothing here. If a\r
+restore is refused, the message names the projected count, your current count,\r
+and the limit.\r
+\r
+A restore that the app performs during\r
+[recovery](/docs/troubleshooting/app-wont-open/) — from a backup slot it wrote\r
+itself, because your local data would not open — is never refused by the limit.\r
+Your data comes back in full. Adding or reinstating a further spool while over\r
+the limit is still blocked, as it is everywhere else.\r
+\r
 ## What is and is not in a backup\r
 \r
 Backups include all spools, projects, usage logs, thumbnails, and selected app\r
@@ -80,10 +99,27 @@ and exit details intact, so a restore brings back what you sold, gifted,\r
 discarded, or used up alongside your current inventory. Secure credentials and sign-in data are never backed up — you will\r
 need to sign in again after a restore that lands on a fresh state.\r
 \r
+## Backups are what recovery restores from\r
+\r
+If Spool Hoarder ever cannot open your data on this device, it opens a recovery\r
+screen that reads these same slots, tells you which backup it found, when it was\r
+taken, and how many current spools, history records, and projects are in it, and\r
+restores it in one tap — without deleting the data that would not open. That is\r
+why the slots are worth keeping. See\r
+[The app will not open](/docs/troubleshooting/app-wont-open/).\r
+\r
 ## Backups are local to this device\r
 \r
 Backup slots live inside this device's app storage. They do not travel with you\r
-to a new phone or computer on their own. To move your full library between\r
+to a new phone or computer on their own.\r
+\r
+On iPhone and iPad they **are** included in the device's own backup, and are\r
+meant to be: a backup ZIP is self-contained and restores anywhere. The app's\r
+database file is deliberately left out of the device backup, because it is\r
+encrypted with a key that the device backup does not carry — restoring it onto a\r
+new device would produce a file nothing could read.\r
+\r
+To move your full library between\r
 devices, use [Exporting your data](/docs/data/exporting-your-data/) and\r
 [Importing a CSV](/docs/data/importing-a-csv/), or use\r
 [Cloud sync](/docs/data/cloud-sync/) if you have a Pro subscription.\r
@@ -93,4 +129,6 @@ devices, use [Exporting your data](/docs/data/exporting-your-data/) and\r
 - [Exporting your data](/docs/data/exporting-your-data/)\r
 - [Moving to a new device](/docs/data/moving-to-a-new-device/)\r
 - [Cloud sync](/docs/data/cloud-sync/)\r
-`;export{a as default};
+- [The app will not open](/docs/troubleshooting/app-wont-open/)\r
+- [Free tier, trial, and limits](/docs/account/free-trial-and-limits/)\r
+`;export{e as default};

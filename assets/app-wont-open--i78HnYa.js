@@ -3,7 +3,7 @@ title: The app will not open\r
 description: Recovering when Spool Hoarder crashes on launch, and getting your data back.\r
 order: 7\r
 status: published\r
-updated: 2026-08-04\r
+updated: 2026-09-11\r
 keywords:\r
   - crash\r
   - wont open\r
@@ -15,11 +15,16 @@ keywords:\r
   - something went wrong\r
   - app update required\r
   - reset local database\r
+  - could not be unlocked\r
+  - restore your inventory\r
+  - recovery screen\r
+  - encryption key\r
 platforms:\r
   - ios\r
   - ipados\r
   - macos\r
   - windows\r
+  - android\r
 ---\r
 \r
 **Your spools are almost certainly still there.** A crash on launch does not\r
@@ -28,9 +33,15 @@ storage, next to up to three rolling backups, and none of it is touched by the\r
 app failing to start. Restoring is the normal fix, and it usually takes a\r
 minute.\r
 \r
-Nothing on this page deletes data unless you explicitly choose it. The three\r
-actions that do — **Reset Local Database**, **Restore**, and uninstalling the\r
-app — are called out clearly below.\r
+If the app cannot open its data at all, it now opens a recovery screen that\r
+offers you a backup by name and restores it in one tap — see\r
+[The recovery screen](#the-recovery-screen) below.\r
+\r
+Nothing on this page deletes data unless you explicitly choose it. Setting the\r
+local data aside no longer erases it; it is moved into a quarantine folder and\r
+kept. The two actions that genuinely replace or destroy data are **Restore**,\r
+which replaces what is currently in the app, and uninstalling the app, which\r
+takes the backups with it. Both are called out clearly below.\r
 \r
 ## Try these first, in this order\r
 \r
@@ -69,12 +80,78 @@ Do not reset anything here. The app deliberately offers only **Try Again** on\r
 this screen, because an older build could damage newer data if it forced its way\r
 in.\r
 \r
+## The recovery screen\r
+\r
+If Spool Hoarder cannot open the data on this device, it no longer drops you on\r
+an error screen with nowhere to go. Instead the app opens straight into a\r
+recovery screen headed **Restore your inventory**, before the rest of the app\r
+loads.\r
+\r
+It tells you what it found, in this shape:\r
+\r
+> **We found an automatic backup from September 3 at 4:15 PM containing 42\r
+> current spools, 12 history records, and 3 projects.**\r
+\r
+That count is read out of the backup file itself, not guessed, so you can see\r
+what you are about to get back before you commit to it.\r
+\r
+### Your options on that screen\r
+\r
+- **Restore this backup** — the main action. It restores the backup named on\r
+  the screen and then shows you what came back. Nothing is deleted to make room\r
+  for it: the data that would not open is moved aside first and kept.\r
+- **Choose another backup** — shown when more than one of the three slots holds\r
+  a restorable backup. You get the same one-line description of each, so you can\r
+  pick an older one if the newest is from after the trouble started.\r
+- **Sign in to recover synced data** — shown on platforms with\r
+  [cloud sync](/docs/data/cloud-sync/). Sign-in happens on the recovery screen\r
+  itself; you are not sent to Settings to finish. Once you are signed in, your\r
+  synced data downloads and recovery finishes on its own.\r
+- **Start with an empty inventory** — deliberately tucked under the other\r
+  choices, and confirmed before it happens. It opens the app with nothing in it.\r
+  The confirmation says it plainly: *Your existing data is kept on this device\r
+  and is not deleted, but the app will open with nothing in it.* Nothing is\r
+  erased, so you can still come back to a backup later.\r
+\r
+If a restore does not finish, the screen says so, says that your backup was not\r
+changed, and offers **Try this backup again** — you are never left guessing\r
+whether it half-worked.\r
+\r
+### If it asks which currency\r
+\r
+A backup taken before prices recorded their own currency is still restorable,\r
+but the app has to be told what the amounts were in. If you see **Which currency\r
+are these prices in?**, pick **USD** or **CAD** — those are the only two the app\r
+ever wrote without a currency code — and the restore continues.\r
+\r
+### If no backup is found\r
+\r
+The screen says so directly: *We could not find a backup on this device to\r
+restore from.* If you are signed in for cloud sync, **Sign in to recover synced\r
+data** is still the way back. If not, and you have an export ZIP saved outside\r
+the app, start with an empty inventory and then use\r
+**Settings → Data & Backup → Import Data**. See\r
+[Exporting your data](/docs/data/exporting-your-data/).\r
+\r
+## "Local data could not be unlocked"\r
+\r
+You may see this inside the app rather than on the recovery screen. It means the\r
+data on this device is intact but encrypted, and the key that unlocks it is no\r
+longer in the device's secure storage — the usual cause is a device restore or a\r
+re-install that left the credential store behind.\r
+\r
+**Your file is not deleted, and it is not damaged.** There is no **Try Again**\r
+on this screen on purpose: a key that has gone missing will still be missing a\r
+second later, and repeatedly retrying is how people conclude the app is broken\r
+and uninstall it — which is the one action that destroys the backups too.\r
+\r
+Restore from a backup, or sign in and pull your data down from\r
+[cloud sync](/docs/data/cloud-sync/).\r
+\r
 ## "Local data could not be opened"\r
 \r
-This is the one that sounds alarming. The inventory shows **Local data could not\r
-be opened** with the message **Your database file may be damaged or unreadable.\r
-You can try again, or reset local data and restore from a backup.**, and two\r
-buttons: **Try Again** and **Reset Local Database**.\r
+This one means the database file itself would not open. The screen offers **Try\r
+Again**, **Set aside and start fresh**, and a link to this page.\r
 \r
 Work through it in this order:\r
 \r
@@ -82,18 +159,20 @@ Work through it in this order:\r
    interrupted, or by a copy of the app that has not fully closed. Retrying\r
    often just works.\r
 2. **Force-quit the app and restart the device**, then try again once more.\r
-3. **Only then, Reset Local Database.**\r
+3. **Only then, Set aside and start fresh.**\r
 \r
-### Before you tap Reset Local Database\r
+### What "Set aside and start fresh" actually does\r
 \r
-**Reset Local Database** deletes the database file and creates an empty one. The\r
-confirmation dialog is titled **Reset Local Database?** and explains: *This will\r
-delete the local database file and recreate it. If you have a backup ZIP, you\r
-can restore it from Settings.*\r
+It does **not** delete anything. The confirmation is titled **Reset Local\r
+Database?** and says: *This moves the local database aside and starts a fresh\r
+one. The original file is kept, so it can still be recovered if its encryption\r
+key comes back.*\r
 \r
-The reassuring part: **it does not touch your backups.** It removes the database\r
-file only. All three backup slots stay exactly where they are, ready to restore\r
-from. So the full recovery is: reset, then restore.\r
+The old database file is moved into a quarantine folder inside the app's own\r
+storage and left there. A new, empty database is created in its place, and the\r
+app confirms: *Local database reset. Your previous data was moved aside, not\r
+deleted.* Your backup slots are untouched by this — they live in a separate\r
+folder — so the full recovery is: set aside, then restore.\r
 \r
 ## Restore from a backup\r
 \r
